@@ -183,7 +183,7 @@ export default function Header() {
                   href={href}
                   onClick={() => setMenuOpen(false)}
                   style={{ color: active ? "var(--gold)" : "var(--foreground)" }}
-                  className="block py-3 text-sm font-medium border-b border-[var(--border)]"
+                  className="block py-3 text-base font-medium border-b border-[var(--border)]"
                 >
                   {label}
                 </Link>
@@ -195,7 +195,7 @@ export default function Header() {
                 <button
                   onClick={() => setMobileOpenSubmenu(mobileOpen ? null : href)}
                   style={{ color: active ? "var(--gold)" : "var(--foreground)" }}
-                  className="w-full flex items-center justify-between py-3 text-sm font-medium"
+                  className="w-full flex items-center justify-between py-3 text-base font-medium"
                 >
                   {label}
                   <svg

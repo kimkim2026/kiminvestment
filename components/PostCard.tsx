@@ -47,13 +47,13 @@ export default function PostCard({ post, featured = false }: PostCardProps) {
         {/* Title */}
         <h3
           style={{ color: "var(--foreground)" }}
-          className={`font-bold leading-snug mb-3 group-hover:text-[var(--gold)] transition-colors ${featured ? "text-xl" : "text-base"}`}
+          className={`font-bold leading-snug mb-3 group-hover:text-[var(--gold)] transition-colors ${featured ? "text-[22px] md:text-xl" : "text-lg md:text-base"}`}
         >
           {post.title}
         </h3>
 
         {/* Excerpt */}
-        <p style={{ color: "#888" }} className="text-sm leading-relaxed line-clamp-3 mb-4">
+        <p style={{ color: "#888" }} className="text-base md:text-sm leading-relaxed line-clamp-3 mb-4">
           {post.excerpt}
         </p>
 

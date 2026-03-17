@@ -39,10 +39,10 @@ export default function HomePage() {
           </div>
 
           <h1 className="font-bold leading-tight mb-4">
-            <span className="block text-4xl md:text-6xl text-white mb-2">
+            <span className="block text-[40px] md:text-6xl text-white mb-2">
               김통찰의 미국 부동산
             </span>
-            <span style={{ color: "#C9A84C" }} className="block text-2xl md:text-4xl">
+            <span style={{ color: "#C9A84C" }} className="block text-[26px] md:text-4xl">
               한국인이 미국 집주인 되는 법
             </span>
           </h1>

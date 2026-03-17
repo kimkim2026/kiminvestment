@@ -4,7 +4,10 @@
       "Bash(npm run:*)",
       "Bash(git init:*)",
       "Bash(git:*)",
-      "Bash(sleep:*)"
+      "Bash(sleep:*)",
+      "Bash(grep:*)",
+      "Bash(head:*)",
+      "Bash(wc:*)"
     ]
   }
 }
