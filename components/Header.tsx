@@ -36,6 +36,7 @@ const navItems = [
       { href: "/about", label: "운영자 소개" },
     ],
   },
+  { href: "/contact", label: "문의하기", submenu: null },
 ];
 
 export default function Header() {

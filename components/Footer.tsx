@@ -45,6 +45,7 @@ export default function Footer() {
                 { href: "/tax-legal", label: "세금/법률" },
                 { href: "/experience", label: "나의 투자 경험담" },
                 { href: "/about", label: "운영자 소개" },
+                { href: "/contact", label: "문의하기" },
               ].map(({ href, label }) => (
                 <li key={href}>
                   <Link
