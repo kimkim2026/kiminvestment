@@ -34,6 +34,20 @@ const categoryColors: Record<string, string> = {
   "세금/법률": "#3498db",
 };
 
+function renderInline(text: string, baseKey: number): React.ReactNode[] {
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  return parts.map((part, idx) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return (
+        <strong key={`${baseKey}-${idx}`} style={{ color: "var(--foreground)" }}>
+          {part.slice(2, -2)}
+        </strong>
+      );
+    }
+    return part;
+  });
+}
+
 function renderMarkdown(content: string) {
   const lines = content.trim().split("\n");
   const elements: React.ReactNode[] = [];
@@ -47,8 +61,14 @@ function renderMarkdown(content: string) {
       elements.push(
         <h2
           key={key++}
-          style={{ color: "var(--gold)", borderBottom: "1px solid var(--border)" }}
-          className="text-2xl font-bold mt-10 mb-4 pb-3"
+          style={{
+            color: "var(--foreground)",
+            borderLeft: "3px solid var(--gold)",
+            paddingLeft: "12px",
+            marginTop: "40px",
+            marginBottom: "16px",
+          }}
+          className="text-xl font-bold"
         >
           {line.slice(3)}
         </h2>
@@ -57,8 +77,8 @@ function renderMarkdown(content: string) {
       elements.push(
         <h3
           key={key++}
-          style={{ color: "var(--gold-light)" }}
-          className="text-lg font-semibold mt-6 mb-3"
+          style={{ color: "var(--foreground)", marginTop: "24px", marginBottom: "10px" }}
+          className="text-base font-semibold"
         >
           {line.slice(4)}
         </h3>
@@ -174,7 +194,7 @@ function renderMarkdown(content: string) {
           className={`my-4 pl-5 space-y-1.5 text-lg ${isOrdered ? "list-decimal" : "list-disc"}`}
         >
           {listItems.map((item, idx) => (
-            <li key={idx}>{item}</li>
+            <li key={idx}>{renderInline(item, key * 100 + idx)}</li>
           ))}
         </Tag>
       );
