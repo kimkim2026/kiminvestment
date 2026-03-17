@@ -12,6 +12,15 @@ const categoryColors: Record<string, string> = {
   투자전략: "#3498db",
   부동산: "#e67e22",
   암호화폐: "#9b59b6",
+  "나의 투자 경험담": "#e74c3c",
+};
+
+const categoryTitles: Record<string, string> = {
+  전체: "전체 글",
+  투자가이드: "투자 가이드",
+  "나의투자경험담": "나의 투자 경험담",
+  "나의 투자 경험담": "나의 투자 경험담",
+  "세금법률": "세금 / 법률",
 };
 
 function BlogContent() {
@@ -39,6 +48,8 @@ function BlogContent() {
     });
   }, [allPosts, selectedCategory, searchQuery]);
 
+  const pageTitle = categoryTitles[selectedCategory] ?? selectedCategory;
+
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
       {/* Page Header */}
@@ -47,10 +58,10 @@ function BlogContent() {
           style={{ color: "var(--foreground)" }}
           className="text-3xl md:text-4xl font-bold mb-3"
         >
-          블로그
+          {pageTitle}
         </h1>
         <p style={{ color: "#888" }} className="text-base">
-          투자와 금융에 관한 다양한 인사이트를 공유합니다.
+          미국 부동산 투자에 관한 실전 인사이트를 공유합니다.
         </p>
       </div>
 

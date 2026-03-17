@@ -95,7 +95,7 @@ export default function Footer() {
             © {new Date().getFullYear()} 김통찰의 미국 부동산. All rights reserved.
           </p>
           <p className="mt-1">
-            본 블로그의 모든 내용은 정보 제공 목적이며 투자 권유가 아닙니다.
+            본 사이트의 모든 내용은 정보 제공 목적이며 투자 권유가 아닙니다.
           </p>
         </div>
       </div>

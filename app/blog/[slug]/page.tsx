@@ -228,7 +228,7 @@ export default async function PostPage({ params }: Props) {
       <nav className="flex items-center gap-2 text-sm mb-8" style={{ color: "#666" }}>
         <Link href="/" className="hover:opacity-80">홈</Link>
         <span>/</span>
-        <Link href="/blog" className="hover:opacity-80">블로그</Link>
+        <Link href={`/blog?category=${encodeURIComponent(post.category)}`} className="hover:opacity-80">{post.category}</Link>
         <span>/</span>
         <span style={{ color: "var(--gold)" }} className="truncate max-w-xs">{post.title}</span>
       </nav>
@@ -331,11 +331,11 @@ export default async function PostPage({ params }: Props) {
       {/* Back to Blog */}
       <div className="text-center mt-8">
         <Link
-          href="/blog"
+          href={`/blog?category=${encodeURIComponent(post.category)}`}
           style={{ color: "var(--gold)", border: "1px solid var(--border)" }}
           className="inline-block px-6 py-2.5 rounded-lg text-sm font-medium hover:border-[var(--gold)] transition-colors"
         >
-          ← 블로그 목록으로
+          ← 목록으로
         </Link>
       </div>
     </div>

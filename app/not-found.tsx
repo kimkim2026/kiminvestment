@@ -26,7 +26,7 @@ export default function NotFound() {
             style={{ border: "1px solid var(--border)", color: "var(--foreground)" }}
             className="px-6 py-2.5 rounded-lg font-semibold text-sm hover:border-[var(--gold)] transition-colors"
           >
-            블로그 보기
+            글 목록 보기
           </Link>
         </div>
       </div>

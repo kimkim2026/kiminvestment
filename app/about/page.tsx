@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "소개",
-  description: "Kim Investment 블로그 운영자 소개 페이지입니다.",
+  description: "김통찰의 미국 부동산 운영자 소개 페이지입니다.",
 };
 
 const skills = [
@@ -37,8 +37,8 @@ const timeline = [
   },
   {
     year: "2024",
-    title: "블로그 오픈",
-    desc: "Kim Investment 블로그 개설, 투자 인사이트 공유 시작",
+    title: "사이트 오픈",
+    desc: "김통찰의 미국 부동산 개설, 투자 인사이트 공유 시작",
   },
 ];
 
@@ -77,7 +77,7 @@ export default function AboutPage() {
           소개
         </h1>
         <p style={{ color: "#888" }} className="text-base">
-          Kim Investment 블로그를 운영하는 개인 투자자 소개입니다.
+          김통찰의 미국 부동산을 운영하는 개인 투자자 소개입니다.
         </p>
       </div>
 
@@ -274,7 +274,7 @@ export default function AboutPage() {
           면책 고지
         </h3>
         <p style={{ color: "#888" }} className="text-xs leading-relaxed">
-          본 블로그의 모든 콘텐츠는 개인의 의견과 경험을 바탕으로 한 정보 제공 목적으로만
+          본 사이트의 모든 콘텐츠는 개인의 의견과 경험을 바탕으로 한 정보 제공 목적으로만
           작성되었습니다. 투자 권유나 전문적인 금융 자문이 아니며, 투자 결과에 대한 책임은
           전적으로 투자자 본인에게 있습니다. 투자 전 충분한 조사와 전문가 상담을 권장합니다.
         </p>
@@ -283,14 +283,14 @@ export default function AboutPage() {
       {/* CTA */}
       <div className="text-center mt-12">
         <p style={{ color: "#888" }} className="text-sm mb-4">
-          투자 인사이트가 궁금하시다면 블로그를 방문해보세요.
+          투자 인사이트가 궁금하시다면 글 목록을 방문해보세요.
         </p>
         <Link
           href="/blog"
           style={{ background: "var(--gold)", color: "#000" }}
           className="inline-block px-8 py-3 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity"
         >
-          블로그 보기
+          글 목록 보기
         </Link>
       </div>
     </div>
