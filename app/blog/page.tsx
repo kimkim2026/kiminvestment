@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
-import { getAllPosts, getAllCategories } from "@/lib/posts";
+import { getAllPosts, getAllCategories, slugToCategory } from "@/lib/posts";
 import PostCard from "@/components/PostCard";
 
 const categoryColors: Record<string, string> = {
@@ -20,14 +20,18 @@ const categoryColors: Record<string, string> = {
 const categoryTitles: Record<string, string> = {
   전체: "전체 글",
   투자가이드: "투자 가이드",
+  "investment-guide": "투자 가이드",
   "나의투자경험담": "나의 투자 경험담",
   "나의 투자 경험담": "나의 투자 경험담",
-  "세금법률": "세금 / 법률",
+  "my-experience": "나의 투자 경험담",
+  세금법률: "세금 / 법률",
+  "tax-legal": "세금 / 법률",
 };
 
 function BlogContent() {
   const searchParams = useSearchParams();
-  const initialCategory = searchParams.get("category") || "전체";
+  const rawCategory = searchParams.get("category") || "전체";
+  const initialCategory = rawCategory === "전체" ? "전체" : (slugToCategory(rawCategory) !== rawCategory ? slugToCategory(rawCategory) : rawCategory);
 
   const [selectedCategory, setSelectedCategory] = useState(initialCategory);
   const [searchQuery, setSearchQuery] = useState("");

@@ -14,18 +14,37 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const SITE_URL = "https://kiminvestment.com";
+const HERO_IMAGE = "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "김통찰의 미국 부동산 | 한국인이 미국 집주인 되는 법",
     template: "%s | 김통찰의 미국 부동산",
   },
   description:
-    "한국인이 미국 부동산 투자를 시작하는 방법. 구매 프로세스, 융자/모기지, 세금 신고, LLC 설립까지 실전 경험을 공유합니다.",
-  keywords: ["미국 부동산", "미국 집 구매", "외국인 부동산", "모기지", "LLC", "FBAR", "미국 투자"],
+    "미국 부동산 투자를 꿈꾸는 한국인을 위한 실전 가이드. 구매 프로세스, 모기지, 세금 신고까지 직접 경험한 내용을 한국어로 알려드립니다.",
+  keywords: ["미국 부동산", "미국 집 구매", "외국인 부동산", "모기지", "LLC", "FBAR", "미국 투자", "한국인 미국 부동산"],
   openGraph: {
     siteName: "김통찰의 미국 부동산",
     locale: "ko_KR",
     type: "website",
+    title: "김통찰의 미국 부동산 | 한국인이 미국 집주인 되는 법",
+    description:
+      "미국 부동산 투자를 꿈꾸는 한국인을 위한 실전 가이드. 구매 프로세스, 모기지, 세금 신고까지 직접 경험한 내용을 한국어로 알려드립니다.",
+    url: SITE_URL,
+    images: [{ url: HERO_IMAGE, width: 1200, height: 630, alt: "김통찰의 미국 부동산 투자 가이드" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "김통찰의 미국 부동산 | 한국인이 미국 집주인 되는 법",
+    description:
+      "미국 부동산 투자를 꿈꾸는 한국인을 위한 실전 가이드. 구매 프로세스, 모기지, 세금 신고까지 직접 경험한 내용을 한국어로 알려드립니다.",
+    images: [HERO_IMAGE],
+  },
+  verification: {
+    google: process.env.GOOGLE_SITE_VERIFICATION,
   },
 };
 

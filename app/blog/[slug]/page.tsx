@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getAllPosts, getPostBySlug } from "@/lib/posts";
+import Script from "next/script";
+import { getAllPosts, getPostBySlug, categoryToSlug } from "@/lib/posts";
 import type { Metadata } from "next";
 
 interface Props {
@@ -16,10 +17,30 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) return {};
+
+  const ogImage = post.coverImage
+    ? { url: post.coverImage, width: 1200, height: 630, alt: post.title }
+    : { url: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200", width: 1200, height: 630, alt: post.title };
+
   return {
     title: post.title,
     description: post.excerpt,
     keywords: post.tags,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: `https://kiminvestment.com/blog/${post.slug}`,
+      type: "article",
+      publishedTime: post.date,
+      authors: ["김통찰"],
+      images: [ogImage],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [ogImage.url],
+    },
   };
 }
 
@@ -250,7 +271,7 @@ export default async function PostPage({ params }: Props) {
       <nav className="flex items-center gap-2 text-sm mb-8" style={{ color: "#666" }}>
         <Link href="/" className="hover:opacity-80">홈</Link>
         <span>/</span>
-        <Link href={`/blog?category=${encodeURIComponent(post.category)}`} className="hover:opacity-80">{post.category}</Link>
+        <Link href={`/blog?category=${categoryToSlug(post.category)}`} className="hover:opacity-80">{post.category}</Link>
         <span>/</span>
         <span style={{ color: "var(--gold)" }} className="truncate max-w-xs">{post.title}</span>
       </nav>
@@ -353,13 +374,46 @@ export default async function PostPage({ params }: Props) {
       {/* Back to Blog */}
       <div className="text-center mt-8">
         <Link
-          href={`/blog?category=${encodeURIComponent(post.category)}`}
+          href={`/blog?category=${categoryToSlug(post.category)}`}
           style={{ color: "var(--gold)", border: "1px solid var(--border)" }}
           className="inline-block px-6 py-2.5 rounded-lg text-sm font-medium hover:border-[var(--gold)] transition-colors"
         >
           ← 목록으로
         </Link>
       </div>
+
+      {/* Schema.org Article */}
+      <Script
+        id={`schema-${post.slug}`}
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: post.title,
+            description: post.excerpt,
+            image: post.coverImage || "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200",
+            datePublished: post.date,
+            dateModified: post.date,
+            author: {
+              "@type": "Person",
+              name: "김통찰",
+              url: "https://kiminvestment.com/about",
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "김통찰의 미국 부동산",
+              url: "https://kiminvestment.com",
+            },
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": `https://kiminvestment.com/blog/${post.slug}`,
+            },
+            keywords: post.tags.join(", "),
+            inLanguage: "ko-KR",
+          }),
+        }}
+      />
     </div>
   );
 }

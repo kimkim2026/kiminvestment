@@ -1,6 +1,28 @@
 import Link from "next/link";
-import { getAllPosts } from "@/lib/posts";
+import type { Metadata } from "next";
+import { getAllPosts, categoryToSlug } from "@/lib/posts";
 import PostCard from "@/components/PostCard";
+
+export const metadata: Metadata = {
+  title: "김통찰의 미국 부동산 | 한국인이 미국 집주인 되는 법",
+  description:
+    "미국 부동산 투자를 꿈꾸는 한국인을 위한 실전 가이드. 구매 프로세스, 모기지, 세금 신고까지 직접 경험한 내용을 한국어로 알려드립니다.",
+  openGraph: {
+    title: "김통찰의 미국 부동산 | 한국인이 미국 집주인 되는 법",
+    description:
+      "미국 부동산 투자를 꿈꾸는 한국인을 위한 실전 가이드. 구매 프로세스, 모기지, 세금 신고까지 직접 경험한 내용을 한국어로 알려드립니다.",
+    url: "https://kiminvestment.com",
+    type: "website",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200",
+        width: 1200,
+        height: 630,
+        alt: "한국인을 위한 미국 부동산 투자 가이드",
+      },
+    ],
+  },
+};
 
 export default function HomePage() {
   const posts = getAllPosts();
@@ -53,14 +75,14 @@ export default function HomePage() {
 
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
-              href="/blog?category=투자가이드"
+              href={`/blog?category=${categoryToSlug("투자 가이드")}`}
               style={{ background: "#C9A84C", color: "#000" }}
               className="px-7 py-3 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity"
             >
               투자 가이드 보기
             </Link>
             <Link
-              href="/blog?category=경험담"
+              href={`/blog?category=${categoryToSlug("나의 투자 경험담")}`}
               style={{ border: "1px solid #C9A84C", color: "#fff" }}
               className="px-7 py-3 rounded-lg font-semibold text-sm hover:text-[#C9A84C] transition-colors"
             >
@@ -107,9 +129,9 @@ export default function HomePage() {
           </div>
           <div className="flex flex-wrap gap-3">
             {[
-              { name: "투자 가이드", color: "#2ecc71", emoji: "🏠", href: "/blog?category=투자 가이드" },
-              { name: "세금/법률", color: "#c9a84c", emoji: "📋", href: "/blog?category=세금/법률" },
-              { name: "나의 투자 경험담", color: "#e74c3c", emoji: "📖", href: "/blog?category=나의 투자 경험담" },
+              { name: "투자 가이드", color: "#2ecc71", emoji: "🏠", href: "/blog?category=investment-guide" },
+              { name: "세금/법률", color: "#3498db", emoji: "📋", href: "/blog?category=tax-legal" },
+              { name: "나의 투자 경험담", color: "#e74c3c", emoji: "📖", href: "/blog?category=my-experience" },
             ].map(({ name, color, emoji, href }) => (
               <Link
                 key={name}
