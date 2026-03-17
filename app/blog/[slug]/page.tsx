@@ -29,6 +29,7 @@ const categoryColors: Record<string, string> = {
   투자전략: "#3498db",
   부동산: "#e67e22",
   암호화폐: "#9b59b6",
+  "나의 투자 경험담": "#e74c3c",
 };
 
 function renderMarkdown(content: string) {
@@ -60,6 +61,21 @@ function renderMarkdown(content: string) {
           {line.slice(4)}
         </h3>
       );
+    } else if (line.match(/^!\[([^\]]*)\]\(([^)]+)\)$/)) {
+      const match = line.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+      if (match) {
+        const [, alt, src] = match;
+        elements.push(
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            key={key++}
+            src={src}
+            alt={alt}
+            className="w-full rounded-xl my-6 object-cover"
+            style={{ maxHeight: "400px", border: "1px solid var(--border)" }}
+          />
+        );
+      }
     } else if (line.startsWith("> ")) {
       elements.push(
         <blockquote
@@ -260,6 +276,17 @@ export default async function PostPage({ params }: Props) {
           ))}
         </div>
       </header>
+
+      {/* Cover Image */}
+      {post.coverImage && (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={post.coverImage}
+          alt={post.title}
+          className="w-full rounded-xl mb-8 object-cover"
+          style={{ maxHeight: "420px", border: "1px solid var(--border)" }}
+        />
+      )}
 
       {/* Divider */}
       <div style={{ background: "var(--border)" }} className="h-px mb-10" />

@@ -7,6 +7,7 @@ const categoryColors: Record<string, string> = {
   투자전략: "#3498db",
   부동산: "#e67e22",
   암호화폐: "#9b59b6",
+  "나의 투자 경험담": "#e74c3c",
 };
 
 interface PostCardProps {
