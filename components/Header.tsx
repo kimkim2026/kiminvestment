@@ -4,15 +4,45 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-const navLinks = [
-  { href: "/", label: "홈" },
-  { href: "/blog", label: "블로그" },
-  { href: "/about", label: "소개" },
+const navItems = [
+  { href: "/", label: "홈", submenu: null },
+  {
+    href: "/guide",
+    label: "투자 가이드",
+    submenu: [
+      { href: "/guide/basics", label: "부동산 투자 기초" },
+      { href: "/guide/process", label: "구매 프로세스 A to Z" },
+      { href: "/guide/mortgage", label: "융자/모기지" },
+      { href: "/guide/rental", label: "임대 관리" },
+    ],
+  },
+  {
+    href: "/tax-legal",
+    label: "세금/법률",
+    submenu: [
+      { href: "/tax-legal/tax-filing", label: "외국인 세금 신고" },
+      { href: "/tax-legal/fbar-fatca", label: "FBAR/FATCA" },
+      { href: "/tax-legal/llc", label: "LLC 법인 설립" },
+      { href: "/tax-legal/visa", label: "비자/이민 연계" },
+    ],
+  },
+  {
+    href: "/experience",
+    label: "나의 투자 경험담",
+    submenu: [
+      { href: "/experience/case-study", label: "실제 매물 구매 사례" },
+      { href: "/experience/returns", label: "수익률 실제 계산" },
+      { href: "/experience/lessons", label: "실수 & 교훈" },
+      { href: "/about", label: "운영자 소개" },
+    ],
+  },
 ];
 
 export default function Header() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
+  const [mobileOpenSubmenu, setMobileOpenSubmenu] = useState<string | null>(null);
 
   return (
     <header
@@ -21,38 +51,90 @@ export default function Header() {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
+        <Link href="/" className="flex items-center gap-2 group flex-shrink-0">
           <div
             style={{ background: "var(--gold)" }}
             className="w-8 h-8 rounded flex items-center justify-center font-bold text-black text-sm"
           >
-            K
+            金
           </div>
           <span
             style={{ color: "var(--gold)" }}
-            className="text-lg font-bold tracking-wide"
+            className="text-base font-bold tracking-wide leading-tight"
           >
-            Kim Investment
+            김통찰의 미국 부동산
           </span>
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map(({ href, label }) => {
+        <nav className="hidden md:flex items-center gap-1">
+          {navItems.map(({ href, label, submenu }) => {
             const active =
               href === "/" ? pathname === "/" : pathname.startsWith(href);
+
+            if (!submenu) {
+              return (
+                <Link
+                  key={href}
+                  href={href}
+                  style={{
+                    color: active ? "var(--gold)" : "var(--foreground)",
+                  }}
+                  className="px-3 py-2 text-sm font-medium rounded hover:text-[var(--gold)] transition-colors"
+                >
+                  {label}
+                </Link>
+              );
+            }
+
             return (
-              <Link
+              <div
                 key={href}
-                href={href}
-                style={{
-                  color: active ? "var(--gold)" : "var(--foreground)",
-                  borderBottom: active ? "2px solid var(--gold)" : "2px solid transparent",
-                }}
-                className="text-sm font-medium pb-1 transition-colors hover:opacity-80"
+                className="relative"
+                onMouseEnter={() => setOpenSubmenu(href)}
+                onMouseLeave={() => setOpenSubmenu(null)}
               >
-                {label}
-              </Link>
+                <button
+                  style={{
+                    color: active ? "var(--gold)" : "var(--foreground)",
+                  }}
+                  className="px-3 py-2 text-sm font-medium rounded hover:text-[var(--gold)] transition-colors flex items-center gap-1"
+                >
+                  {label}
+                  <svg
+                    width="10"
+                    height="6"
+                    viewBox="0 0 10 6"
+                    fill="none"
+                    style={{ color: "currentColor" }}
+                    className={`transition-transform ${openSubmenu === href ? "rotate-180" : ""}`}
+                  >
+                    <path d="M1 1l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </button>
+
+                {openSubmenu === href && (
+                  <div
+                    style={{
+                      background: "var(--surface-2)",
+                      border: "1px solid var(--border)",
+                      top: "calc(100% + 4px)",
+                    }}
+                    className="absolute left-0 w-44 rounded-lg shadow-xl shadow-black/40 py-1"
+                  >
+                    {submenu.map(({ href: subHref, label: subLabel }) => (
+                      <Link
+                        key={subHref}
+                        href={subHref}
+                        style={{ color: pathname === subHref ? "var(--gold)" : "#bbb" }}
+                        className="block px-4 py-2 text-xs hover:text-[var(--gold)] hover:bg-[var(--surface)] transition-colors"
+                      >
+                        {subLabel}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             );
           })}
         </nav>
@@ -86,19 +168,59 @@ export default function Header() {
           style={{ background: "var(--surface-2)", borderTop: "1px solid var(--border)" }}
           className="md:hidden px-4 pb-4"
         >
-          {navLinks.map(({ href, label }) => {
-            const active =
-              href === "/" ? pathname === "/" : pathname.startsWith(href);
+          {navItems.map(({ href, label, submenu }) => {
+            const active = href === "/" ? pathname === "/" : pathname.startsWith(href);
+            const mobileOpen = mobileOpenSubmenu === href;
+
+            if (!submenu) {
+              return (
+                <Link
+                  key={href}
+                  href={href}
+                  onClick={() => setMenuOpen(false)}
+                  style={{ color: active ? "var(--gold)" : "var(--foreground)" }}
+                  className="block py-3 text-sm font-medium border-b border-[var(--border)]"
+                >
+                  {label}
+                </Link>
+              );
+            }
+
             return (
-              <Link
-                key={href}
-                href={href}
-                onClick={() => setMenuOpen(false)}
-                style={{ color: active ? "var(--gold)" : "var(--foreground)" }}
-                className="block py-3 text-sm font-medium border-b border-[var(--border)] last:border-0"
-              >
-                {label}
-              </Link>
+              <div key={href} style={{ borderBottom: "1px solid var(--border)" }}>
+                <button
+                  onClick={() => setMobileOpenSubmenu(mobileOpen ? null : href)}
+                  style={{ color: active ? "var(--gold)" : "var(--foreground)" }}
+                  className="w-full flex items-center justify-between py-3 text-sm font-medium"
+                >
+                  {label}
+                  <svg
+                    width="10"
+                    height="6"
+                    viewBox="0 0 10 6"
+                    fill="none"
+                    style={{ color: "currentColor" }}
+                    className={`transition-transform ${mobileOpen ? "rotate-180" : ""}`}
+                  >
+                    <path d="M1 1l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </button>
+                {mobileOpen && (
+                  <div className="pb-2 pl-3 space-y-1">
+                    {submenu.map(({ href: subHref, label: subLabel }) => (
+                      <Link
+                        key={subHref}
+                        href={subHref}
+                        onClick={() => setMenuOpen(false)}
+                        style={{ color: pathname === subHref ? "var(--gold)" : "#888" }}
+                        className="block py-1.5 text-xs"
+                      >
+                        › {subLabel}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             );
           })}
         </div>

@@ -16,14 +16,14 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Kim Investment | 투자 인사이트 블로그",
-    template: "%s | Kim Investment",
+    default: "김통찰의 미국 부동산 | 한국인이 미국 집주인 되는 법",
+    template: "%s | 김통찰의 미국 부동산",
   },
   description:
-    "주식, ETF, 부동산, 암호화폐 등 다양한 투자 분야의 인사이트와 분석을 제공하는 금융 블로그입니다.",
-  keywords: ["투자", "주식", "ETF", "부동산", "금융", "재테크"],
+    "한국인이 미국 부동산 투자를 시작하는 방법. 구매 프로세스, 융자/모기지, 세금 신고, LLC 설립까지 실전 경험을 공유합니다.",
+  keywords: ["미국 부동산", "미국 집 구매", "외국인 부동산", "모기지", "LLC", "FBAR", "미국 투자"],
   openGraph: {
-    siteName: "Kim Investment",
+    siteName: "김통찰의 미국 부동산",
     locale: "ko_KR",
     type: "website",
   },

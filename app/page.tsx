@@ -36,38 +36,38 @@ export default function HomePage() {
                 className="rounded-full animate-pulse"
               />
               <span style={{ color: "var(--gold)" }} className="text-xs font-semibold uppercase tracking-widest">
-                Investment Insights
+                미국 부동산 투자 인사이트
               </span>
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
-              <span style={{ color: "var(--foreground)" }}>스마트한 투자를 위한</span>
+              <span style={{ color: "var(--foreground)" }}>한국인이</span>
               <br />
-              <span style={{ color: "var(--gold)" }}>Kim Investment</span>
+              <span style={{ color: "var(--gold)" }}>미국 집주인 되는 법</span>
             </h1>
 
             <p style={{ color: "#999" }} className="text-lg leading-relaxed mb-8 max-w-lg">
-              주식, ETF, 부동산, 암호화폐까지 — 데이터 기반의 투자 분석과
-              실전 전략을 제공합니다. 장기적 부의 창출을 함께 추구합니다.
+              미국 부동산 구매 프로세스부터 융자, 세금 신고, LLC 설립까지 —
+              직접 경험한 내용을 한국어로 쉽게 알려드립니다.
             </p>
 
             <div className="flex flex-wrap gap-4">
               <Link
-                href="/blog"
+                href="/guide"
                 style={{ background: "var(--gold)", color: "#000" }}
                 className="px-6 py-3 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity"
               >
-                블로그 보기
+                투자 가이드 보기
               </Link>
               <Link
-                href="/about"
+                href="/experience"
                 style={{
                   border: "1px solid var(--border)",
                   color: "var(--foreground)",
                 }}
                 className="px-6 py-3 rounded-lg font-semibold text-sm hover:border-[var(--gold)] transition-colors"
               >
-                운영자 소개
+                나의 경험담
               </Link>
             </div>
           </div>
