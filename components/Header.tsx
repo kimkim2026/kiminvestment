@@ -52,12 +52,15 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group flex-shrink-0">
-          <div
-            style={{ background: "var(--gold)" }}
-            className="w-8 h-8 rounded flex items-center justify-center font-bold text-black text-sm"
-          >
-            金
-          </div>
+          <svg viewBox="0 0 48 48" width="36" height="36">
+            <polygon
+              points="24,6 44,22 40,22 40,42 28,42 28,30 20,30 20,42 8,42 8,22 4,22"
+              fill="none"
+              stroke="#C9A84C"
+              strokeWidth="2.5"
+              strokeLinejoin="round"
+            />
+          </svg>
           <span
             style={{ color: "var(--gold)" }}
             className="text-base font-bold tracking-wide leading-tight"

@@ -14,12 +14,15 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <div
-                style={{ background: "var(--gold)" }}
-                className="w-7 h-7 rounded flex items-center justify-center font-bold text-black text-xs"
-              >
-                金
-              </div>
+              <svg viewBox="0 0 48 48" width="30" height="30">
+                <polygon
+                  points="24,6 44,22 40,22 40,42 28,42 28,30 20,30 20,42 8,42 8,22 4,22"
+                  fill="none"
+                  stroke="#C9A84C"
+                  strokeWidth="2.5"
+                  strokeLinejoin="round"
+                />
+              </svg>
               <span style={{ color: "var(--gold)" }} className="font-bold text-sm">
                 김통찰의 미국 부동산
               </span>
