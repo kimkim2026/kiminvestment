@@ -4,7 +4,7 @@ import PostCard from "@/components/PostCard";
 
 export default function HomePage() {
   const posts = getAllPosts();
-  const recentPosts = posts.slice(0, 3);
+  const recentPosts = posts.slice(0, 6);
 
   return (
     <>
