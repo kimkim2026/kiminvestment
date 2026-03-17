@@ -12,64 +12,61 @@ export default function HomePage() {
       {/* Hero Section */}
       <section
         style={{
-          background:
-            "linear-gradient(135deg, var(--surface) 0%, var(--background) 60%)",
-          borderBottom: "1px solid var(--border)",
+          backgroundImage: "url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          minHeight: "500px",
         }}
-        className="relative overflow-hidden py-24 px-4"
+        className="relative flex items-center overflow-hidden px-4 py-24"
       >
-        {/* Background decorative elements */}
+        {/* Dark overlay */}
         <div
-          style={{
-            background:
-              "radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%)",
-          }}
-          className="absolute inset-0 pointer-events-none"
+          style={{ background: "rgba(0,0,0,0.6)" }}
+          className="absolute inset-0"
         />
 
-        <div className="max-w-6xl mx-auto relative">
-          <div className="max-w-2xl">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 mb-6">
-              <div
-                style={{ background: "var(--gold)", width: 8, height: 8 }}
-                className="rounded-full animate-pulse"
-              />
-              <span style={{ color: "var(--gold)" }} className="text-xs font-semibold uppercase tracking-widest">
-                미국 부동산 투자 인사이트
-              </span>
-            </div>
+        {/* Content */}
+        <div className="max-w-6xl mx-auto w-full relative z-10 text-center">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 mb-6">
+            <div
+              style={{ background: "var(--gold)", width: 8, height: 8 }}
+              className="rounded-full animate-pulse"
+            />
+            <span style={{ color: "var(--gold)" }} className="text-xs font-semibold uppercase tracking-widest">
+              미국 부동산 투자 인사이트
+            </span>
+          </div>
 
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
-              <span style={{ color: "var(--foreground)" }}>한국인이</span>
-              <br />
-              <span style={{ color: "var(--gold)" }}>미국 집주인 되는 법</span>
-            </h1>
+          <h1 className="font-bold leading-tight mb-4">
+            <span className="block text-4xl md:text-6xl text-white mb-2">
+              김통찰의 미국 부동산
+            </span>
+            <span style={{ color: "#C9A84C" }} className="block text-2xl md:text-4xl">
+              한국인이 미국 집주인 되는 법
+            </span>
+          </h1>
 
-            <p style={{ color: "#999" }} className="text-lg leading-relaxed mb-8 max-w-lg">
-              미국 부동산 구매 프로세스부터 융자, 세금 신고, LLC 설립까지 —
-              직접 경험한 내용을 한국어로 쉽게 알려드립니다.
-            </p>
+          <p className="text-base md:text-lg leading-relaxed mb-10 max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.75)" }}>
+            미국 부동산 구매 프로세스부터 융자, 세금 신고, LLC 설립까지 —
+            직접 경험한 내용을 한국어로 쉽게 알려드립니다.
+          </p>
 
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="/guide"
-                style={{ background: "var(--gold)", color: "#000" }}
-                className="px-6 py-3 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity"
-              >
-                투자 가이드 보기
-              </Link>
-              <Link
-                href="/experience"
-                style={{
-                  border: "1px solid var(--border)",
-                  color: "var(--foreground)",
-                }}
-                className="px-6 py-3 rounded-lg font-semibold text-sm hover:border-[var(--gold)] transition-colors"
-              >
-                나의 경험담
-              </Link>
-            </div>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Link
+              href="/blog"
+              style={{ background: "#C9A84C", color: "#000" }}
+              className="px-7 py-3 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity"
+            >
+              블로그 보기
+            </Link>
+            <Link
+              href="/experience"
+              style={{ border: "1px solid rgba(255,255,255,0.35)", color: "#fff" }}
+              className="px-7 py-3 rounded-lg font-semibold text-sm hover:border-[#C9A84C] hover:text-[#C9A84C] transition-colors"
+            >
+              나의 경험담
+            </Link>
           </div>
         </div>
       </section>
