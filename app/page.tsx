@@ -4,8 +4,7 @@ import PostCard from "@/components/PostCard";
 
 export default function HomePage() {
   const posts = getAllPosts();
-  const featuredPost = posts[0];
-  const recentPosts = posts.slice(1, 5);
+  const recentPosts = posts.slice(0, 3);
 
   return (
     <>
@@ -71,51 +70,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Stats Bar */}
-      <section
-        style={{ background: "var(--surface-2)", borderBottom: "1px solid var(--border)" }}
-        className="py-6 px-4"
-      >
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-3 gap-4 text-center">
-            {[
-              { label: "게시글", value: `${posts.length}+` },
-              { label: "투자 카테고리", value: "5개" },
-              { label: "운영 기간", value: "2024~" },
-            ].map(({ label, value }) => (
-              <div key={label}>
-                <div style={{ color: "var(--gold)" }} className="text-2xl font-bold">
-                  {value}
-                </div>
-                <div style={{ color: "#666" }} className="text-xs mt-1">
-                  {label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16">
-        {/* Featured Post */}
-        {featuredPost && (
-          <section className="mb-16">
-            <div className="flex items-center gap-3 mb-6">
-              <div style={{ background: "var(--gold)", width: 4 }} className="h-6 rounded-full" />
-              <h2 className="text-xl font-bold" style={{ color: "var(--foreground)" }}>
-                최신 글
-              </h2>
-            </div>
-            <PostCard post={featuredPost} featured />
-          </section>
-        )}
-
-        {/* Recent Posts Grid */}
+        {/* Recent Posts */}
         {recentPosts.length > 0 && (
           <section className="mb-12">
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-3">
-                <div style={{ background: "var(--green)", width: 4 }} className="h-6 rounded-full" />
+                <div style={{ background: "var(--gold)", width: 4 }} className="h-6 rounded-full" />
                 <h2 className="text-xl font-bold" style={{ color: "var(--foreground)" }}>
                   최근 글
                 </h2>
@@ -146,15 +107,13 @@ export default function HomePage() {
           </div>
           <div className="flex flex-wrap gap-3">
             {[
-              { name: "주식", color: "#2ecc71", emoji: "📈" },
-              { name: "ETF", color: "#c9a84c", emoji: "📊" },
-              { name: "투자전략", color: "#3498db", emoji: "🎯" },
-              { name: "부동산", color: "#e67e22", emoji: "🏢" },
-              { name: "암호화폐", color: "#9b59b6", emoji: "₿" },
-            ].map(({ name, color, emoji }) => (
+              { name: "투자 가이드", color: "#2ecc71", emoji: "🏠", href: "/blog?category=투자 가이드" },
+              { name: "세금/법률", color: "#c9a84c", emoji: "📋", href: "/blog?category=세금/법률" },
+              { name: "나의 투자 경험담", color: "#e74c3c", emoji: "📖", href: "/blog?category=나의 투자 경험담" },
+            ].map(({ name, color, emoji, href }) => (
               <Link
                 key={name}
-                href={`/blog?category=${name}`}
+                href={href}
                 style={{
                   border: `1px solid ${color}40`,
                   color,
