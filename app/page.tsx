@@ -54,18 +54,18 @@ export default function HomePage() {
 
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
-              href="/blog"
+              href="/blog?category=투자가이드"
               style={{ background: "#C9A84C", color: "#000" }}
               className="px-7 py-3 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity"
             >
-              블로그 보기
+              투자 가이드 보기
             </Link>
             <Link
-              href="/experience"
-              style={{ border: "1px solid rgba(255,255,255,0.35)", color: "#fff" }}
-              className="px-7 py-3 rounded-lg font-semibold text-sm hover:border-[#C9A84C] hover:text-[#C9A84C] transition-colors"
+              href="/blog?category=경험담"
+              style={{ border: "1px solid #C9A84C", color: "#fff" }}
+              className="px-7 py-3 rounded-lg font-semibold text-sm hover:text-[#C9A84C] transition-colors"
             >
-              나의 경험담
+              나의 경험담 보기
             </Link>
           </div>
         </div>
