@@ -30,6 +30,7 @@ const categoryColors: Record<string, string> = {
   부동산: "#e67e22",
   암호화폐: "#9b59b6",
   "나의 투자 경험담": "#e74c3c",
+  "투자 가이드": "#2ecc71",
 };
 
 function renderMarkdown(content: string) {
