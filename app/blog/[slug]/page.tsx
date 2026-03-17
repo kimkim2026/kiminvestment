@@ -84,8 +84,9 @@ function renderMarkdown(content: string) {
             borderLeft: "3px solid var(--gold)",
             background: "var(--surface-2)",
             color: "#aaa",
+            lineHeight: 1.9,
           }}
-          className="pl-4 py-3 pr-4 rounded-r-lg my-4 text-sm italic"
+          className="pl-4 py-3 pr-4 rounded-r-lg my-4 text-base md:text-lg italic"
         >
           {line.slice(2)}
         </blockquote>
@@ -167,8 +168,8 @@ function renderMarkdown(content: string) {
       elements.push(
         <Tag
           key={key++}
-          style={{ color: "#bbb" }}
-          className={`my-4 pl-5 space-y-1.5 text-sm leading-relaxed ${isOrdered ? "list-decimal" : "list-disc"}`}
+          style={{ color: "#bbb", lineHeight: 1.9 }}
+          className={`my-4 pl-5 space-y-1.5 text-base md:text-lg ${isOrdered ? "list-decimal" : "list-disc"}`}
         >
           {listItems.map((item, idx) => (
             <li key={idx}>{item}</li>
@@ -178,7 +179,7 @@ function renderMarkdown(content: string) {
       continue;
     } else if (line.startsWith("**") && line.endsWith("**")) {
       elements.push(
-        <p key={key++} style={{ color: "var(--foreground)" }} className="font-semibold my-3 text-sm">
+        <p key={key++} style={{ color: "var(--foreground)", lineHeight: 1.9 }} className="font-semibold my-3 text-base md:text-lg">
           {line.slice(2, -2)}
         </p>
       );
@@ -188,7 +189,7 @@ function renderMarkdown(content: string) {
       // Parse inline bold
       const parts = line.split(/(\*\*[^*]+\*\*)/g);
       elements.push(
-        <p key={key++} style={{ color: "#ccc" }} className="my-3 text-sm leading-relaxed">
+        <p key={key++} style={{ color: "#ccc", lineHeight: 1.9 }} className="my-3 text-base md:text-lg">
           {parts.map((part, idx) => {
             if (part.startsWith("**") && part.endsWith("**")) {
               return (
