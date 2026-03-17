@@ -777,10 +777,15 @@ LLC(유한책임회사)는 기본적으로 Pass-Through Entity입니다. LLC 자
   },
 ];
 
+function sortByDateDesc(a: Post, b: Post): number {
+  const dateDiff = new Date(b.date).getTime() - new Date(a.date).getTime();
+  if (dateDiff !== 0) return dateDiff;
+  // 날짜가 같으면 slug 역순 (알파벳 내림차순)
+  return b.slug.localeCompare(a.slug);
+}
+
 export function getAllPosts(): Post[] {
-  return posts.sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-  );
+  return [...posts].sort(sortByDateDesc);
 }
 
 export function getPostBySlug(slug: string): Post | undefined {
@@ -788,7 +793,7 @@ export function getPostBySlug(slug: string): Post | undefined {
 }
 
 export function getPostsByCategory(category: string): Post[] {
-  return posts.filter((p) => p.category === category);
+  return posts.filter((p) => p.category === category).sort(sortByDateDesc);
 }
 
 export function getAllCategories(): string[] {
