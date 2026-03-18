@@ -30,7 +30,7 @@ const navItems = [
     href: "__experience",
     label: "나의 투자 경험담",
     submenu: [
-      { href: "/blog/duplex-renovation-bedroom-addition", label: "실제 매물 구매 사례" },
+      { href: "/blog?category=my-experience&tag=매물구매사례", label: "실제 매물 구매 사례" },
       { href: "/blog/korea-vs-usa-real-estate-investment", label: "수익률 실제 계산" },
       { href: "/blog/tree-removal-cost-usa", label: "실수 & 교훈" },
       { href: "/about", label: "운영자 소개" },
