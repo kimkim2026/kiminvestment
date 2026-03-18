@@ -1,184 +1,71 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "소개",
+  title: "운영자 소개",
   description: "김통찰의 미국 부동산 운영자 소개 페이지입니다.",
 };
 
-const skills = [
-  { label: "주식 분석", value: 90 },
-  { label: "ETF 투자", value: 85 },
-  { label: "부동산", value: 70 },
-  { label: "암호화폐", value: 65 },
-  { label: "거시경제 분석", value: 80 },
-];
-
-const timeline = [
-  {
-    year: "2014",
-    title: "투자 시작",
-    desc: "첫 주식 계좌 개설, 국내 주식 투자 시작",
-  },
-  {
-    year: "2017",
-    title: "해외 주식 투자",
-    desc: "미국 주식 시장 진입, S&P500 ETF 투자 시작",
-  },
-  {
-    year: "2019",
-    title: "부동산 투자",
-    desc: "첫 부동산 투자 및 REITs 포트폴리오 구성",
-  },
-  {
-    year: "2021",
-    title: "암호화폐 진입",
-    desc: "비트코인, 이더리움 소액 분산 투자",
-  },
-  {
-    year: "2024",
-    title: "사이트 오픈",
-    desc: "김통찰의 미국 부동산 개설, 투자 인사이트 공유 시작",
-  },
-];
-
-const investmentPhilosophy = [
-  {
-    icon: "📊",
-    title: "데이터 기반 분석",
-    desc: "감정이 아닌 데이터와 논리에 근거한 투자 결정을 추구합니다.",
-  },
-  {
-    icon: "⏳",
-    title: "장기 투자",
-    desc: "단기 시세 차익보다 장기적인 복리 효과를 중시합니다.",
-  },
-  {
-    icon: "🌐",
-    title: "글로벌 분산",
-    desc: "국내외 다양한 자산 클래스에 분산 투자하여 리스크를 관리합니다.",
-  },
-  {
-    icon: "📚",
-    title: "지속적 학습",
-    desc: "시장은 끊임없이 변합니다. 지속적인 공부와 업데이트가 핵심입니다.",
-  },
+const topics = [
+  "미국 부동산 구매 프로세스 (처음부터 끝까지)",
+  "외국인 모기지 및 융자 전략",
+  "세입자 스크리닝과 임대 관리 실전",
+  "FBAR, FIRPTA, 세금 신고 등 세금/법률 이슈",
+  "한국과 미국 부동산 투자 비교",
+  "리노베이션, 유지보수 등 실제 운용 경험",
 ];
 
 export default function AboutPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
-      {/* Page Header */}
-      <div className="mb-12">
-        <h1
-          style={{ color: "var(--foreground)" }}
-          className="text-3xl md:text-4xl font-bold mb-3"
-        >
-          소개
-        </h1>
-        <p style={{ color: "#888" }} className="text-base">
-          김통찰의 미국 부동산을 운영하는 개인 투자자 소개입니다.
-        </p>
+    <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12">
+      {/* Hero Image */}
+      <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden mb-12">
+        <Image
+          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200"
+          alt="도시 빌딩 부동산"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background: "linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.55) 100%)",
+          }}
+        />
+        <div className="absolute bottom-0 left-0 p-8">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-1">운영자 소개</h1>
+          <p style={{ color: "#C9A84C" }} className="text-sm font-medium">
+            김통찰
+          </p>
+        </div>
       </div>
 
-      {/* Profile Card */}
+      {/* Intro */}
       <section
         style={{
           background: "var(--surface)",
           border: "1px solid var(--border)",
         }}
-        className="rounded-2xl p-8 mb-12"
+        className="rounded-2xl p-8 mb-10"
       >
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
-          {/* Avatar */}
-          <div className="flex-shrink-0">
-            <div
-              style={{
-                background: "linear-gradient(135deg, var(--gold) 0%, #8b6914 100%)",
-                width: 100,
-                height: 100,
-              }}
-              className="rounded-full flex items-center justify-center text-4xl font-bold text-black"
-            >
-              K
-            </div>
-          </div>
-
-          {/* Info */}
-          <div className="flex-1 text-center md:text-left">
-            <h2 style={{ color: "var(--gold)" }} className="text-2xl font-bold mb-1">
-              Kim
-            </h2>
-            <p style={{ color: "#888" }} className="text-sm mb-4">
-              개인 투자자 · 금융 블로거
-            </p>
-            <p style={{ color: "#bbb" }} className="text-sm leading-relaxed mb-6 max-w-xl">
-              10년 이상의 투자 경험을 바탕으로 국내외 주식, ETF, 부동산, 암호화폐 등
-              다양한 자산 클래스에 분산 투자하고 있습니다. 복잡한 금융 정보를
-              누구나 이해하기 쉽게 정리하고 공유하는 것을 목표로 합니다.
-            </p>
-
-            {/* Contact/Social */}
-            <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-              {[
-                { label: "이메일", icon: "✉️", href: "mailto:contact@kiminvestment.com" },
-                { label: "트위터", icon: "𝕏", href: "#" },
-              ].map(({ label, icon, href }) => (
-                <a
-                  key={label}
-                  href={href}
-                  style={{
-                    border: "1px solid var(--border)",
-                    color: "var(--foreground)",
-                    background: "var(--surface-2)",
-                  }}
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm hover:border-[var(--gold)] transition-colors"
-                >
-                  <span>{icon}</span>
-                  <span>{label}</span>
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
+        <p style={{ color: "var(--foreground)" }} className="text-base leading-relaxed mb-5">
+          안녕하세요, <span style={{ color: "#C9A84C" }} className="font-semibold">김통찰</span>입니다.
+        </p>
+        <p style={{ color: "#bbb" }} className="text-base leading-relaxed mb-5">
+          한국과 미국 양쪽에서 부동산 투자를 직접 해오고 있습니다.
+          한국에서 먼저 부동산 투자를 시작했고, 이후 미국으로 투자 범위를 넓혀
+          현재까지 미국 부동산을 직접 운용하고 있습니다.
+        </p>
       </section>
 
-      {/* Investment Philosophy */}
-      <section className="mb-12">
-        <div className="flex items-center gap-3 mb-6">
-          <div style={{ background: "var(--gold)", width: 4 }} className="h-6 rounded-full" />
+      {/* Why this site */}
+      <section className="mb-10">
+        <div className="flex items-center gap-3 mb-5">
+          <div style={{ background: "#C9A84C", width: 4 }} className="h-6 rounded-full flex-shrink-0" />
           <h2 style={{ color: "var(--foreground)" }} className="text-xl font-bold">
-            투자 철학
-          </h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {investmentPhilosophy.map(({ icon, title, desc }) => (
-            <div
-              key={title}
-              style={{
-                background: "var(--surface)",
-                border: "1px solid var(--border)",
-              }}
-              className="p-5 rounded-xl hover:border-[var(--gold)] transition-colors"
-            >
-              <div className="text-2xl mb-3">{icon}</div>
-              <h3 style={{ color: "var(--gold)" }} className="font-semibold mb-2 text-sm">
-                {title}
-              </h3>
-              <p style={{ color: "#888" }} className="text-sm leading-relaxed">
-                {desc}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Skills */}
-      <section className="mb-12">
-        <div className="flex items-center gap-3 mb-6">
-          <div style={{ background: "var(--green)", width: 4 }} className="h-6 rounded-full" />
-          <h2 style={{ color: "var(--foreground)" }} className="text-xl font-bold">
-            투자 분야
+            이 사이트를 만든 이유
           </h2>
         </div>
         <div
@@ -186,78 +73,63 @@ export default function AboutPage() {
             background: "var(--surface)",
             border: "1px solid var(--border)",
           }}
-          className="rounded-xl p-6 space-y-5"
+          className="rounded-xl p-7 space-y-4"
         >
-          {skills.map(({ label, value }) => (
-            <div key={label}>
-              <div className="flex justify-between mb-1.5">
-                <span style={{ color: "var(--foreground)" }} className="text-sm font-medium">
-                  {label}
-                </span>
-                <span style={{ color: "var(--gold)" }} className="text-sm font-semibold">
-                  {value}%
-                </span>
-              </div>
-              <div
-                style={{ background: "var(--surface-2)" }}
-                className="h-1.5 rounded-full overflow-hidden"
-              >
-                <div
-                  style={{
-                    width: `${value}%`,
-                    background: "linear-gradient(90deg, var(--gold) 0%, var(--green) 100%)",
-                  }}
-                  className="h-full rounded-full"
-                />
-              </div>
-            </div>
-          ))}
+          <p style={{ color: "#bbb" }} className="text-base leading-relaxed">
+            미국 부동산에 관심을 갖기 시작했을 때, 한국어로 된 실용적인 정보가 생각보다 너무 없었습니다.
+            있어도 이론적이거나, 실제와 다른 내용이 많았습니다. 직접 겪어보지 않으면 알 수 없는 것들이
+            너무 많더라고요.
+          </p>
+          <p style={{ color: "#bbb" }} className="text-base leading-relaxed">
+            그래서 직접 경험한 것들을 기록하기 시작했습니다. 매물 구입 과정, 세입자 관리, 리노베이션,
+            세금 신고까지 실제로 겪은 내용을 있는 그대로 공유하고 싶었습니다.
+          </p>
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="mb-12">
-        <div className="flex items-center gap-3 mb-6">
-          <div style={{ background: "var(--gold)", width: 4 }} className="h-6 rounded-full" />
+      {/* Topics */}
+      <section className="mb-10">
+        <div className="flex items-center gap-3 mb-5">
+          <div style={{ background: "#C9A84C", width: 4 }} className="h-6 rounded-full flex-shrink-0" />
           <h2 style={{ color: "var(--foreground)" }} className="text-xl font-bold">
-            투자 이력
+            이 사이트에서 다루는 내용
           </h2>
         </div>
-        <div className="relative">
-          <div
-            style={{ background: "var(--border)", left: "3.5rem" }}
-            className="absolute top-0 bottom-0 w-px"
-          />
-          <div className="space-y-6">
-            {timeline.map(({ year, title, desc }) => (
-              <div key={year} className="flex gap-6">
-                {/* Year */}
-                <div
-                  style={{ color: "var(--gold)", minWidth: "3.5rem" }}
-                  className="text-sm font-bold text-right pt-1 relative"
-                >
-                  {year}
-                  <div
-                    style={{
-                      background: "var(--gold)",
-                      right: "-4px",
-                      top: "7px",
-                    }}
-                    className="absolute w-2 h-2 rounded-full"
-                  />
-                </div>
-                {/* Content */}
-                <div className="pl-4 pb-2">
-                  <h3 style={{ color: "var(--foreground)" }} className="font-semibold text-sm mb-1">
-                    {title}
-                  </h3>
-                  <p style={{ color: "#888" }} className="text-sm leading-relaxed">
-                    {desc}
-                  </p>
-                </div>
-              </div>
+        <div
+          style={{
+            background: "var(--surface)",
+            border: "1px solid var(--border)",
+          }}
+          className="rounded-xl p-7"
+        >
+          <ul className="space-y-3">
+            {topics.map((topic) => (
+              <li key={topic} className="flex items-start gap-3">
+                <span style={{ color: "#C9A84C" }} className="mt-0.5 flex-shrink-0 text-lg leading-none">
+                  ·
+                </span>
+                <span style={{ color: "#bbb" }} className="text-base leading-relaxed">
+                  {topic}
+                </span>
+              </li>
             ))}
-          </div>
+          </ul>
+        </div>
+      </section>
+
+      {/* Stance */}
+      <section className="mb-10">
+        <div
+          style={{
+            background: "var(--surface)",
+            border: "1px solid var(--border)",
+          }}
+          className="rounded-xl p-7 space-y-4"
+        >
+          <p style={{ color: "#bbb" }} className="text-base leading-relaxed">
+            전문 투자 기관이 아닙니다. 저도 여전히 배우면서 투자하고 있습니다.
+            다만 제가 직접 경험하고 공부한 내용이기 때문에, 적어도 현실과 동떨어진 이야기는 하지 않으려고 합니다.
+          </p>
         </div>
       </section>
 
@@ -266,31 +138,30 @@ export default function AboutPage() {
         style={{
           background: "var(--surface-2)",
           border: "1px solid var(--border)",
-          borderLeft: "3px solid var(--gold)",
+          borderLeft: "3px solid #C9A84C",
         }}
-        className="rounded-lg p-6"
+        className="rounded-lg p-6 mb-12"
       >
-        <h3 style={{ color: "var(--gold)" }} className="font-semibold text-sm mb-3">
+        <h3 style={{ color: "#C9A84C" }} className="font-semibold text-sm mb-3">
           면책 고지
         </h3>
-        <p style={{ color: "#888" }} className="text-xs leading-relaxed">
-          본 사이트의 모든 콘텐츠는 개인의 의견과 경험을 바탕으로 한 정보 제공 목적으로만
-          작성되었습니다. 투자 권유나 전문적인 금융 자문이 아니며, 투자 결과에 대한 책임은
-          전적으로 투자자 본인에게 있습니다. 투자 전 충분한 조사와 전문가 상담을 권장합니다.
+        <p style={{ color: "#888" }} className="text-sm leading-relaxed">
+          이 사이트의 모든 내용은 정보 제공 목적이며 투자 권유가 아닙니다.
+          투자 결정은 반드시 본인의 판단과 책임 하에 하시기 바랍니다.
         </p>
       </section>
 
       {/* CTA */}
-      <div className="text-center mt-12">
-        <p style={{ color: "#888" }} className="text-sm mb-4">
-          투자 인사이트가 궁금하시다면 글 목록을 방문해보세요.
+      <div className="text-center">
+        <p style={{ color: "#888" }} className="text-sm mb-5">
+          궁금한 점이 있으시거나, 경험을 나누고 싶으신 분들은 편하게 연락해 주세요.
         </p>
         <Link
-          href="/blog"
-          style={{ background: "var(--gold)", color: "#000" }}
-          className="inline-block px-8 py-3 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity"
+          href="/contact"
+          style={{ background: "#C9A84C", color: "#000" }}
+          className="inline-block px-10 py-3.5 rounded-lg font-bold text-sm hover:opacity-90 transition-opacity"
         >
-          글 목록 보기
+          문의하기
         </Link>
       </div>
     </div>
