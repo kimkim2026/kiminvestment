@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "운영자 소개",
@@ -20,21 +19,22 @@ export default function AboutPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12">
       {/* Hero Image */}
-      <div className="relative w-full h-64 md:h-80 rounded-2xl overflow-hidden mb-12">
-        <Image
-          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200"
-          alt="도시 빌딩 부동산"
-          fill
-          className="object-cover"
-          priority
-        />
+      <div
+        className="relative w-full rounded-2xl overflow-hidden mb-12 flex items-end"
+        style={{
+          minHeight: 300,
+          backgroundImage: "url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        {/* Dark overlay */}
         <div
           className="absolute inset-0"
-          style={{
-            background: "linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.55) 100%)",
-          }}
+          style={{ background: "rgba(0,0,0,0.55)" }}
         />
-        <div className="absolute bottom-0 left-0 p-8">
+        {/* Text */}
+        <div className="relative z-10 p-8">
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-1">운영자 소개</h1>
           <p style={{ color: "#C9A84C" }} className="text-sm font-medium">
             김통찰
