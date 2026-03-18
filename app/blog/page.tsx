@@ -31,6 +31,7 @@ const categoryTitles: Record<string, string> = {
 function BlogContent() {
   const searchParams = useSearchParams();
   const rawCategory = searchParams.get("category") || "전체";
+  const rawTag = searchParams.get("tag") || "";
   const initialCategory = rawCategory === "전체" ? "전체" : (slugToCategory(rawCategory) !== rawCategory ? slugToCategory(rawCategory) : rawCategory);
 
   const [selectedCategory, setSelectedCategory] = useState(initialCategory);
@@ -43,6 +44,9 @@ function BlogContent() {
     return allPosts.filter((post) => {
       const categoryMatch =
         selectedCategory === "전체" || post.category === selectedCategory;
+      const tagMatch =
+        !rawTag ||
+        post.tags.some((tag) => tag.toLowerCase() === rawTag.toLowerCase());
       const searchMatch =
         !searchQuery ||
         post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -50,9 +54,9 @@ function BlogContent() {
         post.tags.some((tag) =>
           tag.toLowerCase().includes(searchQuery.toLowerCase())
         );
-      return categoryMatch && searchMatch;
+      return categoryMatch && tagMatch && searchMatch;
     });
-  }, [allPosts, selectedCategory, searchQuery]);
+  }, [allPosts, selectedCategory, searchQuery, rawTag]);
 
   const pageTitle = categoryTitles[selectedCategory] ?? selectedCategory;
 
@@ -121,13 +125,19 @@ function BlogContent() {
             <PostCard key={post.slug} post={post} />
           ))}
         </div>
-      ) : (
+      ) : searchQuery ? (
         <div className="text-center py-20">
           <p style={{ color: "#555" }} className="text-lg mb-2">
             검색 결과가 없습니다.
           </p>
           <p style={{ color: "#444" }} className="text-sm">
             다른 검색어나 카테고리를 시도해보세요.
+          </p>
+        </div>
+      ) : (
+        <div className="text-center py-20">
+          <p style={{ color: "#888" }} className="text-base">
+            준비 중입니다. 곧 업로드될 예정입니다.
           </p>
         </div>
       )}
