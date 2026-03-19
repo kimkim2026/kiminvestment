@@ -20,7 +20,7 @@ const HERO_IMAGE = "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "김통찰의 미국 부동산 | 한국인이 미국 집주인 되는 법",
+    default: "한국인 미국 부동산 투자 가이드 — 김통찰의 미국 부동산",
     template: "%s | 김통찰의 미국 부동산",
   },
   description:

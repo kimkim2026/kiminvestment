@@ -22,13 +22,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     ? { url: post.coverImage, width: 1200, height: 630, alt: post.title }
     : { url: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200", width: 1200, height: 630, alt: post.title };
 
+  const metaTitle = post.metaTitle ?? post.title;
+  const metaDescription = post.metaDescription ?? post.excerpt;
+
   return {
-    title: post.title,
-    description: post.excerpt,
+    title: metaTitle,
+    description: metaDescription,
     keywords: post.tags,
     openGraph: {
-      title: post.title,
-      description: post.excerpt,
+      title: metaTitle,
+      description: metaDescription,
       url: `https://kiminvestment.com/blog/${post.slug}`,
       type: "article",
       publishedTime: post.date,
@@ -37,8 +40,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
-      description: post.excerpt,
+      title: metaTitle,
+      description: metaDescription,
       images: [ogImage.url],
     },
   };
