@@ -45,6 +45,9 @@ export const metadata: Metadata = {
   },
   verification: {
     google: process.env.GOOGLE_SITE_VERIFICATION,
+    other: {
+      "naver-site-verification": "여기에_발급된_코드_입력",
+    },
   },
 };
 
