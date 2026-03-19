@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import SearchModal from "@/components/SearchModal";
 
 const navItems = [
   { href: "/", label: "홈", submenu: null },
@@ -44,6 +45,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
   const [mobileOpenSubmenu, setMobileOpenSubmenu] = useState<string | null>(null);
+  const [searchOpen, setSearchOpen] = useState(false);
 
   return (
     <header
@@ -143,6 +145,19 @@ export default function Header() {
           })}
         </nav>
 
+        {/* Search Button */}
+        <button
+          onClick={() => setSearchOpen(true)}
+          aria-label="검색"
+          style={{ color: "#888" }}
+          className="p-2 hover:text-[#C9A84C] transition-colors"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <circle cx="11" cy="11" r="8" stroke="currentColor" strokeWidth="2" />
+            <path d="M21 21l-4.35-4.35" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+          </svg>
+        </button>
+
         {/* Mobile Menu Button */}
         <button
           className="md:hidden p-2"
@@ -229,6 +244,8 @@ export default function Header() {
           })}
         </div>
       )}
+
+      <SearchModal isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
     </header>
   );
 }
