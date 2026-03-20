@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import SearchModal from "@/components/SearchModal";
 
 const navItems = [
@@ -46,6 +46,47 @@ export default function Header() {
   const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
   const [mobileOpenSubmenu, setMobileOpenSubmenu] = useState<string | null>(null);
   const [searchOpen, setSearchOpen] = useState(false);
+  const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const navRef = useRef<HTMLDivElement>(null);
+
+  const clearCloseTimer = () => {
+    if (closeTimerRef.current) {
+      clearTimeout(closeTimerRef.current);
+      closeTimerRef.current = null;
+    }
+  };
+
+  const handleMouseEnter = (href: string) => {
+    clearCloseTimer();
+    setOpenSubmenu(href);
+  };
+
+  const handleMouseLeave = () => {
+    closeTimerRef.current = setTimeout(() => {
+      setOpenSubmenu(null);
+    }, 300);
+  };
+
+  const handleButtonClick = (href: string) => {
+    clearCloseTimer();
+    setOpenSubmenu((prev) => (prev === href ? null : href));
+  };
+
+  // 바깥 클릭 시 드롭다운 닫기
+  useEffect(() => {
+    const handleOutsideClick = (e: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        setOpenSubmenu(null);
+      }
+    };
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => document.removeEventListener("mousedown", handleOutsideClick);
+  }, []);
+
+  // 언마운트 시 타이머 정리
+  useEffect(() => {
+    return () => clearCloseTimer();
+  }, []);
 
   return (
     <header
@@ -73,7 +114,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-1">
+        <nav ref={navRef} className="hidden md:flex items-center gap-1">
           {navItems.map(({ href, label, submenu }) => {
             const active =
               href === "/" ? pathname === "/" : pathname.startsWith(href);
@@ -97,10 +138,11 @@ export default function Header() {
               <div
                 key={href}
                 className="relative"
-                onMouseEnter={() => setOpenSubmenu(href)}
-                onMouseLeave={() => setOpenSubmenu(null)}
+                onMouseEnter={() => handleMouseEnter(href)}
+                onMouseLeave={handleMouseLeave}
               >
                 <button
+                  onClick={() => handleButtonClick(href)}
                   style={{
                     color: active ? "var(--gold)" : "var(--foreground)",
                   }}
@@ -120,24 +162,30 @@ export default function Header() {
                 </button>
 
                 {openSubmenu === href && (
+                  /* pt-2: 보이지 않는 브리지 — 마우스가 버튼과 드롭다운 사이를 이동할 때 끊기지 않도록 */
                   <div
-                    style={{
-                      background: "var(--surface-2)",
-                      border: "1px solid var(--border)",
-                      top: "calc(100% + 4px)",
-                    }}
-                    className="absolute left-0 w-44 rounded-lg shadow-xl shadow-black/40 py-1"
+                    className="absolute left-0 pt-2"
+                    style={{ top: "100%" }}
                   >
-                    {submenu.map(({ href: subHref, label: subLabel }) => (
-                      <Link
-                        key={subHref}
-                        href={subHref}
-                        style={{ color: pathname === subHref ? "var(--gold)" : "#bbb" }}
-                        className="block px-4 py-2 text-xs hover:text-[var(--gold)] hover:bg-[var(--surface)] transition-colors"
-                      >
-                        {subLabel}
-                      </Link>
-                    ))}
+                    <div
+                      style={{
+                        background: "var(--surface-2)",
+                        border: "1px solid var(--border)",
+                      }}
+                      className="w-44 rounded-lg shadow-xl shadow-black/40 py-1"
+                    >
+                      {submenu.map(({ href: subHref, label: subLabel }) => (
+                        <Link
+                          key={subHref}
+                          href={subHref}
+                          onClick={() => setOpenSubmenu(null)}
+                          style={{ color: pathname === subHref ? "var(--gold)" : "#bbb" }}
+                          className="block px-4 py-2 text-xs hover:text-[var(--gold)] hover:bg-[var(--surface)] transition-colors"
+                        >
+                          {subLabel}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>
