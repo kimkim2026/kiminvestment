@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const SITE_URL = "https://kiminvestment.com";
+const SITE_URL = "https://www.kiminvestment.com";
 const HERO_IMAGE = "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200";
 
 export const metadata: Metadata = {

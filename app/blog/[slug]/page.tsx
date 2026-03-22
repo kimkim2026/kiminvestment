@@ -29,10 +29,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: metaTitle,
     description: metaDescription,
     keywords: post.tags,
+    alternates: {
+      canonical: `https://www.kiminvestment.com/blog/${post.slug}`,
+    },
     openGraph: {
       title: metaTitle,
       description: metaDescription,
-      url: `https://kiminvestment.com/blog/${post.slug}`,
+      url: `https://www.kiminvestment.com/blog/${post.slug}`,
       type: "article",
       publishedTime: post.date,
       authors: ["김통찰"],
@@ -401,16 +404,16 @@ export default async function PostPage({ params }: Props) {
             author: {
               "@type": "Person",
               name: "김통찰",
-              url: "https://kiminvestment.com/about",
+              url: "https://www.kiminvestment.com/about",
             },
             publisher: {
               "@type": "Organization",
               name: "김통찰의 미국 부동산",
-              url: "https://kiminvestment.com",
+              url: "https://www.kiminvestment.com",
             },
             mainEntityOfPage: {
               "@type": "WebPage",
-              "@id": `https://kiminvestment.com/blog/${post.slug}`,
+              "@id": `https://www.kiminvestment.com/blog/${post.slug}`,
             },
             keywords: post.tags.join(", "),
             inLanguage: "ko-KR",
