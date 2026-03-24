@@ -41,9 +41,9 @@ export default function Footer() {
             <ul className="space-y-2">
               {[
                 { href: "/", label: "홈" },
-                { href: "/guide", label: "투자 가이드" },
-                { href: "/tax-legal", label: "세금/법률" },
-                { href: "/experience", label: "나의 투자 경험담" },
+                { href: "/blog?category=투자가이드", label: "투자 가이드" },
+                { href: "/blog?category=세금법률", label: "세금/법률" },
+                { href: "/blog?category=나의투자경험담", label: "나의 투자 경험담" },
                 { href: "/about", label: "운영자 소개" },
                 { href: "/contact", label: "문의하기" },
               ].map(({ href, label }) => (
@@ -67,11 +67,11 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2">
               {[
-                { href: "/guide/basics", label: "부동산 투자 기초" },
-                { href: "/guide/mortgage", label: "융자/모기지" },
-                { href: "/tax-legal/llc", label: "LLC 법인 설립" },
-                { href: "/tax-legal/tax-filing", label: "외국인 세금 신고" },
-                { href: "/experience/case-study", label: "실제 매물 구매 사례" },
+                { href: "/blog/us-real-estate-investment-types", label: "부동산 투자 기초" },
+                { href: "/blog/mortgage-guide-for-koreans", label: "융자/모기지" },
+                { href: "/blog/us-llc-formation-guide", label: "LLC 법인 설립" },
+                { href: "/blog/us-rental-income-tax-korean", label: "외국인 세금 신고" },
+                { href: "/blog/duplex-east-coast-purchase-review", label: "실제 매물 구매 사례" },
               ].map(({ href, label }) => (
                 <li key={href}>
                   <Link
