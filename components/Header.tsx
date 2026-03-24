@@ -22,7 +22,7 @@ const navItems = [
     label: "세금/법률",
     submenu: [
       { href: "/blog/us-rental-income-tax-korean", label: "외국인 세금 신고" },
-      { href: "/blog?category=tax-legal&tag=FBAR", label: "FBAR/FATCA" },
+      { href: "/tax/fbar-fatca", label: "FBAR/FATCA" },
       { href: "/blog/us-llc-formation-guide", label: "LLC 법인 설립" },
       { href: "/blog?category=tax-legal&tag=비자", label: "비자/이민 연계" },
     ],
