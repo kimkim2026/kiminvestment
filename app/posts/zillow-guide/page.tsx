@@ -87,7 +87,7 @@ export default function ZillowGuidePage() {
         >
           투자 가이드
         </span>
-        <span className="text-xs" style={{ color: "#666" }}>2025년 3월 25일</span>
+        <span className="text-xs" style={{ color: "#666" }}>2026년 3월 25일</span>
         <span className="text-xs" style={{ color: "#666" }}>읽는 데 약 7분</span>
         <div className="flex flex-wrap gap-2 ml-auto">
           {["Zillow", "첫 집 구매", "매물 검색", "모기지", "바이어 에이전트"].map((tag) => (

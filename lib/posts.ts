@@ -33,7 +33,7 @@ export const posts: Post[] = [
   {
     slug: "zillow-guide",
     title: "Zillow로 미국 첫 집 사기 — 단계별 완전 가이드",
-    date: "2025-03-25",
+    date: "2026-03-25",
     category: "투자 가이드",
     subcategory: "구매 프로세스 A to Z",
     excerpt:
