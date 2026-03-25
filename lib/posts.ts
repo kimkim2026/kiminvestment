@@ -3,6 +3,7 @@ export interface Post {
   title: string;
   date: string;
   category: string;
+  subcategory?: string;
   excerpt: string;
   content: string;
   readTime: number;
@@ -10,6 +11,7 @@ export interface Post {
   coverImage?: string;
   metaTitle?: string;
   metaDescription?: string;
+  featured?: boolean;
 }
 
 export const CATEGORY_SLUG_MAP: Record<string, string> = {
@@ -28,6 +30,82 @@ export function slugToCategory(slug: string): string {
 }
 
 export const posts: Post[] = [
+  {
+    slug: "zillow-guide",
+    title: "Zillow로 미국 첫 집 사기 — 단계별 완전 가이드",
+    date: "2025-03-25",
+    category: "투자 가이드",
+    subcategory: "구매 프로세스 A to Z",
+    excerpt:
+      "미국 최대 부동산 플랫폼 Zillow 사용법을 한국인 눈높이에서 쉽게 설명합니다. 계정 생성부터 매물 검색, Zestimate, 모기지 계산, 투어 신청까지 7단계로 정리했습니다.",
+    metaTitle: "Zillow로 미국 첫 집 사기 — 단계별 완전 가이드 | 김통찰의 미국 부동산",
+    metaDescription:
+      "미국 최대 부동산 플랫폼 Zillow 사용법을 한국인 눈높이에서 쉽게 설명합니다. 계정 생성부터 매물 검색, Zestimate, 모기지 계산, 투어 신청까지 7단계로 정리했습니다.",
+    readTime: 7,
+    tags: ["Zillow", "첫 집 구매", "매물 검색", "모기지", "바이어 에이전트"],
+    coverImage:
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1200",
+    featured: true,
+    content: `Zillow는 미국 최대 부동산 플랫폼으로, 월 방문자 수가 1억 명을 넘습니다. 처음 미국에서 집을 구매하려는 한국인 분들께 Zillow를 어떻게 활용하는지 7단계로 쉽게 설명해 드리겠습니다.
+
+## 1단계 — 계정 만들기와 앱 설치
+
+zillow.com에 접속하거나 앱스토어에서 Zillow 앱을 무료로 설치합니다. 이메일 또는 구글 계정으로 가입하면 관심 매물 저장, 가격 변동 알림, 맞춤 추천 기능을 모두 사용할 수 있습니다.
+
+> 계정 없이도 검색은 가능하지만, Saved Homes(관심 매물 저장) 기능은 계정이 있어야 사용할 수 있습니다.
+
+## 2단계 — 원하는 지역과 조건으로 매물 검색
+
+검색창에 도시명, 우편번호(ZIP Code), 학군 이름, 주소를 직접 입력할 수 있습니다. 지도 보기(Map View)를 활용하면 원하는 동네를 시각적으로 탐색할 수 있어 미국 지리가 낯선 분들께 특히 유용합니다.
+
+- 가격 범위, 방 수(Beds), 욕실 수(Baths) 필터
+- 주택 유형(House / Townhouse / Condo) 필터
+- 학군 등급(GreatSchools) 필터
+
+![노트북으로 미국 부동산 매물을 검색하는 모습](https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=1200)
+
+## 3단계 — Zestimate로 가격이 적정한지 파악하기
+
+Zillow의 대표 기능 Zestimate(AI 가격 추정)는 AI 알고리즘이 분석한 해당 주택의 예상 시장 가치입니다. 판매 호가와 비교해 가격이 적정한지 가늠하는 데 도움이 됩니다.
+
+> **주의:** Zestimate는 참고용 수치이며 공식 감정(Appraisal) 결과가 아닙니다. 최종 가격 판단은 반드시 공인 에이전트와 함께 하시길 권장합니다.
+
+## 4단계 — 모기지 계산기로 월 납부액 미리 확인
+
+매물 상세 페이지에 내장된 모기지 계산기(Mortgage Calculator)에 계약금(Down Payment), 이자율, 대출 기간을 입력하면 예상 월 납부액을 즉시 확인할 수 있습니다.
+
+| 항목 | 일반 기준 |
+|------|-----------|
+| 계약금(Down Payment) | 집값의 3.5 ~ 20% |
+| 대출 기간(Loan Term) | 15년 또는 30년 |
+| 재산세(Property Tax) | 주 · 카운티마다 상이 |
+| 주택보험(Insurance) | 연간 $800 ~ $2,000+ |
+
+![모기지 계약서에 서명하는 모습](https://images.unsplash.com/photo-1554920951-462522873ead?w=1200)
+
+## 5단계 — 투어 예약과 에이전트 연결
+
+마음에 드는 매물을 찾으셨다면 상세 페이지의 Request a Tour 버튼으로 방문 투어를 신청하실 수 있습니다. 대면(In-Person) 또는 영상 투어(Video Tour) 중 선택 가능합니다.
+
+처음 집을 구매하신다면 Buyer's Agent(바이어 에이전트)를 연결하시는 것을 강력히 권장합니다. 바이어 에이전트 수수료는 보통 셀러가 부담합니다.
+
+> Zillow의 Find an Agent 기능에서 Korean-speaking agent를 검색하면 한국어로 소통 가능한 에이전트를 찾을 수 있습니다.
+
+![에이전트와 함께 미국 주택을 둘러보는 모습](https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=1200)
+
+## 6단계 — 관심 매물 저장과 알림 설정
+
+관심 매물은 하트 버튼으로 저장(Saved Homes)하고, 조건에 맞는 신규 매물이나 가격 변동 시 즉시 알림을 받을 수 있습니다.
+
+- Price Drop Alerts(가격 인하 알림)
+- New Listing Alerts(신규 매물 알림)
+- Saved Searches(검색 조건 저장)
+
+## 7단계 — 동네 정보로 생활 편의성 파악
+
+매물 상세 페이지 하단의 What's Nearby 섹션에서 인근 마트, 식당, 병원, 학교, 대중교통을 한눈에 확인할 수 있습니다. 처음 미국 생활을 시작하시는 분들이 생활 편의성을 파악하는 데 매우 유용한 기능입니다.
+`,
+  },
   {
     slug: "building-us-credit-score",
     title: "미국 신용점수, 아무것도 없는 상태에서 어떻게 만들까?",
