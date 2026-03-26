@@ -72,6 +72,9 @@ export default function Footer() {
                 { href: "/blog/us-llc-formation-guide", label: "LLC 법인 설립" },
                 { href: "/blog/us-rental-income-tax-korean", label: "외국인 세금 신고" },
                 { href: "/blog/duplex-east-coast-purchase-review", label: "실제 매물 구매 사례" },
+                { href: "/blog/korean-landlord-us-tenant-management-challenges", label: "임대 관리" },
+                { href: "/blog/building-us-credit-score", label: "미국 신용점수 만들기" },
+                { href: "/blog/buying-process-a-to-z", label: "구매 프로세스 A to Z" },
               ].map(({ href, label }) => (
                 <li key={href}>
                   <Link

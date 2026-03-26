@@ -9,7 +9,11 @@
       "Bash(head:*)",
       "Bash(wc:*)",
       "Bash(npm install:*)",
-      "Bash(npx tsc:*)"
+      "Bash(npx tsc:*)",
+      "Bash(ls:*)",
+      "Bash(gh run:*)",
+      "Bash(find /c/Users/khyun/Desktop/kiminvestment/src -name layout*)",
+      "Bash(find /c/Users/khyun/Desktop/kiminvestment/src -name *.tsx)"
     ]
   }
 }
