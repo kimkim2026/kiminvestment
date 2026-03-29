@@ -10,7 +10,7 @@ export default function Footer() {
       className="mt-20"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-3">
@@ -31,33 +31,6 @@ export default function Footer() {
               한국인이 미국 집주인 되는 법.<br />
               미국 부동산 투자의 모든 것을 실전 경험으로 공유합니다.
             </p>
-          </div>
-
-          {/* Links */}
-          <div>
-            <h4 style={{ color: "var(--gold)" }} className="font-semibold mb-3 text-sm">
-              바로가기
-            </h4>
-            <ul className="space-y-2">
-              {[
-                { href: "/", label: "홈" },
-                { href: "/blog?category=투자가이드", label: "투자 가이드" },
-                { href: "/blog?category=세금법률", label: "세금/법률" },
-                { href: "/blog?category=나의투자경험담", label: "나의 투자 경험담" },
-                { href: "/about", label: "운영자 소개" },
-                { href: "/contact", label: "문의하기" },
-              ].map(({ href, label }) => (
-                <li key={href}>
-                  <Link
-                    href={href}
-                    style={{ color: "#888" }}
-                    className="text-sm hover:opacity-80 transition-opacity"
-                  >
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
           </div>
 
           {/* Topics */}

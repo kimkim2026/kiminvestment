@@ -25,6 +25,7 @@ export const metadata: Metadata = {
   },
   description:
     "미국 부동산 투자를 꿈꾸는 한국인을 위한 실전 가이드. 구매 프로세스, 모기지, 세금 신고까지 직접 경험한 내용을 한국어로 알려드립니다.",
+  authors: [{ name: "김통찰" }],
   keywords: ["미국 부동산", "미국 집 구매", "외국인 부동산", "모기지", "LLC", "FBAR", "미국 투자", "한국인 미국 부동산"],
   openGraph: {
     siteName: "김통찰의 미국 부동산",

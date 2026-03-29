@@ -4,6 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "운영자 소개",
   description: "김통찰의 미국 부동산 운영자 소개 페이지입니다.",
+  authors: [{ name: "김통찰" }],
 };
 
 const topics = [
@@ -41,6 +42,39 @@ export default function AboutPage() {
           </p>
         </div>
       </div>
+
+      {/* Identity — 검색엔진/구글 운영자 명시 */}
+      <section
+        style={{
+          background: "var(--surface)",
+          border: "1px solid var(--border)",
+          borderLeft: "4px solid #C9A84C",
+        }}
+        className="rounded-xl p-6 mb-8"
+        aria-label="사이트 운영자 정보"
+      >
+        <h2 style={{ color: "#C9A84C" }} className="text-xs font-semibold tracking-widest uppercase mb-3">
+          사이트 운영자 정보
+        </h2>
+        <dl className="space-y-2">
+          <div className="flex flex-wrap gap-x-3 items-baseline">
+            <dt style={{ color: "#888" }} className="text-sm font-medium flex-shrink-0">운영자</dt>
+            <dd style={{ color: "var(--foreground)" }} className="text-sm font-semibold">김통찰</dd>
+          </div>
+          <div className="flex flex-wrap gap-x-3 items-baseline">
+            <dt style={{ color: "#888" }} className="text-sm font-medium flex-shrink-0">소개</dt>
+            <dd style={{ color: "#bbb" }} className="text-sm">
+              미국 부동산에 직접 투자하는 개인 투자자이자 블로그 운영자
+            </dd>
+          </div>
+          <div className="flex flex-wrap gap-x-3 items-baseline">
+            <dt style={{ color: "#888" }} className="text-sm font-medium flex-shrink-0">독립성</dt>
+            <dd style={{ color: "#bbb" }} className="text-sm">
+              특정 부동산 회사·컨설팅 업체와 관련 없음. 광고·제휴 없는 독립 블로그
+            </dd>
+          </div>
+        </dl>
+      </section>
 
       {/* Intro */}
       <section
