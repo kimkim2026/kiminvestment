@@ -3359,7 +3359,7 @@ Streamlined Filing Compliance Procedures를 통해 자진 신고하면 페널티
     readTime: 6,
     tags: ["임대관리"],
     coverImage:
-      "https://images.unsplash.com/photo-1632823471565-1ecdf5c6da3c?w=1200",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200",
     content: `미국에서 집주인을 하다 보면 크고 작은 수리 요청이 끊이지 않습니다. 그중에서도 지붕 관련 문제는 비용도 크고 방치하면 집 전체에 영향을 주는 만큼 빠른 대응이 중요합니다. 오늘은 세입자 연락으로 시작된 지붕 수리 경험을 공유해 드리겠습니다.
 
 ## 세입자에게 연락이 왔습니다
