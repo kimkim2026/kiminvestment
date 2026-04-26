@@ -1,9 +1,3 @@
-# *
 User-agent: *
 Allow: /
-
-# Host
-Host: https://www.kiminvestment.com
-
-# Sitemaps
 Sitemap: https://www.kiminvestment.com/sitemap.xml
