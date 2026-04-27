@@ -62,13 +62,25 @@ const categoryColors: Record<string, string> = {
 };
 
 function renderInline(text: string, baseKey: number): React.ReactNode[] {
-  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  const parts = text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g);
   return parts.map((part, idx) => {
     if (part.startsWith("**") && part.endsWith("**")) {
       return (
         <strong key={`${baseKey}-${idx}`} style={{ color: "var(--foreground)" }}>
           {part.slice(2, -2)}
         </strong>
+      );
+    }
+    const linkMatch = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (linkMatch) {
+      return (
+        <a
+          key={`${baseKey}-${idx}`}
+          href={linkMatch[2]}
+          style={{ color: "#C9A84C", textDecoration: "underline" }}
+        >
+          {linkMatch[1]}
+        </a>
       );
     }
     return part;
@@ -137,7 +149,7 @@ function renderMarkdown(content: string) {
           }}
           className="pl-4 py-3 pr-4 rounded-r-lg my-4 text-lg italic"
         >
-          {line.slice(2)}
+          {renderInline(line.slice(2), key * 1000)}
         </blockquote>
       );
     } else if (line.startsWith("| ")) {
@@ -235,20 +247,9 @@ function renderMarkdown(content: string) {
     } else if (line.trim() === "") {
       // skip empty lines
     } else {
-      // Parse inline bold
-      const parts = line.split(/(\*\*[^*]+\*\*)/g);
       elements.push(
         <p key={key++} style={{ color: "#ccc", lineHeight: 1.9 }} className="my-3 text-lg">
-          {parts.map((part, idx) => {
-            if (part.startsWith("**") && part.endsWith("**")) {
-              return (
-                <strong key={idx} style={{ color: "var(--foreground)" }}>
-                  {part.slice(2, -2)}
-                </strong>
-              );
-            }
-            return part;
-          })}
+          {renderInline(line, key * 1000)}
         </p>
       );
     }
