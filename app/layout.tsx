@@ -45,6 +45,11 @@ export const metadata: Metadata = {
       "미국 부동산 투자를 꿈꾸는 한국인을 위한 실전 가이드. 구매 프로세스, 모기지, 세금 신고까지 직접 경험한 내용을 한국어로 알려드립니다.",
     images: [HERO_IMAGE],
   },
+  alternates: {
+    types: {
+      "application/rss+xml": `${SITE_URL}/feed.xml`,
+    },
+  },
   verification: {
     google: process.env.GOOGLE_SITE_VERIFICATION,
     other: {
