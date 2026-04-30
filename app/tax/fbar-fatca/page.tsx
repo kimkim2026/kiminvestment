@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "FBAR / FATCA 완벽 가이드 | 해외 계좌 신고",
   description:
     "미국에 살면서 한국 계좌를 갖고 계신가요? FBAR와 FATCA 신고 대상, 마감일, 절차, 페널티까지 쉽게 정리했습니다.",
+  alternates: {
+    canonical: "https://www.kiminvestment.com/blog/fbar-fatca-guide",
+  },
 };
 
 export default function FbarFatcaPage() {

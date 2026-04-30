@@ -8,5 +8,5 @@ module.exports = {
       { userAgent: '*', allow: '/' },
     ],
   },
-  exclude: ['/_not-found'],
+  exclude: ['/_not-found', '/posts/*', '/tax/*'],
 };

@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Zillow로 미국 첫 집 사기 — 단계별 완전 가이드 | 김통찰의 미국 부동산",
   description:
     "미국 최대 부동산 플랫폼 Zillow 사용법을 한국인 눈높이에서 쉽게 설명합니다. 계정 생성부터 매물 검색, Zestimate, 모기지 계산, 투어 신청까지 7단계로 정리했습니다.",
+  alternates: {
+    canonical: "https://www.kiminvestment.com/blog/zillow-guide",
+  },
   openGraph: {
     title: "Zillow로 미국 첫 집 사기 — 단계별 완전 가이드",
     description:
