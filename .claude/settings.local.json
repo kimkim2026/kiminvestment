@@ -13,7 +13,8 @@
       "Bash(ls:*)",
       "Bash(gh run:*)",
       "Bash(find /c/Users/khyun/Desktop/kiminvestment/src -name layout*)",
-      "Bash(find /c/Users/khyun/Desktop/kiminvestment/src -name *.tsx)"
+      "Bash(find /c/Users/khyun/Desktop/kiminvestment/src -name *.tsx)",
+      "WebFetch(domain:www.kiminvestment.com)"
     ]
   }
 }
