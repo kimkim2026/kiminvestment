@@ -14,7 +14,8 @@
       "Bash(gh run:*)",
       "Bash(find /c/Users/khyun/Desktop/kiminvestment/src -name layout*)",
       "Bash(find /c/Users/khyun/Desktop/kiminvestment/src -name *.tsx)",
-      "WebFetch(domain:www.kiminvestment.com)"
+      "WebFetch(domain:www.kiminvestment.com)",
+      "Bash(dir *)"
     ]
   }
 }
