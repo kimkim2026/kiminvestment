@@ -154,6 +154,37 @@ export default function HomePage() {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 space-y-16">
 
+        {/* Author Intro */}
+        <div
+          style={{ border: "1px solid rgba(201,168,76,0.35)", background: "rgba(201,168,76,0.05)" }}
+          className="rounded-2xl px-6 py-5 flex flex-col sm:flex-row sm:items-center gap-4"
+        >
+          <div
+            style={{ background: "rgba(201,168,76,0.12)", border: "1px solid rgba(201,168,76,0.3)", flexShrink: 0 }}
+            className="w-14 h-14 rounded-full flex items-center justify-center text-3xl"
+          >
+            🏡
+          </div>
+          <div className="flex-1 min-w-0">
+            <p style={{ color: "#C9A84C", fontSize: "16px" }} className="font-bold leading-snug mb-1">
+              한국인이 직접 미국 집주인으로 살면서 씁니다.
+            </p>
+            <p style={{ color: "#fff", fontSize: "14px" }} className="mb-1">
+              미국 부동산 8년 · 10채 이상 직접 운용 중.
+            </p>
+            <p style={{ color: "#888", fontSize: "13px" }}>
+              구매부터 세입자 관리, 세금 신고까지 실전 경험을 공유합니다.
+            </p>
+          </div>
+          <Link
+            href="/about"
+            style={{ color: "#C9A84C", fontSize: "13px", flexShrink: 0 }}
+            className="font-medium hover:opacity-75 transition-opacity whitespace-nowrap"
+          >
+            운영자 소개 →
+          </Link>
+        </div>
+
         {/* Featured Post */}
         {featuredPost && (
           <section>
