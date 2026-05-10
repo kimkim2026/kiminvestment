@@ -170,7 +170,7 @@ export default function HomePage() {
               한국인이 직접 미국 집주인으로 살면서 씁니다.
             </p>
             <p style={{ color: "#fff", fontSize: "14px" }} className="mb-1">
-              미국 부동산 8년 · 10채 이상 직접 운용 중.
+              미국 부동산 투자 8년 · 10채 이상 직접 운용 중
             </p>
             <p style={{ color: "#888", fontSize: "13px" }}>
               구매부터 세입자 관리, 세금 신고까지 실전 경험을 공유합니다.
