@@ -15,9 +15,10 @@ const categoryColors: Record<string, string> = {
 interface PostCardProps {
   post: Post;
   featured?: boolean;
+  isNew?: boolean;
 }
 
-export default function PostCard({ post, featured = false }: PostCardProps) {
+export default function PostCard({ post, featured = false, isNew = false }: PostCardProps) {
   const color = categoryColors[post.category] || "var(--gold)";
 
   return (
@@ -51,6 +52,14 @@ export default function PostCard({ post, featured = false }: PostCardProps) {
           style={{ color: "var(--foreground)" }}
           className={`font-bold leading-snug mb-3 group-hover:text-[var(--gold)] transition-colors ${featured ? "text-[22px] md:text-xl" : "text-lg md:text-base"}`}
         >
+          {isNew && (
+            <span
+              style={{ background: "#C9A84C", color: "#000", fontSize: "11px", verticalAlign: "middle" }}
+              className="font-bold px-2 py-0.5 rounded-full mr-1.5 inline-block"
+            >
+              NEW
+            </span>
+          )}
           {post.title}
         </h3>
 
@@ -74,7 +83,8 @@ export default function PostCard({ post, featured = false }: PostCardProps) {
 
         {/* Date + Arrow */}
         <div className="flex items-center justify-between">
-          <time style={{ color: "#555" }} className="text-xs">
+          <time style={{ color: isNew ? "#C9A84C" : "#555" }} className={isNew ? "text-sm font-medium" : "text-xs"}>
+            {isNew && "🆕 "}
             {new Date(post.date).toLocaleDateString("ko-KR", {
               year: "numeric",
               month: "long",

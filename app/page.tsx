@@ -48,6 +48,13 @@ export default function HomePage() {
     .filter((p) => !EXCLUDED_SLUGS.includes(p.slug))
     .slice(0, 6);
 
+  const latestDateFormatted = allPosts[0]?.date
+    ? new Date(allPosts[0].date).toLocaleDateString("ko-KR", { year: "numeric", month: "long", day: "numeric" })
+    : null;
+
+  const sevenDaysAgo = new Date();
+  sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+
   return (
     <>
       {/* Hero Section */}
@@ -226,8 +233,13 @@ export default function HomePage() {
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-3">
                 <div style={{ background: "#C9A84C", width: 4 }} className="h-6 rounded-full" />
-                <h2 className="text-xl font-bold" style={{ color: "var(--foreground)" }}>
+                <h2 className="text-xl font-bold flex items-center gap-2 flex-wrap" style={{ color: "var(--foreground)" }}>
                   최근 글
+                  {latestDateFormatted && (
+                    <span style={{ color: "#C9A84C", fontSize: "13px", fontWeight: "normal" }}>
+                      · 마지막 업데이트: {latestDateFormatted}
+                    </span>
+                  )}
                 </h2>
               </div>
               <Link
@@ -240,7 +252,7 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {recentPosts.map((post) => (
-                <PostCard key={post.slug} post={post} />
+                <PostCard key={post.slug} post={post} isNew={new Date(post.date) >= sevenDaysAgo} />
               ))}
             </div>
           </section>
