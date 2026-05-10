@@ -129,6 +129,29 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Category Navigation */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-10 pb-2">
+        <p style={{ color: "#888", fontSize: "14px" }} className="text-center mb-4">
+          어떤 주제가 궁금하신가요?
+        </p>
+        <div className="flex flex-col sm:flex-row gap-3">
+          {[
+            { name: "투자 가이드", emoji: "🏠", href: "/blog?category=investment-guide" },
+            { name: "세금/법률", emoji: "📋", href: "/blog?category=tax-legal" },
+            { name: "나의 투자 경험담", emoji: "✍️", href: "/blog?category=my-experience" },
+          ].map(({ name, emoji, href }) => (
+            <Link
+              key={name}
+              href={href}
+              className="flex-1 flex items-center justify-center gap-2 px-6 py-4 rounded-xl font-semibold text-sm border border-[#C9A84C] text-[#C9A84C] bg-[var(--surface)] hover:bg-[#C9A84C] hover:text-black transition-all duration-200"
+            >
+              <span>{emoji}</span>
+              <span>{name}</span>
+            </Link>
+          ))}
+        </div>
+      </div>
+
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 space-y-16">
 
         {/* Featured Post */}
@@ -257,37 +280,6 @@ export default function HomePage() {
             </div>
           </section>
         )}
-
-        {/* Category Quick Links */}
-        <section>
-          <div className="flex items-center gap-3 mb-6">
-            <div style={{ background: "#C9A84C", width: 4 }} className="h-6 rounded-full" />
-            <h2 className="text-xl font-bold" style={{ color: "var(--foreground)" }}>
-              카테고리
-            </h2>
-          </div>
-          <div className="flex flex-wrap gap-3">
-            {[
-              { name: "투자 가이드", color: "#2ecc71", emoji: "🏠", href: "/blog?category=investment-guide" },
-              { name: "세금/법률", color: "#3498db", emoji: "📋", href: "/blog?category=tax-legal" },
-              { name: "나의 투자 경험담", color: "#e74c3c", emoji: "📖", href: "/blog?category=my-experience" },
-            ].map(({ name, color, emoji, href }) => (
-              <Link
-                key={name}
-                href={href}
-                style={{
-                  border: `1px solid ${color}40`,
-                  color,
-                  background: `${color}0d`,
-                }}
-                className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium hover:opacity-80 transition-opacity"
-              >
-                <span>{emoji}</span>
-                <span>{name}</span>
-              </Link>
-            ))}
-          </div>
-        </section>
 
       </div>
     </>
