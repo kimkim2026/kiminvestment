@@ -89,6 +89,20 @@ export default function HomePage() {
             직접 경험한 내용을 한국어로 쉽게 알려드립니다.
           </p>
 
+          <div className="flex justify-center mb-6">
+            <span
+              style={{
+                color: "#C9A84C",
+                background: "rgba(201, 168, 76, 0.1)",
+                fontSize: "14px",
+                border: "1px solid rgba(201, 168, 76, 0.25)",
+              }}
+              className="inline-block px-4 py-2 rounded-full text-center leading-snug"
+            >
+              🏠 미국 부동산 8년 · 10채 이상 직접 운용 중인 집주인이 씁니다
+            </span>
+          </div>
+
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
               href={`/blog?category=${categoryToSlug("투자 가이드")}`}
