@@ -17,7 +17,8 @@
       "WebFetch(domain:www.kiminvestment.com)",
       "Bash(dir *)",
       "Bash(Remove-Item \"C:\\\\Users\\\\khyun\\\\kiminvestment\\\\components\\\\NewsletterSection.tsx\" -Force)",
-      "Bash(Remove-Item \"C:\\\\Users\\\\khyun\\\\kiminvestment\\\\app\\\\api\\\\subscribe\\\\route.ts\" -Force)"
+      "Bash(Remove-Item \"C:\\\\Users\\\\khyun\\\\kiminvestment\\\\app\\\\api\\\\subscribe\\\\route.ts\" -Force)",
+      "PowerShell(git *)"
     ]
   }
 }
