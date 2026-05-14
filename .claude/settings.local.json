@@ -18,7 +18,8 @@
       "Bash(dir *)",
       "Bash(Remove-Item \"C:\\\\Users\\\\khyun\\\\kiminvestment\\\\components\\\\NewsletterSection.tsx\" -Force)",
       "Bash(Remove-Item \"C:\\\\Users\\\\khyun\\\\kiminvestment\\\\app\\\\api\\\\subscribe\\\\route.ts\" -Force)",
-      "PowerShell(git *)"
+      "PowerShell(git *)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\khyun\\\\Desktop\\\\kiminvestment\" -Depth 2 | Where-Object { $_.Extension -notin @\\('.json', '.js', '.ts'\\) -and $_.Name -notmatch 'node_modules' } | Select-Object FullName)"
     ]
   }
 }
