@@ -8,17 +8,17 @@ import SearchModal from "@/components/SearchModal";
 const navItems = [
   { href: "/", label: "홈", submenu: null },
   {
-    href: "__guide",
+    href: "/category/투자-가이드",
     label: "투자 가이드",
     submenu: [
-      { href: "/blog?tag=부동산투자기초", label: "부동산 투자 기초" },
-      { href: "/blog/buying-process-a-to-z", label: "구매 프로세스 A to Z" },
-      { href: "/blog/mortgage-guide-for-koreans", label: "융자/모기지" },
-      { href: "/blog?category=investment-guide&tag=임대관리", label: "임대 관리" },
+      { href: "/category/부동산-투자-기초", label: "부동산 투자 기초" },
+      { href: "/category/구매-프로세스-a-to-z", label: "구매 프로세스 A to Z" },
+      { href: "/category/융자-모기지", label: "융자/모기지" },
+      { href: "/category/임대-관리", label: "임대 관리" },
     ],
   },
   {
-    href: "__tax",
+    href: "/category/세금-법률",
     label: "세금/법률",
     submenu: [
       { href: "/blog/us-rental-income-tax-korean", label: "외국인 세금 신고" },
@@ -27,7 +27,7 @@ const navItems = [
     ],
   },
   {
-    href: "__experience",
+    href: "/category/나의-투자-경험담",
     label: "나의 투자 경험담",
     submenu: [
       { href: "/blog?category=my-experience&tag=매물구매사례", label: "실제 매물 구매 사례" },
@@ -140,25 +140,37 @@ export default function Header() {
                 onMouseEnter={() => handleMouseEnter(href)}
                 onMouseLeave={handleMouseLeave}
               >
-                <button
-                  onClick={() => handleButtonClick(href)}
-                  style={{
-                    color: active ? "var(--gold)" : "var(--foreground)",
-                  }}
-                  className="px-3 py-2 text-sm font-medium rounded hover:text-[var(--gold)] transition-colors flex items-center gap-1"
-                >
-                  {label}
-                  <svg
-                    width="10"
-                    height="6"
-                    viewBox="0 0 10 6"
-                    fill="none"
-                    style={{ color: "currentColor" }}
-                    className={`transition-transform ${openSubmenu === href ? "rotate-180" : ""}`}
+                <div className="flex items-center">
+                  <Link
+                    href={href}
+                    onClick={() => setOpenSubmenu(null)}
+                    style={{
+                      color: active ? "var(--gold)" : "var(--foreground)",
+                    }}
+                    className="pl-3 pr-1 py-2 text-sm font-medium rounded hover:text-[var(--gold)] transition-colors"
                   >
-                    <path d="M1 1l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </button>
+                    {label}
+                  </Link>
+                  <button
+                    onClick={() => handleButtonClick(href)}
+                    style={{
+                      color: active ? "var(--gold)" : "var(--foreground)",
+                    }}
+                    className="pr-2 py-2 hover:text-[var(--gold)] transition-colors"
+                    aria-label={`${label} 하위 메뉴`}
+                  >
+                    <svg
+                      width="10"
+                      height="6"
+                      viewBox="0 0 10 6"
+                      fill="none"
+                      style={{ color: "currentColor" }}
+                      className={`transition-transform ${openSubmenu === href ? "rotate-180" : ""}`}
+                    >
+                      <path d="M1 1l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </button>
+                </div>
 
                 {openSubmenu === href && (
                   /* pt-2: 보이지 않는 브리지 — 마우스가 버튼과 드롭다운 사이를 이동할 때 끊기지 않도록 */
