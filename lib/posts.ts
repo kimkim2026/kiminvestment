@@ -37,6 +37,11 @@ export function slugToCategory(slug: string): string {
   return entry ? entry[0] : decodeURIComponent(slug);
 }
 
+// "세금/법률" → "세금-법률", "투자 가이드" → "투자-가이드"
+export function toCategorySlug(name: string): string {
+  return name.replace(/\//g, "-").replace(/\s+/g, "-");
+}
+
 export const posts: Post[] = [
   {
     slug: "itin-guide",

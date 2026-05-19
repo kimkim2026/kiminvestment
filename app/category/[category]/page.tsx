@@ -1,4 +1,4 @@
-import { getAllPosts, getPostsByCategory } from "@/lib/posts";
+import { getAllPosts, getPostsByCategory, toCategorySlug } from "@/lib/posts";
 import PostCard from "@/components/PostCard";
 import Link from "next/link";
 import { Metadata } from "next";
@@ -7,8 +7,8 @@ interface CategoryConfig {
   title: string;
   description: string;
   color: string;
-  type: "category" | "tag";
-  value: string;
+  matchCategories: string[];
+  matchTags: string[];
 }
 
 const CATEGORY_CONFIG: Record<string, CategoryConfig> = {
@@ -16,66 +16,90 @@ const CATEGORY_CONFIG: Record<string, CategoryConfig> = {
     title: "투자 가이드",
     description: "미국 부동산 투자의 A to Z — 초보자부터 경험자까지 실전에 바로 쓸 수 있는 가이드.",
     color: "#2ecc71",
-    type: "category",
-    value: "투자 가이드",
+    matchCategories: [
+      "투자 가이드",
+      "부동산 투자 기초",
+      "구매 프로세스 A to Z",
+      "융자/모기지",
+      "임대 관리",
+    ],
+    matchTags: ["부동산투자기초", "임대관리", "모기지", "부동산구매"],
   },
   "세금-법률": {
     title: "세금/법률",
     description: "미국 세금 신고, LLC 설립, FBAR·FATCA 등 한국인 투자자가 꼭 알아야 할 세금·법률 정보.",
     color: "#3498db",
-    type: "category",
-    value: "세금/법률",
+    matchCategories: ["세금/법률"],
+    matchTags: [],
   },
   "나의-투자-경험담": {
     title: "나의 투자 경험담",
     description: "직접 경험한 미국 부동산 투자 이야기 — 성공과 실수, 그리고 그 사이에서 배운 것들.",
     color: "#e74c3c",
-    type: "category",
-    value: "나의 투자 경험담",
+    matchCategories: ["나의 투자 경험담"],
+    matchTags: [],
   },
   "부동산-투자-기초": {
     title: "부동산 투자 기초",
     description: "미국 부동산 투자를 처음 시작하는 분들을 위한 기초 개념과 필수 지식.",
     color: "#2ecc71",
-    type: "tag",
-    value: "부동산투자기초",
+    matchCategories: ["부동산 투자 기초"],
+    matchTags: ["부동산투자기초"],
   },
   "구매-프로세스-a-to-z": {
     title: "구매 프로세스 A to Z",
     description: "미국 부동산 매물 탐색부터 클로징까지, 구매 절차 전 과정을 단계별로 설명합니다.",
     color: "#2ecc71",
-    type: "tag",
-    value: "부동산구매",
+    matchCategories: ["구매 프로세스 A to Z"],
+    matchTags: ["부동산구매"],
   },
   "융자-모기지": {
     title: "융자/모기지",
     description: "한국인 투자자를 위한 미국 모기지 가이드 — 대출 조건, 금리, 승인 절차까지.",
     color: "#2ecc71",
-    type: "tag",
-    value: "모기지",
+    matchCategories: ["융자/모기지"],
+    matchTags: ["모기지", "융자"],
   },
   "임대-관리": {
     title: "임대 관리",
     description: "임차인 선별부터 렌트비 관리, 유지보수까지 — 임대 수익을 극대화하는 방법.",
     color: "#2ecc71",
-    type: "tag",
-    value: "임대관리",
+    matchCategories: ["임대 관리"],
+    matchTags: ["임대관리"],
   },
 };
+
+function normalizeSlug(raw: string): string {
+  try {
+    return decodeURIComponent(raw).normalize("NFC");
+  } catch {
+    return raw.normalize("NFC");
+  }
+}
 
 function getPostsForCategory(slug: string) {
   const config = CATEGORY_CONFIG[slug];
   if (!config) return [];
 
   const allPosts = getAllPosts();
+  const seen = new Set<string>();
 
-  if (config.type === "category") {
-    return getPostsByCategory(config.value);
-  } else {
-    return allPosts.filter((post) =>
-      post.tags.some((tag) => tag.toLowerCase() === config.value.toLowerCase())
-    );
-  }
+  return allPosts.filter((post) => {
+    if (seen.has(post.slug)) return false;
+
+    const catMatch = config.matchCategories.includes(post.category);
+    const tagMatch =
+      config.matchTags.length > 0 &&
+      post.tags.some((t) =>
+        config.matchTags.some((mt) => mt.toLowerCase() === t.toLowerCase())
+      );
+
+    if (catMatch || tagMatch) {
+      seen.add(post.slug);
+      return true;
+    }
+    return false;
+  });
 }
 
 export async function generateStaticParams() {
@@ -87,7 +111,8 @@ export async function generateMetadata({
 }: {
   params: Promise<{ category: string }>;
 }): Promise<Metadata> {
-  const { category } = await params;
+  const { category: raw } = await params;
+  const category = normalizeSlug(raw);
   const config = CATEGORY_CONFIG[category];
   if (!config) return { title: "카테고리 | 김통찰의 미국 부동산" };
   return {
@@ -101,7 +126,8 @@ export default async function CategoryPage({
 }: {
   params: Promise<{ category: string }>;
 }) {
-  const { category } = await params;
+  const { category: raw } = await params;
+  const category = normalizeSlug(raw);
   const config = CATEGORY_CONFIG[category];
 
   if (!config) {
