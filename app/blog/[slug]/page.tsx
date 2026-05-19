@@ -144,20 +144,53 @@ function renderMarkdown(content: string) {
         );
       }
     } else if (line.startsWith("> ")) {
-      elements.push(
-        <blockquote
-          key={key++}
-          style={{
-            borderLeft: "3px solid var(--gold)",
-            background: "var(--surface-2)",
-            color: "#aaa",
-            lineHeight: 1.9,
-          }}
-          className="pl-4 py-3 pr-4 rounded-r-lg my-4 text-lg italic"
-        >
-          {renderInline(line.slice(2), key * 1000)}
-        </blockquote>
-      );
+      const bqText = line.slice(2);
+      if (bqText.startsWith("[TIP] ")) {
+        elements.push(
+          <div
+            key={key++}
+            style={{
+              background: "rgba(201,168,76,0.1)",
+              border: "1px solid rgba(201,168,76,0.3)",
+              lineHeight: 1.8,
+            }}
+            className="flex gap-3 items-start px-4 py-3 rounded-lg my-4 text-base"
+          >
+            <span style={{ color: "var(--gold)", fontSize: "20px", lineHeight: 1.4, flexShrink: 0 }}>💡</span>
+            <span style={{ color: "#ccc" }}>{renderInline(bqText.slice(6), key * 1000)}</span>
+          </div>
+        );
+      } else if (bqText.startsWith("[WARNING] ")) {
+        elements.push(
+          <div
+            key={key++}
+            style={{
+              background: "rgba(230,126,34,0.1)",
+              border: "1px solid rgba(230,126,34,0.3)",
+              lineHeight: 1.8,
+            }}
+            className="flex gap-3 items-start px-4 py-3 rounded-lg my-4 text-base"
+          >
+            <span style={{ fontSize: "20px", lineHeight: 1.4, flexShrink: 0 }}>⚠️</span>
+            <span style={{ color: "#ccc" }}>{renderInline(bqText.slice(10), key * 1000)}</span>
+          </div>
+        );
+      } else {
+        elements.push(
+          <blockquote
+            key={key++}
+            style={{
+              borderLeft: "3px solid var(--gold)",
+              background: "var(--surface-2)",
+              color: "#aaa",
+              lineHeight: 1.9,
+            }}
+            className="pl-4 py-3 pr-4 rounded-r-lg my-4 text-lg italic"
+          >
+            {renderInline(bqText, key * 1000)}
+          </blockquote>
+        );
+      }
     } else if (line.startsWith("| ")) {
       // Table
       const tableLines: string[] = [];
