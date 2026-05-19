@@ -11,7 +11,7 @@ const navItems = [
     href: "__guide",
     label: "투자 가이드",
     submenu: [
-      { href: "/blog?category=investment-guide&tag=기초", label: "부동산 투자 기초" },
+      { href: "/blog?tag=부동산투자기초", label: "부동산 투자 기초" },
       { href: "/blog/buying-process-a-to-z", label: "구매 프로세스 A to Z" },
       { href: "/blog/mortgage-guide-for-koreans", label: "융자/모기지" },
       { href: "/blog?category=investment-guide&tag=임대관리", label: "임대 관리" },

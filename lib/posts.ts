@@ -49,7 +49,7 @@ export const posts: Post[] = [
     metaDescription:
       "미국 부동산 투자 초보자를 위한 에이전트 선택 가이드. 실거주 에이전트와 투자 전문 에이전트의 차이, 첫 미팅 질문 체크리스트까지 직접 경험을 바탕으로 정리했습니다.",
     readTime: 8,
-    tags: ["바이어 에이전트", "투자 전략", "에이전트 선택", "렌탈 투자"],
+    tags: ["바이어 에이전트", "투자 전략", "에이전트 선택", "렌탈 투자", "부동산투자기초"],
     coverImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200",
     relatedPosts: [
       {

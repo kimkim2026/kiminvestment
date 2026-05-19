@@ -28,6 +28,11 @@ const categoryTitles: Record<string, string> = {
   "tax-legal": "세금 / 법률",
 };
 
+const tagTitles: Record<string, string> = {
+  부동산투자기초: "부동산 투자 기초",
+  임대관리: "임대 관리",
+};
+
 function BlogContent() {
   const searchParams = useSearchParams();
   const rawCategory = searchParams.get("category") || "전체";
@@ -62,7 +67,7 @@ function BlogContent() {
     });
   }, [allPosts, selectedCategory, searchQuery, rawTag]);
 
-  const pageTitle = categoryTitles[selectedCategory] ?? selectedCategory;
+  const pageTitle = tagTitles[rawTag] ?? categoryTitles[selectedCategory] ?? selectedCategory;
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
