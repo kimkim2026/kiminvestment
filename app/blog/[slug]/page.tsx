@@ -4,6 +4,12 @@ import Script from "next/script";
 import { getAllPosts, getPostBySlug, categoryToSlug } from "@/lib/posts";
 import type { Metadata } from "next";
 
+const relatedCategoryColors: Record<string, { text: string; bg: string }> = {
+  "나의 투자 경험담": { text: "#e74c3c", bg: "rgba(231,76,60,0.15)" },
+  "투자 가이드": { text: "#2ecc71", bg: "rgba(46,204,113,0.15)" },
+  "세금/법률": { text: "#3498db", bg: "rgba(52,152,219,0.15)" },
+};
+
 interface Props {
   params: Promise<{ slug: string }>;
 }
@@ -349,6 +355,44 @@ export default async function PostPage({ params }: Props) {
 
       {/* Divider */}
       <div style={{ background: "var(--border)" }} className="h-px mt-12 mb-8" />
+
+      {/* 함께 읽으면 좋은 글 */}
+      {post.relatedPosts && post.relatedPosts.length > 0 && (
+        <section className="mb-10">
+          <div className="flex items-center gap-3 mb-6">
+            <div style={{ background: "var(--gold)", width: 4 }} className="h-6 rounded-full flex-shrink-0" />
+            <h2 className="text-lg font-bold" style={{ color: "var(--foreground)" }}>
+              함께 읽으면 좋은 글
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {post.relatedPosts.map(({ slug, title, category, excerpt }) => {
+              const cc = relatedCategoryColors[category] ?? { text: "var(--gold)", bg: "rgba(201,168,76,0.15)" };
+              return (
+                <Link
+                  key={slug}
+                  href={`/blog/${slug}`}
+                  className="rounded-xl p-4 flex flex-col gap-2 transition-all hover:border-[var(--gold)]"
+                  style={{ background: "var(--surface)", border: "1px solid var(--border)" }}
+                >
+                  <span
+                    className="text-xs font-semibold px-2 py-0.5 rounded-full self-start"
+                    style={{ background: cc.bg, color: cc.text }}
+                  >
+                    {category}
+                  </span>
+                  <p className="font-semibold text-sm leading-snug" style={{ color: "var(--foreground)" }}>
+                    {title}
+                  </p>
+                  <p className="text-xs leading-relaxed line-clamp-3" style={{ color: "#888" }}>
+                    {excerpt}
+                  </p>
+                </Link>
+              );
+            })}
+          </div>
+        </section>
+      )}
 
       {/* Navigation */}
       <nav className="grid grid-cols-1 md:grid-cols-2 gap-4">
