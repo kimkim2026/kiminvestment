@@ -50,7 +50,7 @@ export const posts: Post[] = [
       "미국 부동산·주식 투자 한국인을 위한 ITIN 완전 가이드. ITIN vs SSN 차이, 신청 절차 4단계, CAA 활용법, 처리 기간까지 초보자도 이해할 수 있게 정리했습니다.",
     readTime: 9,
     tags: ["ITIN", "세금 신고", "외국인 투자", "IRS", "CPA"],
-    coverImage: "https://images.unsplash.com/photo-1554224154-db19571e7bbb?w=1200",
+    coverImage: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=1200",
     relatedPosts: [
       {
         slug: "us-rental-income-tax-korean",
@@ -104,7 +104,7 @@ ITIN은 Individual Taxpayer Identification Number의 약자입니다. 미국 SSN
 
 ## 신청 전에 꼭 알아야 할 포인트
 
-![세금 서류와 신청 양식 준비](https://images.unsplash.com/photo-1554224154-db19571e7bbb?w=1200)
+![세금 서류와 신청 양식 준비](https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=1200)
 
 많은 분들이 놓치는 포인트가 있습니다. ITIN은 보통 단독으로 신청하지 않고, 미국 세금 신고서와 Form W-7 신청서를 함께 제출하는 경우가 대부분입니다.
 
