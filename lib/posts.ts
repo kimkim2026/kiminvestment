@@ -44,6 +44,45 @@ export function toCategorySlug(name: string): string {
 
 export const posts: Post[] = [
   {
+    slug: "us-investment-region-guide",
+    title:
+      "미국 부동산 투자, 어느 지역이 좋을까? — 한국인을 위한 지역별 완전 가이드",
+    date: "2026-05-20",
+    category: "부동산 투자 기초",
+    excerpt:
+      "텍사스·플로리다·미시간·조지아·캘리포니아 5개 지역을 현금흐름·인구증가·세금·관리 난이도 기준으로 비교합니다. 한국인 초보 투자자를 위한 추천 전략 포함.",
+    metaTitle:
+      "미국 부동산 투자 지역별 완전 가이드 — 텍사스·플로리다·미시간·조지아·캘리포니아 비교 | 김통찰",
+    metaDescription:
+      "텍사스·플로리다·미시간·조지아·캘리포니아 5개 지역을 현금흐름·인구증가·세금·관리 난이도 기준으로 비교합니다. 한국인 초보 투자자를 위한 추천 전략 포함.",
+    readTime: 12,
+    tags: ["미국 투자 지역", "텍사스", "플로리다", "미시간", "애틀란타", "캘리포니아"],
+    coverImage:
+      "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&q=80",
+    featured: true,
+    relatedPosts: [
+      {
+        slug: "brrrr-strategy",
+        title: "BRRRR 전략으로 미국 부동산 투자금 회수하기",
+        category: "부동산 투자 기초",
+        excerpt:
+          "지역 선정 후 바로 적용할 수 있는 투자 전략입니다. Buy·Rehab·Rent·Refinance·Repeat 5단계를 실제 숫자 예시와 함께 설명합니다.",
+      },
+      {
+        slug: "zillow-guide",
+        title: "Zillow로 미국 첫 집 사기 — 단계별 완전 가이드",
+        category: "투자 가이드",
+        excerpt:
+          "관심 지역 매물을 직접 검색하는 방법입니다. 계정 생성부터 Zestimate 활용, 모기지 계산기, 투어 신청까지 7단계로 정리했습니다.",
+      },
+    ],
+    content: `미국 부동산 투자에서 가장 중요한 첫 결정은 "어느 도시에 투자할 것인가"입니다. 주마다 세금 구조, 임대 문화, 집값 패턴이 전혀 다르기 때문입니다.
+
+텍사스, 플로리다, 미시간, 조지아, 캘리포니아 5개 지역을 현금흐름, 인구 증가, 세금 부담, 관리 난이도 기준으로 비교하고 초보 투자자를 위한 단계별 진입 전략을 안내합니다.
+
+궁금한 점이 있으시면 [문의하기](/contact) 페이지를 통해 언제든지 질문해 주세요.`,
+  },
+  {
     slug: "brrrr-strategy",
     title: "BRRRR 전략으로 미국 부동산 투자금 회수하기",
     date: "2026-05-20",
