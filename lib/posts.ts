@@ -44,6 +44,44 @@ export function toCategorySlug(name: string): string {
 
 export const posts: Post[] = [
   {
+    slug: "home-inspection-checklist",
+    title: "미국 홈 인스펙션 체크리스트 10가지",
+    date: "2026-05-21",
+    category: "구매 프로세스 A to Z",
+    excerpt:
+      "미국 부동산 구매 전 반드시 확인해야 할 홈 인스펙션(Home Inspection) 핵심 10가지를 투자자 관점에서 정리했습니다. 지붕·HVAC·기초·배관 등 실제 비용 정보 포함.",
+    metaTitle:
+      "미국 홈 인스펙션 체크리스트 10가지 — 투자자 관점 완전 가이드 | 김통찰의 미국 부동산",
+    metaDescription:
+      "미국 부동산 구매 전 반드시 확인해야 할 홈 인스펙션 핵심 10가지를 투자자 관점에서 정리했습니다. 지붕·HVAC·기초·배관 등 실제 비용 정보 포함.",
+    readTime: 10,
+    tags: ["홈 인스펙션", "체크리스트", "집 구매", "투자용 부동산", "수리 비용"],
+    coverImage:
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80",
+    featured: true,
+    relatedPosts: [
+      {
+        slug: "us-investment-region-guide",
+        title: "미국 부동산 투자, 어느 지역이 좋을까? — 한국인을 위한 지역별 완전 가이드",
+        category: "부동산 투자 기초",
+        excerpt:
+          "지역별 집 상태와 특성을 미리 파악하세요. 텍사스·플로리다·미시간·조지아·캘리포니아 5개 지역을 기준별로 비교합니다.",
+      },
+      {
+        slug: "brrrr-strategy",
+        title: "BRRRR 전략으로 미국 부동산 투자금 회수하기",
+        category: "부동산 투자 기초",
+        excerpt:
+          "인스펙션 후 수리 비용을 투자 전략에 활용하는 법입니다. Buy·Rehab·Rent·Refinance·Repeat 5단계를 실제 숫자 예시와 함께 설명합니다.",
+      },
+    ],
+    content: `미국 부동산 구매에서 계약 후 가장 중요한 단계가 홈 인스펙션(Home Inspection)입니다. 겉으로 멀쩡해 보이는 집도 인스펙션 결과를 받아보면 수천~수만 달러 수리가 필요한 경우가 많습니다.
+
+지붕·HVAC·온수기·기초·지하실·전기·배관·창문·외부·세입자 관점 10가지 항목별 확인 포인트와 실제 교체 비용을 정리했습니다.
+
+궁금한 점이 있으시면 [문의하기](/contact) 페이지를 통해 언제든지 질문해 주세요.`,
+  },
+  {
     slug: "us-investment-region-guide",
     title:
       "미국 부동산 투자, 어느 지역이 좋을까? — 한국인을 위한 지역별 완전 가이드",
