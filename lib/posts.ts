@@ -44,6 +44,44 @@ export function toCategorySlug(name: string): string {
 
 export const posts: Post[] = [
   {
+    slug: "brrrr-strategy",
+    title: "BRRRR 전략으로 미국 부동산 투자금 회수하기",
+    date: "2026-05-20",
+    category: "부동산 투자 기초",
+    excerpt:
+      "BRRRR(Buy·Rehab·Rent·Refinance·Repeat) 전략을 한국인 투자자 관점에서 쉽게 설명합니다. 실제 숫자 예시로 투자금 회수 과정을 단계별로 안내합니다.",
+    metaTitle:
+      "BRRRR 전략으로 미국 부동산 투자금 회수하기 | 김통찰의 미국 부동산",
+    metaDescription:
+      "BRRRR(Buy·Rehab·Rent·Refinance·Repeat) 전략을 한국인 투자자 관점에서 쉽게 설명합니다. 실제 숫자 예시로 투자금 회수 과정을 단계별로 안내합니다.",
+    readTime: 10,
+    tags: ["BRRRR", "재융자", "리모델링", "임대투자", "현금흐름"],
+    coverImage:
+      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80",
+    featured: true,
+    relatedPosts: [
+      {
+        slug: "zillow-guide",
+        title: "Zillow로 미국 첫 집 사기 — 단계별 완전 가이드",
+        category: "투자 가이드",
+        excerpt:
+          "미국 최대 부동산 플랫폼 Zillow 사용법을 한국인 눈높이에서 쉽게 설명합니다. 계정 생성부터 매물 검색, Zestimate, 모기지 계산, 투어 신청까지 7단계로 정리했습니다.",
+      },
+      {
+        slug: "mortgage-guide-for-koreans",
+        title: "한국인을 위한 미국 모기지 완전 정복",
+        category: "투자 가이드",
+        excerpt:
+          "미국 모기지는 한국 주택담보대출과 완전히 다릅니다. 고정금리 vs 변동금리, DTI 계산법, 외국인 모기지 조건까지 실제 대출 경험을 바탕으로 핵심만 정리했습니다.",
+      },
+    ],
+    content: `BRRRR은 Buy(구매) → Rehab(리모델링) → Rent(임대) → Refinance(재융자) → Repeat(반복)의 첫 글자를 딴 미국 부동산 투자 전략입니다. 낡은 집을 저렴하게 매입해 수리한 후 세입자를 구하고, 집값이 오른 상태에서 재융자로 투자금을 회수해 다음 매물에 재투자합니다.
+
+BRRRR 전략의 핵심은 한 번의 투자금으로 여러 채의 부동산을 보유하는 구조를 만드는 것입니다. 실제 숫자 예시와 단계별 가이드는 본문에서 확인하세요.
+
+궁금한 점이 있으시면 [문의하기](/contact) 페이지를 통해 언제든지 질문해 주세요.`,
+  },
+  {
     slug: "itin-guide",
     title: "ITIN 발급 방법 — 한국인이 미국 세금 번호 받는 법",
     date: "2026-05-19",
