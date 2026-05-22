@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import FaqAccordion from "./FaqAccordion";
+import ShareButtons from '@/components/ShareButtons';
 
 export const metadata: Metadata = {
   title: "FBAR / FATCA 완벽 가이드 | 해외 계좌 신고",
@@ -51,6 +52,11 @@ export default function FbarFatcaPage() {
           </Link>
         </div>
       </section>
+
+      <ShareButtons
+        title="FBAR / FATCA 완벽 가이드 — 해외 계좌 신고"
+        url="https://www.kiminvestment.com/tax/fbar-fatca"
+      />
 
       {/* ── 섹션 2: FBAR vs FATCA 개요 ── */}
       <section className="mb-14">
@@ -318,6 +324,11 @@ export default function FbarFatcaPage() {
         </p>
         <FaqAccordion />
       </section>
+
+      <ShareButtons
+        title="FBAR / FATCA 완벽 가이드 — 해외 계좌 신고"
+        url="https://www.kiminvestment.com/tax/fbar-fatca"
+      />
 
       {/* ── 섹션 7: 하단 CTA ── */}
       <section

@@ -3,6 +3,7 @@ import Link from "next/link";
 import Script from "next/script";
 import { getAllPosts, getPostBySlug, categoryToSlug } from "@/lib/posts";
 import type { Metadata } from "next";
+import ShareButtons from "@/components/ShareButtons";
 
 const relatedCategoryColors: Record<string, { text: string; bg: string }> = {
   "나의 투자 경험담": { text: "#e74c3c", bg: "rgba(231,76,60,0.15)" },
@@ -381,6 +382,12 @@ export default async function PostPage({ params }: Props) {
       {/* Divider */}
       <div style={{ background: "var(--border)" }} className="h-px mb-10" />
 
+      <ShareButtons
+        title={post.title}
+        description={post.excerpt}
+        url={`https://www.kiminvestment.com/blog/${post.slug}`}
+      />
+
       {/* Article Content */}
       <article className="prose-custom">
         {renderMarkdown(post.content)}
@@ -388,6 +395,12 @@ export default async function PostPage({ params }: Props) {
 
       {/* Divider */}
       <div style={{ background: "var(--border)" }} className="h-px mt-12 mb-8" />
+
+      <ShareButtons
+        title={post.title}
+        description={post.excerpt}
+        url={`https://www.kiminvestment.com/blog/${post.slug}`}
+      />
 
       {/* 함께 읽으면 좋은 글 */}
       {post.relatedPosts && post.relatedPosts.length > 0 && (

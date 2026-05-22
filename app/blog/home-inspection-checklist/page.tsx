@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ShareButtons from '@/components/ShareButtons';
 
 export const metadata: Metadata = {
   title:
@@ -214,6 +215,11 @@ export default function HomeInspectionChecklistPage() {
           )}
         </div>
       </div>
+
+      <ShareButtons
+        title="미국 홈 인스펙션 체크리스트 10가지"
+        url="https://www.kiminvestment.com/blog/home-inspection-checklist"
+      />
 
       {/* ── 들어가며 ── */}
       <section className="mb-14">
@@ -869,6 +875,11 @@ export default function HomeInspectionChecklistPage() {
           페이지를 통해 언제든지 질문해 주세요.
         </p>
       </section>
+
+      <ShareButtons
+        title="미국 홈 인스펙션 체크리스트 10가지"
+        url="https://www.kiminvestment.com/blog/home-inspection-checklist"
+      />
 
       {/* ── 함께 읽으면 좋은 글 ── */}
       <section className="mb-14">

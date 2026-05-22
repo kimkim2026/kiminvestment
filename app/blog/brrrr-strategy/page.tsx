@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ShareButtons from '@/components/ShareButtons';
 
 export const metadata: Metadata = {
   title: "BRRRR 전략으로 미국 부동산 투자금 회수하기 | 김통찰의 미국 부동산",
@@ -171,6 +172,11 @@ export default function BrrrrStrategyPage() {
           ))}
         </div>
       </div>
+
+      <ShareButtons
+        title="BRRRR 전략으로 미국 부동산 투자금 회수하기"
+        url="https://www.kiminvestment.com/blog/brrrr-strategy"
+      />
 
       {/* ── 들어가며 ── */}
       <section className="mb-14">
@@ -923,6 +929,11 @@ export default function BrrrrStrategyPage() {
           페이지를 통해 언제든지 질문해 주세요.
         </p>
       </section>
+
+      <ShareButtons
+        title="BRRRR 전략으로 미국 부동산 투자금 회수하기"
+        url="https://www.kiminvestment.com/blog/brrrr-strategy"
+      />
 
       {/* ── 함께 읽으면 좋은 글 ── */}
       <section className="mb-14">

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ShareButtons from '@/components/ShareButtons';
 
 export const metadata: Metadata = {
   title:
@@ -224,6 +225,11 @@ export default function UsInvestmentRegionGuidePage() {
           )}
         </div>
       </div>
+
+      <ShareButtons
+        title="미국 부동산 투자, 어느 지역이 좋을까? — 한국인을 위한 지역별 완전 가이드"
+        url="https://www.kiminvestment.com/blog/us-investment-region-guide"
+      />
 
       {/* ── 들어가며 ── */}
       <section className="mb-14">
@@ -876,6 +882,11 @@ export default function UsInvestmentRegionGuidePage() {
           페이지를 통해 언제든지 질문해 주세요.
         </p>
       </section>
+
+      <ShareButtons
+        title="미국 부동산 투자, 어느 지역이 좋을까? — 한국인을 위한 지역별 완전 가이드"
+        url="https://www.kiminvestment.com/blog/us-investment-region-guide"
+      />
 
       {/* ── 함께 읽으면 좋은 글 ── */}
       <section className="mb-14">
