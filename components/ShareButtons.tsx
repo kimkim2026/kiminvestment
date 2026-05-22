@@ -101,49 +101,49 @@ export default function ShareButtons({ title, description, url }: ShareButtonsPr
   };
 
   return (
-    <div className="bg-slate-50 border border-slate-200 rounded-2xl px-6 py-6">
-      <p className="text-slate-600 text-sm text-center mb-5">
+    <div className="border-t border-slate-700 pt-8 pb-2">
+      <p className="text-slate-400 text-sm text-center mb-4">
         이 글이 도움이 되셨나요? 미국 부동산 투자 고민하는 분들에게 공유해보세요 :)
       </p>
-      <div className="flex flex-wrap gap-3 justify-center">
+      <div className="flex flex-wrap gap-2 justify-center">
         <button
           onClick={shareKakao}
-          className="flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-semibold transition-colors bg-yellow-400 hover:bg-yellow-300 text-yellow-900"
+          className="flex items-center gap-2 px-3 py-2 rounded-full text-xs font-semibold transition-colors bg-yellow-400 hover:bg-yellow-300 text-yellow-900"
         >
           카카오톡
         </button>
         <button
           onClick={shareFacebook}
-          className="flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-semibold transition-colors bg-blue-600 hover:bg-blue-700 text-white"
+          className="flex items-center gap-2 px-3 py-2 rounded-full text-xs font-semibold transition-colors bg-blue-600 hover:bg-blue-700 text-white"
         >
           Facebook
         </button>
         <button
           onClick={shareTwitter}
-          className="flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-semibold transition-colors bg-slate-900 hover:bg-slate-700 text-white"
+          className="flex items-center gap-2 px-3 py-2 rounded-full text-xs font-semibold transition-colors bg-slate-900 hover:bg-slate-700 text-white"
         >
           X (트위터)
         </button>
         <button
           onClick={shareEmail}
-          className="flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-semibold transition-colors bg-slate-200 hover:bg-slate-300 text-slate-800"
+          className="flex items-center gap-2 px-3 py-2 rounded-full text-xs font-semibold transition-colors bg-slate-200 hover:bg-slate-300 text-slate-800"
         >
           이메일
         </button>
         <button
           onClick={shareBand}
-          className="flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-semibold transition-colors bg-green-500 hover:bg-green-600 text-white"
+          className="flex items-center gap-2 px-3 py-2 rounded-full text-xs font-semibold transition-colors bg-green-500 hover:bg-green-600 text-white"
         >
           네이버 밴드
         </button>
         <button
           onClick={copyLink}
-          className="flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-semibold transition-colors bg-slate-700 hover:bg-slate-600 text-white"
+          className="flex items-center gap-2 px-3 py-2 rounded-full text-xs font-semibold transition-colors bg-slate-700 hover:bg-slate-600 text-white"
         >
           {copied ? '복사되었습니다 ✓' : '링크 복사'}
         </button>
       </div>
-      <p className="text-xs text-slate-400 text-center mt-4">링크 복사 시 제목과 주소가 함께 복사됩니다</p>
+      <p className="text-xs text-slate-500 text-center mt-3">링크 복사 시 제목과 주소가 함께 복사됩니다</p>
     </div>
   );
 }
