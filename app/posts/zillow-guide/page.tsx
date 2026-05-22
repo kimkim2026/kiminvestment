@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import ShareButtons from '@/components/ShareButtons';
 
 export const metadata: Metadata = {
   title: "Zillow로 미국 첫 집 사기 — 단계별 완전 가이드 | 김통찰의 미국 부동산",
@@ -104,6 +105,12 @@ export default function ZillowGuidePage() {
           ))}
         </div>
       </div>
+
+      <ShareButtons
+        title="Zillow로 미국 첫 집 사기 — 단계별 완전 가이드"
+        description="미국 최대 부동산 플랫폼 Zillow 사용법을 한국인 눈높이에서 쉽게 설명합니다."
+        url="https://www.kiminvestment.com/posts/zillow-guide"
+      />
 
       {/* ── 들어가며 ── */}
       <section className="mb-14">
@@ -635,6 +642,12 @@ export default function ZillowGuidePage() {
           미국에 오셔서 차량이 없는 기간이 있다면 이 점수를 꼭 확인해 보세요.
         </div>
       </section>
+
+      <ShareButtons
+        title="Zillow로 미국 첫 집 사기 — 단계별 완전 가이드"
+        description="미국 최대 부동산 플랫폼 Zillow 사용법을 한국인 눈높이에서 쉽게 설명합니다."
+        url="https://www.kiminvestment.com/posts/zillow-guide"
+      />
 
       {/* ── 함께 읽으면 좋은 글 ── */}
       <section className="mb-14">
