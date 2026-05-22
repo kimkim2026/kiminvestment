@@ -1,12 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-
-declare global {
-  interface Window {
-    Kakao: any;
-  }
-}
+import { useState } from 'react';
 
 interface ShareButtonsProps {
   title: string;
@@ -17,42 +11,28 @@ interface ShareButtonsProps {
 export default function ShareButtons({ title, description, url }: ShareButtonsProps) {
   const [copied, setCopied] = useState(false);
   const currentUrl = url || (typeof window !== 'undefined' ? window.location.href : '');
-
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js';
-    script.async = true;
-    script.onload = () => {
-      if (window.Kakao && !window.Kakao.isInitialized()) {
-        window.Kakao.init(process.env.NEXT_PUBLIC_KAKAO_APP_KEY);
-      }
-    };
-    document.head.appendChild(script);
-  }, []);
+  const canShare = typeof navigator !== 'undefined' && !!navigator.share;
 
   const shareKakao = () => {
-    if (!window.Kakao?.Share) return;
-    window.Kakao.Share.sendDefault({
-      objectType: 'feed',
-      content: {
-        title,
-        description,
-        imageUrl: 'https://www.kiminvestment.com/og-image.png',
-        link: {
-          webUrl: currentUrl,
-          mobileWebUrl: currentUrl,
-        },
-      },
-      buttons: [
-        {
-          title: '글 읽기',
-          link: {
-            webUrl: currentUrl,
-            mobileWebUrl: currentUrl,
-          },
-        },
-      ],
-    });
+    if (navigator.share) {
+      navigator.share({
+        title: title,
+        text: description || '한국인이 미국 집주인 되는 법 — 김통찰의 미국 부동산',
+        url: currentUrl,
+      }).catch(() => {
+        const text = '[미국 부동산 투자 가이드] ' + title + '\n' + currentUrl + '\n미국 투자 시작 전 꼭 읽어보세요.';
+        navigator.clipboard.writeText(text).then(() => {
+          setCopied(true);
+          setTimeout(() => setCopied(false), 2000);
+        });
+      });
+    } else {
+      const text = '[미국 부동산 투자 가이드] ' + title + '\n' + currentUrl + '\n미국 투자 시작 전 꼭 읽어보세요.';
+      navigator.clipboard.writeText(text).then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      });
+    }
   };
 
   const shareFacebook = () => {
@@ -110,7 +90,7 @@ export default function ShareButtons({ title, description, url }: ShareButtonsPr
           onClick={shareKakao}
           className="flex items-center gap-2 px-3 py-2 rounded-full text-xs font-semibold transition-colors bg-yellow-400 hover:bg-yellow-300 text-yellow-900"
         >
-          카카오톡
+          {canShare ? '카카오톡 공유' : '공유하기'}
         </button>
         <button
           onClick={shareFacebook}
