@@ -112,18 +112,18 @@ export default function HomePage() {
 
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
-              href={`/blog?category=${categoryToSlug("투자 가이드")}`}
+              href="/blog/buying-process-a-to-z"
               style={{ background: "#C9A84C", color: "#000" }}
               className="px-7 py-3 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity"
             >
-              투자 가이드 보기
+              미국 집 사는 순서 한눈에 보기 →
             </Link>
             <Link
-              href={`/blog?category=${categoryToSlug("나의 투자 경험담")}`}
+              href="/blog/korea-vs-usa-real-estate-investment"
               style={{ border: "1px solid #C9A84C", color: "#fff" }}
               className="px-7 py-3 rounded-lg font-semibold text-sm hover:text-[#C9A84C] transition-colors"
             >
-              나의 경험담 보기
+              실전 경험담 읽기 →
             </Link>
           </div>
         </div>
@@ -167,10 +167,10 @@ export default function HomePage() {
           </div>
           <div className="flex-1 min-w-0">
             <p style={{ color: "#C9A84C", fontSize: "16px" }} className="font-bold leading-snug mb-1">
-              한국인이 직접 미국 집주인으로 살면서 씁니다.
+              사고, 세 놓고, 수리하고, 팔았습니다 — 8년의 기록
             </p>
             <p style={{ color: "#fff", fontSize: "14px" }} className="mb-1">
-              미국 부동산 투자 8년 · 10채 이상 직접 운용 중
+              단독주택부터 듀플렉스까지, 10채 이상 직접 운용한 집주인입니다
             </p>
             <p style={{ color: "#888", fontSize: "13px" }}>
               구매부터 세입자 관리, 세금 신고까지 실전 경험을 공유합니다.
