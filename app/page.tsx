@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200",
+        url: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200",
         width: 1200,
         height: 630,
         alt: "한국인을 위한 미국 부동산 투자 가이드",
@@ -60,7 +60,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <section
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600')",
+          backgroundImage: "url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           minHeight: "500px",
