@@ -19,7 +19,12 @@
       "Bash(Remove-Item \"C:\\\\Users\\\\khyun\\\\kiminvestment\\\\components\\\\NewsletterSection.tsx\" -Force)",
       "Bash(Remove-Item \"C:\\\\Users\\\\khyun\\\\kiminvestment\\\\app\\\\api\\\\subscribe\\\\route.ts\" -Force)",
       "PowerShell(git *)",
-      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\khyun\\\\Desktop\\\\kiminvestment\" -Depth 2 | Where-Object { $_.Extension -notin @\\('.json', '.js', '.ts'\\) -and $_.Name -notmatch 'node_modules' } | Select-Object FullName)"
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\khyun\\\\Desktop\\\\kiminvestment\" -Depth 2 | Where-Object { $_.Extension -notin @\\('.json', '.js', '.ts'\\) -and $_.Name -notmatch 'node_modules' } | Select-Object FullName)",
+      "Bash(npx next *)",
+      "Bash(pkill -f \"next start\")",
+      "PowerShell(npm run *)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\khyun\\\\Desktop\\\\kiminvestment\" -Depth 2 | Where-Object { $_.Extension -notin @\\('.js','.ts','.tsx','.json'\\) -and $_.Name -notlike 'node_modules' } | Select-Object FullName, PSIsContainer)",
+      "PowerShell(\\(Get-Content \"C:\\\\Users\\\\khyun\\\\Desktop\\\\kiminvestment\\\\lib\\\\posts.ts\" | Measure-Object -Line\\).Lines)"
     ]
   }
 }
