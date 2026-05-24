@@ -43,7 +43,7 @@ export function toCategorySlug(name: string): string {
 }
 
 export const posts: Post[] = [
-  {  {
+  {  
     slug: "10year-investment-comparison-2016-2025",
     title: "2억원으로 10년 투자하면 어디가 최고일까? — S&P 500 vs 코스피200 vs 서울 아파트 vs 미국 부동산",
     date: "2026-05-23",
