@@ -19,21 +19,21 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/guide/basics',
-        destination: '/blog/beginner-real-estate-investment-guide-2026',
+        destination: '/posts/beginner-real-estate-investment-guide-2026',
         permanent: true,
       },
       {
         source: '/tax-legal/llc',
-        destination: '/blog/us-llc-formation-guide',
+        destination: '/posts/us-llc-formation-guide',
         permanent: true,
       },
       {
         source: '/experience',
-        destination: '/blog?category=my-experience',
+        destination: '/posts/duplex-east-coast-purchase-review',
         permanent: true,
       },
       {
-        source: '/etf',
+        source: '/etf/:path*',
         destination: '/',
         permanent: true,
       },
