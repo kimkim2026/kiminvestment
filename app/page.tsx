@@ -110,47 +110,9 @@ export default function HomePage() {
             </span>
           </div>
 
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Link
-              href="/posts/buying-process-a-to-z"
-              style={{ background: "#C9A84C", color: "#000" }}
-              className="px-7 py-3 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity"
-            >
-              미국 집 사는 순서 한눈에 보기 →
-            </Link>
-            <Link
-              href="/posts/duplex-east-coast-purchase-review"
-              style={{ border: "1px solid #C9A84C", color: "#fff" }}
-              className="px-7 py-3 rounded-lg font-semibold text-sm hover:text-[#C9A84C] transition-colors"
-            >
-              실전 경험담 읽기 →
-            </Link>
-          </div>
         </div>
       </section>
 
-      {/* Category Navigation */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 pt-10 pb-2">
-        <p style={{ color: "#888", fontSize: "14px" }} className="text-center mb-4">
-          어떤 주제가 궁금하신가요?
-        </p>
-        <div className="flex flex-col sm:flex-row gap-3">
-          {[
-            { name: "투자 가이드", emoji: "🏠", href: "/posts/buying-process-a-to-z" },
-            { name: "세금/법률", emoji: "📋", href: "/posts/fbar-fatca-guide" },
-            { name: "나의 투자 경험담", emoji: "✍️", href: "/posts/duplex-east-coast-purchase-review" },
-          ].map(({ name, emoji, href }) => (
-            <Link
-              key={name}
-              href={href}
-              className="flex-1 flex items-center justify-center gap-2 px-6 py-4 rounded-xl font-semibold text-sm border border-[#C9A84C] text-[#C9A84C] bg-[var(--surface)] hover:bg-[#C9A84C] hover:text-black transition-all duration-200"
-            >
-              <span>{emoji}</span>
-              <span>{name}</span>
-            </Link>
-          ))}
-        </div>
-      </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 space-y-16">
 
