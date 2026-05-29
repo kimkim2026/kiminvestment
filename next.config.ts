@@ -40,13 +40,18 @@ const nextConfig: NextConfig = {
       {
         source: '/blog',
         has: [{ type: 'query', key: 'category', value: 'my-experience' }],
-        destination: '/posts',
+        destination: '/',
         permanent: true,
       },
       {
         source: '/blog',
         has: [{ type: 'query', key: 'category', value: 'tax-legal' }],
-        destination: '/posts',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/posts',
+        destination: '/',
         permanent: true,
       },
       {
