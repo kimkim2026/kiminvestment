@@ -112,14 +112,14 @@ export default function HomePage() {
 
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
-              href="/blog/buying-process-a-to-z"
+              href="/posts/buying-process-a-to-z"
               style={{ background: "#C9A84C", color: "#000" }}
               className="px-7 py-3 rounded-lg font-semibold text-sm hover:opacity-90 transition-opacity"
             >
               미국 집 사는 순서 한눈에 보기 →
             </Link>
             <Link
-              href="/blog/duplex-east-coast-purchase-review"
+              href="/posts/duplex-east-coast-purchase-review"
               style={{ border: "1px solid #C9A84C", color: "#fff" }}
               className="px-7 py-3 rounded-lg font-semibold text-sm hover:text-[#C9A84C] transition-colors"
             >
@@ -136,9 +136,9 @@ export default function HomePage() {
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
           {[
-            { name: "투자 가이드", emoji: "🏠", href: "/blog/buying-process-a-to-z" },
-            { name: "세금/법률", emoji: "📋", href: "/blog/fbar-fatca-guide" },
-            { name: "나의 투자 경험담", emoji: "✍️", href: "/blog/duplex-east-coast-purchase-review" },
+            { name: "투자 가이드", emoji: "🏠", href: "/posts/buying-process-a-to-z" },
+            { name: "세금/법률", emoji: "📋", href: "/posts/fbar-fatca-guide" },
+            { name: "나의 투자 경험담", emoji: "✍️", href: "/posts/duplex-east-coast-purchase-review" },
           ].map(({ name, emoji, href }) => (
             <Link
               key={name}
@@ -194,7 +194,7 @@ export default function HomePage() {
                 이 글부터 읽어보세요
               </h2>
             </div>
-            <Link href={`/blog/${featuredPost.slug}`} className="group block">
+            <Link href={`/posts/${featuredPost.slug}`} className="group block">
               <article
                 style={{ background: "var(--surface)", border: "1px solid var(--border)" }}
                 className="rounded-2xl overflow-hidden hover:border-[#C9A84C] transition-all duration-200 hover:shadow-lg hover:shadow-black/30"
