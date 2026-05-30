@@ -156,7 +156,7 @@ export default function HomePage() {
                 이 글부터 읽어보세요
               </h2>
             </div>
-            <Link href={`/posts/${featuredPost.slug}`} className="group block">
+            <Link href={`/blog/${featuredPost.slug}`} className="group block">
               <article
                 style={{ background: "var(--surface)", border: "1px solid var(--border)" }}
                 className="rounded-2xl overflow-hidden hover:border-[#C9A84C] transition-all duration-200 hover:shadow-lg hover:shadow-black/30"
