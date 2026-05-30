@@ -19,17 +19,17 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/guide/basics',
-        destination: '/posts/beginner-real-estate-investment-guide-2026',
+        destination: '/blog/beginner-real-estate-investment-guide-2026',
         permanent: true,
       },
       {
         source: '/tax-legal/llc',
-        destination: '/posts/us-llc-formation-guide',
+        destination: '/blog/us-llc-formation-guide',
         permanent: true,
       },
       {
         source: '/experience',
-        destination: '/posts/duplex-east-coast-purchase-review',
+        destination: '/blog/duplex-east-coast-purchase-review',
         permanent: true,
       },
       {
@@ -52,11 +52,6 @@ const nextConfig: NextConfig = {
       {
         source: '/posts',
         destination: '/',
-        permanent: true,
-      },
-      {
-        source: '/blog/:slug*',
-        destination: '/posts/:slug*',
         permanent: true,
       },
     ]
