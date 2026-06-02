@@ -43,7 +43,25 @@ export function toCategorySlug(name: string): string {
 }
 
 export const posts: Post[] = [
-  {  
+  {
+    slug: "eviction-update-2026",
+    title: "Eviction 업데이트 — 드디어 마무리됩니다 (6개월의 기록)",
+    date: "2026-06-02",
+    category: "나의 투자 경험담",
+    excerpt:
+      "미국 세입자 강제 퇴거(Eviction) 실전 경험 최종 업데이트. 판사 서명, 황당한 반전, 자물쇠 교체까지 — 6개월간의 기록을 마무리합니다.",
+    metaTitle:
+      "Eviction 업데이트 — 드디어 마무리됩니다 (6개월의 기록) | 김통찰의 미국 부동산",
+    metaDescription:
+      "미국 세입자 강제 퇴거(Eviction) 실전 경험 최종 업데이트. 판사 서명, 황당한 반전, 자물쇠 교체까지 — 6개월간의 기록을 마무리합니다.",
+    readTime: 6,
+    tags: ["Eviction", "세입자관리", "실수교훈", "임대관리"],
+    coverImage:
+      "https://res.cloudinary.com/diglpn5kv/image/upload/Photo_Jun_02_2026_12_03_11_PM_hx8gff.jpg",
+    featured: false,
+    content: `이 글은 이전 글 "미국 세입자 강제 퇴거(Eviction) — 직접 겪고 있는 실전 이야기"의 최종 업데이트입니다. 12월부터 시작된 6개월간의 과정이 드디어 마무리됩니다.`,
+  },
+  {
     slug: "10year-investment-comparison-2016-2025",
     title: "2억원으로 10년 투자하면 어디가 최고일까? — S&P 500 vs 코스피200 vs 서울 아파트 vs 미국 부동산",
     date: "2026-05-23",
