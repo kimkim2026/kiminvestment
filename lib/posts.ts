@@ -44,6 +44,24 @@ export function toCategorySlug(name: string): string {
 
 export const posts: Post[] = [
   {
+    slug: "roof-replacement-completed",
+    title: "지붕 교체 완료 후기 — $20,000 체크 한 장으로 끝낸 공사 전 과정",
+    date: "2026-06-03",
+    category: "나의 투자 경험담",
+    excerpt:
+      "지붕 수리 결정 후 실제 교체 공사가 어떻게 진행됐는지 공유합니다. 철거부터 마감까지 단계별 과정, 계약서 검토, $20,000 최종 체크 결제까지 실전 경험담입니다.",
+    metaTitle:
+      "지붕 교체 완료 후기 — $20,000 체크 한 장으로 끝낸 공사 전 과정 | 김통찰의 미국 부동산",
+    metaDescription:
+      "지붕 수리 결정 후 실제 교체 공사가 어떻게 진행됐는지 공유합니다. 철거부터 마감까지 단계별 과정, 계약서 검토, $20,000 최종 체크 결제까지 실전 경험담입니다.",
+    readTime: 6,
+    tags: ["지붕 교체", "루핑 공사", "미국 집 수리", "임대 관리", "유지보수 비용"],
+    coverImage:
+      "https://res.cloudinary.com/diglpn5kv/image/upload/Photo_Dec_19_2025_8_18_27_PM_1_xfamu4",
+    featured: false,
+    content: "",
+  },
+  {
     slug: "eviction-update-2026",
     title: "Eviction 업데이트 — 드디어 마무리됩니다 (6개월의 기록)",
     date: "2026-06-02",
