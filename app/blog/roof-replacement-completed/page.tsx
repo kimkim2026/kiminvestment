@@ -367,7 +367,7 @@ export default function RoofReplacementCompletedPage() {
               className="text-sm text-center mt-2"
               style={{ color: "#888" }}
             >
-              공사 전 지붕 상태 — 오랜 세월로 노후화된 슁글이 뚜렷합니다
+              점검 당시 사진 — 누수가 발생하여 물이 지붕에서 떨어짐
             </p>
           </div>
 
@@ -399,7 +399,7 @@ export default function RoofReplacementCompletedPage() {
               className="text-sm text-center mt-2"
               style={{ color: "#888" }}
             >
-              기존 슁글 상태 — 부분 수리가 아닌 전체 교체가 불가피한 상태였습니다
+              점검 당시 사진 — 누수가 발생한 부위를 확인 중
             </p>
           </div>
 
