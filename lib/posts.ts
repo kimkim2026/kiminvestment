@@ -44,6 +44,24 @@ export function toCategorySlug(name: string): string {
 
 export const posts: Post[] = [
   {
+    slug: "tenant-turnover-checklist",
+    title: "세입자가 나간 후 새 세입자 받기 전에 반드시 해야 할 일",
+    date: "2026-06-11",
+    category: "나의 투자 경험담",
+    excerpt:
+      "미국 임대 부동산 운영 8년 경험을 바탕으로 정리한 공실 관리 체크리스트. 사진 촬영부터 보증금 정산, 잠금장치 교체, 청소, 설비 점검, 임대 광고까지 단계별로 안내합니다.",
+    metaTitle:
+      "세입자가 나간 후 새 세입자 받기 전에 반드시 해야 할 일 | 김통찰의 미국 부동산",
+    metaDescription:
+      "미국 임대 부동산 운영 8년 경험을 바탕으로 정리한 공실 관리 체크리스트. 사진 촬영부터 보증금 정산, 잠금장치 교체, 청소, 설비 점검, 임대 광고까지 단계별로 안내합니다.",
+    readTime: 8,
+    tags: ["공실 관리", "세입자 교체", "임대 관리", "보증금 정산", "턴오버"],
+    coverImage:
+      "https://res.cloudinary.com/diglpn5kv/image/upload/Photo_May_28_2026_10_13_59_AM_jlmvdp",
+    featured: false,
+    content: "",
+  },
+  {
     slug: "roof-replacement-completed",
     title: "지붕 교체 완료 후기 — $20,000 체크 한 장으로 끝낸 공사 전 과정",
     date: "2026-06-03",
