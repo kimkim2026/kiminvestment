@@ -42,14 +42,7 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: '/blog',
-        has: [{ type: 'query', key: 'category', value: 'my-experience' }],
-        destination: '/',
-        permanent: true,
-      },
-      {
-        source: '/blog',
-        has: [{ type: 'query', key: 'category', value: 'tax-legal' }],
+        source: '/etf',
         destination: '/',
         permanent: true,
       },
