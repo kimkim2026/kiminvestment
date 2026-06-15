@@ -573,10 +573,11 @@ export default function EvictionLawyerCostPage() {
                 "공실 최소화와 수익 극대화를 위한 세입자 교체 프로세스",
             },
             {
-              href: "/blog/michigan-rental-market",
-              category: "투자 가이드",
-              title: "미시간 렌탈 시장 완전 분석",
-              excerpt: "디트로이트·그랜드래피즈·앤아버 투자 비교",
+              href: "/blog/eviction-real-experience",
+              category: "나의 투자 경험담",
+              title: "미국 세입자 강제 퇴거(Eviction) — 직접 겪고 있는 실전 이야기",
+              excerpt:
+                "월세를 4개월째 내지 않는 세입자, 법원 심리까지 넘어간 Eviction 절차를 현재 진행 중입니다. 7-Day Notice부터 법원 Filing, Stay 신청까지 — 아직 끝나지 않은 실전 이야기를 있는 그대로 공유합니다.",
             },
           ].map(({ href, category, title, excerpt }) => (
             <Link
