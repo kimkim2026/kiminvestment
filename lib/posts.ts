@@ -44,6 +44,24 @@ export function toCategorySlug(name: string): string {
 
 export const posts: Post[] = [
   {
+    slug: "eviction-lawyer-cost",
+    title: "미국 퇴거 소송 변호사 비용 실제 공개 — 인보이스로 낱낱이 분석",
+    date: "2026-06-15",
+    category: "나의 투자 경험담",
+    excerpt:
+      "미시간 세입자 퇴거 소송에서 실제 지불한 변호사 비용 $626을 인보이스 항목별로 공개합니다. 한국 명도소송 비용과 비교하면 얼마나 저렴한지, 언제 변호사를 써야 하는지 실전 경험을 바탕으로 설명합니다.",
+    metaTitle:
+      "미국 퇴거 소송 변호사 비용 실제 공개 — 인보이스로 낱낱이 분석 | 김통찰의 미국 부동산",
+    metaDescription:
+      "미시간 세입자 퇴거 소송에서 실제 지불한 변호사 비용 $626을 인보이스 항목별로 공개합니다. 한국 명도소송 비용과 비교하면 얼마나 저렴한지, 언제 변호사를 써야 하는지 실전 경험을 바탕으로 설명합니다.",
+    readTime: 8,
+    tags: ["퇴거", "변호사 비용", "Eviction", "미시간", "LT Case", "Writ of Eviction", "세입자"],
+    coverImage:
+      "https://res.cloudinary.com/diglpn5kv/image/upload/Invoice_Final_fwl1vp",
+    featured: true,
+    content: "",
+  },
+  {
     slug: "tenant-turnover-checklist",
     title: "세입자가 나간 후 새 세입자 받기 전에 반드시 해야 할 일",
     date: "2026-06-11",
