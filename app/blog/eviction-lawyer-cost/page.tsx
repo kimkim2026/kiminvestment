@@ -8,12 +8,13 @@ export const metadata: Metadata = {
   description:
     "미시간 세입자 퇴거 소송에서 실제 지불한 변호사 비용 $626을 인보이스 항목별로 공개합니다. 한국 명도소송 비용과 비교하면 얼마나 저렴한지, 언제 변호사를 써야 하는지 실전 경험을 바탕으로 설명합니다.",
   alternates: {
-    canonical: "https://www.kiminvestment.com/posts/eviction-lawyer-cost",
+    canonical: "https://www.kiminvestment.com/blog/eviction-lawyer-cost",
   },
   openGraph: {
     title: "미국 퇴거 소송 변호사 비용 실제 공개 — 인보이스로 낱낱이 분석",
     description:
       "미시간 세입자 퇴거 소송에서 실제 지불한 변호사 비용 $626을 인보이스 항목별로 공개합니다.",
+    url: "https://kiminvestment.com/blog/eviction-lawyer-cost",
     images: [
       "https://res.cloudinary.com/diglpn5kv/image/upload/Invoice_Final_fwl1vp",
     ],
@@ -107,7 +108,7 @@ export default function EvictionLawyerCostPage() {
       <ShareButtons
         title="미국 퇴거 소송 변호사 비용 실제 공개 — 인보이스로 낱낱이 분석"
         description="미시간 세입자 퇴거 소송에서 실제 지불한 변호사 비용 $626을 인보이스 항목별로 공개합니다."
-        url="https://www.kiminvestment.com/posts/eviction-lawyer-cost"
+        url="https://www.kiminvestment.com/blog/eviction-lawyer-cost"
       />
 
       {/* ── 도입 ── */}
@@ -544,7 +545,7 @@ export default function EvictionLawyerCostPage() {
       <ShareButtons
         title="미국 퇴거 소송 변호사 비용 실제 공개 — 인보이스로 낱낱이 분석"
         description="미시간 세입자 퇴거 소송에서 실제 지불한 변호사 비용 $626을 인보이스 항목별로 공개합니다."
-        url="https://www.kiminvestment.com/posts/eviction-lawyer-cost"
+        url="https://www.kiminvestment.com/blog/eviction-lawyer-cost"
       />
 
       {/* ── 관련 글 ── */}
