@@ -44,6 +44,49 @@ export function toCategorySlug(name: string): string {
 
 export const posts: Post[] = [
   {
+    slug: "home-selling-guide",
+    title: "미국 부동산 매도 가이드 — 초보 셀러를 위한 전 과정 정리",
+    date: "2026-07-05",
+    category: "투자 가이드",
+    excerpt:
+      "미국에서 집을 팔 때 거쳐야 하는 준비, 가격 책정, 리스팅, 오퍼 검토, 인스펙션, 클로징, 세금까지 전 과정을 초보 셀러 눈높이에서 8단계로 정리합니다.",
+    metaTitle:
+      "미국 부동산 매도 가이드 — 초보 셀러를 위한 전 과정 정리 | 김통찰의 미국 부동산",
+    metaDescription:
+      "미국에서 집을 팔 때 거쳐야 하는 준비, 가격 책정, 리스팅, 오퍼 검토, 인스펙션, 클로징, 세금까지 전 과정을 초보 셀러 눈높이에서 8단계로 정리합니다.",
+    readTime: 9,
+    tags: ["부동산 매도", "셀러", "리스팅", "클로징", "부동산 세금"],
+    coverImage:
+      "https://images.unsplash.com/photo-1576941089067-2de3c901e126?w=1200",
+    featured: false,
+    relatedPosts: [
+      {
+        slug: "us-real-estate-closing-date",
+        title: "미국 부동산 잔금일(Closing Date) — 서류가 이렇게 많을 줄 몰랐다",
+        category: "나의 투자 경험담",
+        excerpt:
+          "미국에서 처음 집을 살 때 클로징 당일 책상 위에 쌓인 서류 더미를 보고 당황했습니다. 클로징 서류, 비용 항목, 타이틀 에이전시까지 직접 경험한 내용을 정리했습니다.",
+      },
+      {
+        slug: "1031-exchange-guide-korean",
+        title: "미국 부동산 투자자라면 꼭 알아야 할 1031 Exchange",
+        category: "세금/법률",
+        excerpt:
+          "부동산을 팔고 다른 부동산을 살 때 세금을 미룰 수 있는 1031 Exchange. 핵심 조건부터 진행 절차, 장단점까지 한국어로 쉽게 정리했습니다.",
+      },
+      {
+        slug: "home-inspection-checklist",
+        title: "미국 홈 인스펙션 체크리스트 10가지",
+        category: "투자 가이드",
+        excerpt:
+          "미국 부동산 거래 전 반드시 확인해야 할 홈 인스펙션 핵심 10가지를 투자자 관점에서 정리했습니다. 지붕·HVAC·기초·배관 등 실제 비용 정보 포함.",
+      },
+    ],
+    content: `미국에서 집을 판다는 것은 준비부터 클로징까지 여러 단계를 거치는 과정입니다. 매도 목적 정리, 가격 책정, 홈 스테이징, 리스팅, 오퍼 검토, 감정가와 융자 승인, 세금 정리까지 8단계로 정리했습니다.
+
+궁금한 점이 있으시면 [문의하기](/contact) 페이지를 통해 언제든지 질문해 주세요.`,
+  },
+  {
     slug: "eviction-lawyer-cost",
     title: "미국 퇴거 소송 변호사 비용 실제 공개 — 인보이스로 낱낱이 분석",
     date: "2026-06-15",
