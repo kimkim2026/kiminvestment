@@ -44,6 +44,49 @@ export function toCategorySlug(name: string): string {
 
 export const posts: Post[] = [
   {
+    slug: "real-estate-selling-tax-guide",
+    title: "미국 부동산 매도 시 세금 완전 정리 — 초보자를 위한 쉬운 설명",
+    date: "2026-07-05",
+    category: "세금/법률",
+    excerpt:
+      "미국 부동산을 매도할 때 발생하는 양도소득세, 감가상각 환수, 외국인 원천징수(FIRPTA), 1031 Exchange까지 초보 투자자 눈높이에서 쉽게 정리합니다.",
+    metaTitle:
+      "미국 부동산 매도 시 세금 완전 정리 — 초보자를 위한 쉬운 설명 | 김통찰의 미국 부동산",
+    metaDescription:
+      "미국 부동산을 매도할 때 발생하는 양도소득세, 감가상각 환수, 외국인 원천징수(FIRPTA), 1031 Exchange까지 초보 투자자 눈높이에서 쉽게 정리합니다.",
+    readTime: 10,
+    tags: ["양도소득세", "FIRPTA", "감가상각 환수", "1031 Exchange", "부동산 세금"],
+    coverImage:
+      "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=1200",
+    featured: false,
+    relatedPosts: [
+      {
+        slug: "home-selling-guide",
+        title: "미국 부동산 매도 가이드 — 초보 셀러를 위한 전 과정 정리",
+        category: "투자 가이드",
+        excerpt:
+          "미국에서 집을 팔 때 거쳐야 하는 준비, 가격 책정, 리스팅, 오퍼 검토, 인스펙션, 클로징, 세금까지 전 과정을 초보 셀러 눈높이에서 8단계로 정리합니다.",
+      },
+      {
+        slug: "1031-exchange-guide-korean",
+        title: "미국 부동산 투자자라면 꼭 알아야 할 1031 Exchange",
+        category: "세금/법률",
+        excerpt:
+          "부동산을 팔고 다른 부동산을 살 때 세금을 미룰 수 있는 1031 Exchange. 핵심 조건부터 진행 절차, 장단점까지 한국어로 쉽게 정리했습니다.",
+      },
+      {
+        slug: "us-rental-income-tax-korean",
+        title: "미국 렌탈 수익, 한국인은 세금을 어떻게 낼까?",
+        category: "세금/법률",
+        excerpt:
+          "미국에서 임대 수익이 발생하면 미국과 한국 양쪽에 세금 신고 의무가 생깁니다. ITIN 발급, Schedule E, 감가상각 혜택, FBAR 신고까지 한국인 투자자가 꼭 알아야 할 세금 가이드입니다.",
+      },
+    ],
+    content: `미국 부동산을 매도할 때는 매매 가격만큼이나 세금 계산이 중요합니다. 양도소득세, 감가상각 환수, 외국인 원천징수(FIRPTA), 1031 Exchange, 주 세금까지 초보 투자자 눈높이에서 8단계로 정리했습니다.
+
+이 글은 일반적인 정보 제공을 목적으로 하며, 실제 매도 전에는 반드시 CPA 등 세무 전문가와 상담하시기 바랍니다. 궁금한 점이 있으시면 [문의하기](/contact) 페이지를 통해 언제든지 질문해 주세요.`,
+  },
+  {
     slug: "home-selling-guide",
     title: "미국 부동산 매도 가이드 — 초보 셀러를 위한 전 과정 정리",
     date: "2026-07-05",
