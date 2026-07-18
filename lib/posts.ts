@@ -44,6 +44,52 @@ export function toCategorySlug(name: string): string {
 
 export const posts: Post[] = [
   {
+    slug: "us-multi-property-investment",
+    title: "미국 다주택 투자의 장점 — 한국과 다른 이유",
+    date: "2026-07-18",
+    category: "투자 가이드",
+    subcategory: "부동산 투자 기초",
+    excerpt:
+      "한국에서는 다주택자가 규제와 비난의 대상이지만, 미국에서는 임대 공급자이자 투자자로 인정받습니다. 월세 수입, 대출 레버리지, 세금 공제, 1031 Exchange, 지역 다양성까지 미국식 다주택 투자의 다섯 가지 장점을 정리합니다.",
+    metaTitle:
+      "미국 다주택 투자의 장점 — 한국과 다른 이유 | 김통찰의 미국 부동산",
+    metaDescription:
+      "한국에서는 다주택자가 규제와 비난의 대상이지만, 미국에서는 임대 공급자이자 투자자로 인정받습니다. 월세 수입, 대출 레버리지, 세금 공제, 1031 Exchange, 지역 다양성까지 미국식 다주택 투자의 다섯 가지 장점을 정리합니다.",
+    readTime: 8,
+    tags: ["다주택 투자", "임대 수익", "1031 Exchange", "감가상각", "캐시플로우"],
+    coverImage:
+      "https://images.unsplash.com/photo-1758304480340-cb2c43aafd4f?w=1200&q=80",
+    featured: false,
+    relatedPosts: [
+      {
+        slug: "why-usa-welcomes-landlords",
+        title: "미국은 왜 다주택자를 대우해줄까? — 한국과 전혀 다른 부동산 문화",
+        category: "나의 투자 경험담",
+        excerpt:
+          "한국에서 다주택자는 규제와 비난의 대상이었습니다. 하지만 미국에서는 달랐습니다. 직접 Landlord가 되어 첫 월세를 받던 날의 경험과 함께, 두 나라의 부동산 문화 차이를 정리했습니다.",
+      },
+      {
+        slug: "1031-exchange-guide-korean",
+        title: "미국 부동산 투자자라면 꼭 알아야 할 1031 Exchange",
+        category: "세금/법률",
+        excerpt:
+          "부동산을 팔고 다른 부동산을 살 때 세금을 미룰 수 있는 1031 Exchange. 핵심 조건부터 진행 절차, 장단점까지 한국어로 쉽게 정리했습니다.",
+      },
+      {
+        slug: "us-real-estate-tax-benefits",
+        title: "미국 부동산 투자, 세금 혜택이 얼마나 클까? — 투자자가 꼭 알아야 할 7가지",
+        category: "세금/법률",
+        excerpt:
+          "감가상각, 모기지 이자 공제, 1031 Exchange까지. 미국 부동산이 투자자에게 세금 면에서 얼마나 유리한 구조인지 7가지 핵심 혜택으로 정리했습니다.",
+      },
+    ],
+    content: `한국에서는 주택 수가 늘어나면 세금과 대출 규제를 먼저 걱정하게 됩니다. 반면 미국에서는 보유 주택 수 자체보다 각 부동산이 안정적인 임대수익을 만드는지가 더 중요합니다. 월세 수입, 대출 레버리지, 세금 공제, 1031 Exchange, 지역 다양성까지 미국식 다주택 투자의 다섯 가지 장점을 정리했습니다.
+
+성공적인 투자를 위해서는 집값 상승만 기대하기보다 임대수입, 공실, 세금, 보험료와 수리비를 모두 반영한 실제 현금흐름을 꼼꼼하게 계산해야 합니다.
+
+궁금한 점이 있으시면 [문의하기](/contact) 페이지를 통해 언제든지 질문해 주세요.`,
+  },
+  {
     slug: "real-estate-selling-tax-guide",
     title: "미국 부동산 매도 시 세금 완전 정리 — 초보자를 위한 쉬운 설명",
     date: "2026-07-05",
