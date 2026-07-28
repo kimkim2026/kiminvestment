@@ -44,6 +44,40 @@ export function toCategorySlug(name: string): string {
 
 export const posts: Post[] = [
   {
+    slug: "brrrr-meaning",
+    title: "BRRRR 뜻 — 30초 만에 이해하는 미국 부동산 투자 용어",
+    date: "2026-07-28",
+    category: "부동산 투자 기초",
+    excerpt:
+      "미국 부동산 투자 커뮤니티에서 자주 보이는 BRRRR이 무엇의 약자인지, 5단계 구조를 쉽고 짧게 설명합니다.",
+    metaTitle:
+      "BRRRR 뜻 — 30초 만에 이해하는 미국 부동산 투자 용어 | 김통찰의 미국 부동산",
+    metaDescription:
+      "미국 부동산 투자 커뮤니티에서 자주 보이는 BRRRR이 무엇의 약자인지, 5단계 구조를 쉽고 짧게 설명합니다.",
+    readTime: 4,
+    tags: ["BRRRR", "BRRRR 뜻", "부동산 투자 용어", "리모델링 투자", "재융자"],
+    coverImage:
+      "https://images.unsplash.com/photo-1674649207083-281c2517ab49?auto=format&fit=crop&w=1600&q=80",
+    featured: false,
+    content: "",
+    relatedPosts: [
+      {
+        slug: "brrrr-strategy",
+        title: "BRRRR 전략으로 미국 부동산 투자금 회수하기",
+        category: "부동산 투자 기초",
+        excerpt:
+          "BRRRR(Buy·Rehab·Rent·Refinance·Repeat) 전략을 한국인 투자자 관점에서 실제 숫자 예시와 함께 단계별로 설명합니다.",
+      },
+      {
+        slug: "us-real-estate-return-rate-example",
+        title: "미국 부동산 수익률은 실제로 얼마나 될까? — 실제 사례로 쉽게 이해하기",
+        category: "투자 가이드",
+        excerpt:
+          "미국 중서부 렌탈 투자 시나리오로 현금흐름, NOI, 집값 상승, 원금 상환을 모두 합산한 실제 수익률을 단계별로 계산해 드립니다.",
+      },
+    ],
+  },
+  {
     slug: "property-tax-uncapping-explained",
     title: "같은 동네, 비슷한 집인데 왜 재산세는 다를까",
     date: "2026-07-27",
