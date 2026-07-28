@@ -44,6 +44,41 @@ export function toCategorySlug(name: string): string {
 
 export const posts: Post[] = [
   {
+    slug: "road-to-housing-act-2026",
+    title:
+      "21st Century ROAD to Housing Act 완전정리 — 한국인 투자자가 알아야 할 것",
+    date: "2026-07-28",
+    category: "세금/법률",
+    excerpt:
+      "2026년 7월 발효된 미국 주택 법안 ROAD to Housing Act의 핵심 내용과 기관 투자자 규제가 개인 투자자에게 미치는 실제 영향을 정리합니다.",
+    metaTitle:
+      "21st Century ROAD to Housing Act 완전정리 — 한국인 투자자가 알아야 할 것 | 김통찰의 미국 부동산",
+    metaDescription:
+      "2026년 7월 발효된 미국 주택 법안 ROAD to Housing Act의 핵심 내용과 기관 투자자 규제가 개인 투자자에게 미치는 실제 영향을 정리합니다.",
+    readTime: 6,
+    tags: ["ROAD to Housing Act", "미국 부동산법", "기관투자자 규제", "주택공급 정책", "부동산 투자자 가이드"],
+    coverImage:
+      "https://images.unsplash.com/photo-1519922838705-9d6cb8bcfaea?w=1200&q=80",
+    featured: false,
+    content: "",
+    relatedPosts: [
+      {
+        slug: "property-tax-uncapping-explained",
+        title: "같은 동네, 비슷한 집인데 왜 재산세는 다를까",
+        category: "세금/법률",
+        excerpt:
+          "미국에서는 같은 동네, 비슷한 크기의 집이라도 재산세가 두 배 이상 차이 나는 경우가 흔합니다. 실제 렌탈 부동산 두 채를 비교하며 그 이유를 한국 투자자 눈높이에서 쉽게 설명합니다.",
+      },
+      {
+        slug: "us-multi-property-investment",
+        title: "미국 다주택 투자의 장점 — 한국과 다른 이유",
+        category: "투자 가이드",
+        excerpt:
+          "한국에서는 다주택자가 규제와 비난의 대상이지만, 미국에서는 임대 공급자이자 투자자로 인정받습니다. 월세 수입, 대출 레버리지, 세금 공제, 1031 Exchange, 지역 다양성까지 미국식 다주택 투자의 다섯 가지 장점을 정리합니다.",
+      },
+    ],
+  },
+  {
     slug: "brrrr-meaning",
     title: "BRRRR 뜻 — 30초 만에 이해하는 미국 부동산 투자 용어",
     date: "2026-07-28",
