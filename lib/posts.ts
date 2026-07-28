@@ -44,6 +44,24 @@ export function toCategorySlug(name: string): string {
 
 export const posts: Post[] = [
   {
+    slug: "property-tax-uncapping-explained",
+    title: "같은 동네, 비슷한 집인데 왜 재산세는 다를까",
+    date: "2026-07-27",
+    category: "세금/법률",
+    excerpt:
+      "미국에서는 같은 동네, 비슷한 크기의 집이라도 재산세가 두 배 이상 차이 나는 경우가 흔합니다. 실제 렌탈 부동산 두 채를 비교하며 그 이유를 한국 투자자 눈높이에서 쉽게 설명합니다.",
+    metaTitle:
+      "같은 동네, 비슷한 집인데 왜 재산세는 다를까 | 김통찰의 미국 부동산",
+    metaDescription:
+      "미국에서는 같은 동네, 비슷한 크기의 집이라도 재산세가 두 배 이상 차이 나는 경우가 흔합니다. 실제 렌탈 부동산 두 채를 비교하며 그 이유를 한국 투자자 눈높이에서 쉽게 설명합니다.",
+    readTime: 6,
+    tags: ["재산세", "Taxable Value", "임대 부동산 투자", "미국 세금", "부동산 투자 경험담"],
+    coverImage:
+      "https://images.unsplash.com/photo-1768067437750-f18d26d3397b?w=1200&q=80",
+    featured: false,
+    content: "",
+  },
+  {
     slug: "us-multi-property-investment",
     title: "미국 다주택 투자의 장점 — 한국과 다른 이유",
     date: "2026-07-18",
