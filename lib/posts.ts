@@ -44,6 +44,123 @@ export function toCategorySlug(name: string): string {
 
 export const posts: Post[] = [
   {
+    slug: "foreign-ownership-state-laws-2026",
+    title:
+      "미국 36개 주 외국인 부동산 소유 제한법 확산 — 한국인도 해당될까?",
+    date: "2026-08-10",
+    category: "세금/법률",
+    excerpt:
+      "미국 여러 주에서 외국인의 부동산 소유를 제한하는 법이 확산되고 있습니다. 어떤 국적이 대상이며 한국인 투자자는 해당되는지 정리합니다.",
+    metaTitle:
+      "미국 36개 주 외국인 부동산 소유 제한법 확산 — 한국인도 해당될까? | 김통찰의 미국 부동산",
+    metaDescription:
+      "미국 여러 주에서 외국인의 부동산 소유를 제한하는 법이 확산되고 있습니다. 어떤 국적이 대상이며 한국인 투자자는 해당되는지 정리합니다.",
+    readTime: 6,
+    tags: ["외국인 소유 제한", "주법", "부동산 규제", "우려국가", "한국인 투자자"],
+    coverImage:
+      "https://images.unsplash.com/photo-1594581979864-36977b15d0dc?w=1200&q=80",
+    featured: true,
+    content: "",
+    relatedPosts: [
+      {
+        slug: "road-to-housing-act-2026",
+        title: "21st Century ROAD to Housing Act 완전정리 — 한국인 투자자가 알아야 할 것",
+        category: "세금/법률",
+        excerpt:
+          "2026년 7월 발효된 미국 주택 법안 ROAD to Housing Act의 핵심 내용과 기관 투자자 규제가 개인 투자자에게 미치는 실제 영향을 정리합니다.",
+      },
+      {
+        slug: "foreign-buyer-decline-2026",
+        title: "2026년 외국인 미국 부동산 매수 19% 감소, 그 이유는?",
+        category: "투자 가이드",
+        excerpt:
+          "전미부동산협회(NAR) 최신 보고서 기준 외국인의 미국 주택 매수가 1년 새 19% 감소했습니다. 그 배경과 한국인 투자자에게 주는 의미를 정리합니다.",
+      },
+    ],
+  },
+  {
+    slug: "trump-mortgage-bond-2026",
+    title: "트럼프發 2000억 달러 모기지 채권 매입, 금리 인하 효과는?",
+    date: "2026-08-10",
+    category: "투자 가이드",
+    excerpt:
+      "트럼프 행정부가 모기지 금리 인하를 위해 2000억 달러 규모의 모기지 채권 매입을 지시했습니다. 실제 효과와 전망을 정리합니다.",
+    metaTitle:
+      "트럼프發 2000억 달러 모기지 채권 매입, 금리 인하 효과는? | 김통찰의 미국 부동산",
+    metaDescription:
+      "트럼프 행정부가 모기지 금리 인하를 위해 2000억 달러 규모의 모기지 채권 매입을 지시했습니다. 실제 효과와 전망을 정리합니다.",
+    readTime: 5,
+    tags: ["트럼프 정책", "모기지 채권", "패니메이", "프레디맥", "금리 전망"],
+    coverImage:
+      "https://images.unsplash.com/photo-1633059050703-0f1b50828402?w=1200&q=80",
+    featured: false,
+    content: "",
+    relatedPosts: [
+      {
+        slug: "mortgage-rate-2026-august",
+        title: "2026년 8월 모기지 금리 6.76%, 올해 최고치 — 지금 사도 될까?",
+        category: "투자 가이드",
+        excerpt:
+          "2026년 8월 기준 30년 고정 모기지 금리가 올해 최고 수준을 기록했습니다. 금리 상승 배경과 매물 재고 증가가 투자자에게 주는 의미를 짚어봅니다.",
+      },
+    ],
+  },
+  {
+    slug: "mortgage-rate-2026-august",
+    title: "2026년 8월 모기지 금리 6.76%, 올해 최고치 — 지금 사도 될까?",
+    date: "2026-08-10",
+    category: "투자 가이드",
+    subcategory: "모기지·대출",
+    excerpt:
+      "2026년 8월 기준 30년 고정 모기지 금리가 올해 최고 수준을 기록했습니다. 금리 상승 배경과 매물 재고 증가가 투자자에게 주는 의미를 짚어봅니다.",
+    metaTitle:
+      "2026년 8월 모기지 금리 6.76%, 올해 최고치 — 지금 사도 될까? | 김통찰의 미국 부동산",
+    metaDescription:
+      "2026년 8월 기준 30년 고정 모기지 금리가 올해 최고 수준을 기록했습니다. 금리 상승 배경과 매물 재고 증가가 투자자에게 주는 의미를 짚어봅니다.",
+    readTime: 5,
+    tags: ["모기지 금리", "프레디맥", "30년 고정금리", "주택 재고", "2026 부동산 시장"],
+    coverImage:
+      "https://images.unsplash.com/photo-1643804926339-e94f0a655185?w=1200&q=80",
+    featured: false,
+    content: "",
+    relatedPosts: [
+      {
+        slug: "trump-mortgage-bond-2026",
+        title: "트럼프發 2000억 달러 모기지 채권 매입, 금리 인하 효과는?",
+        category: "투자 가이드",
+        excerpt:
+          "트럼프 행정부가 모기지 금리 인하를 위해 2000억 달러 규모의 모기지 채권 매입을 지시했습니다. 실제 효과와 전망을 정리합니다.",
+      },
+    ],
+  },
+  {
+    slug: "foreign-buyer-decline-2026",
+    title: "2026년 외국인 미국 부동산 매수 19% 감소, 그 이유는?",
+    date: "2026-08-10",
+    category: "투자 가이드",
+    excerpt:
+      "전미부동산협회(NAR) 최신 보고서 기준 외국인의 미국 주택 매수가 1년 새 19% 감소했습니다. 그 배경과 한국인 투자자에게 주는 의미를 정리합니다.",
+    metaTitle:
+      "2026년 외국인 미국 부동산 매수 19% 감소, 그 이유는? | 김통찰의 미국 부동산",
+    metaDescription:
+      "전미부동산협회(NAR) 최신 보고서 기준 외국인의 미국 주택 매수가 1년 새 19% 감소했습니다. 그 배경과 한국인 투자자에게 주는 의미를 정리합니다.",
+    readTime: 5,
+    tags: ["외국인 매수자", "NAR 보고서", "미국 부동산 시장", "2026 부동산 뉴스", "해외 투자자"],
+    coverImage:
+      "https://images.unsplash.com/photo-1575923640658-37d9c2ad9f92?w=1200&q=80",
+    featured: false,
+    content: "",
+    relatedPosts: [
+      {
+        slug: "foreign-ownership-state-laws-2026",
+        title: "미국 36개 주 외국인 부동산 소유 제한법 확산 — 한국인도 해당될까?",
+        category: "세금/법률",
+        excerpt:
+          "미국 여러 주에서 외국인의 부동산 소유를 제한하는 법이 확산되고 있습니다. 어떤 국적이 대상이며 한국인 투자자는 해당되는지 정리합니다.",
+      },
+    ],
+  },
+  {
     slug: "road-to-housing-act-2026",
     title:
       "21st Century ROAD to Housing Act 완전정리 — 한국인 투자자가 알아야 할 것",
