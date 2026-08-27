@@ -44,6 +44,25 @@ export function toCategorySlug(name: string): string {
 
 export const posts: Post[] = [
   {
+    slug: "buy-borrow-die-strategy",
+    title:
+      "Buy Borrow Die 절세 전략 — 미국 자산가들이 세금을 줄이는 방법",
+    date: "2026-08-27",
+    category: "세금/법률",
+    excerpt:
+      "팔지 않고 자산을 키우는 미국 부호들의 대표적인 절세 전략, Buy Borrow Die의 개념과 원리를 한국인 투자자 눈높이에서 정리했습니다.",
+    metaTitle:
+      "Buy Borrow Die 절세 전략 — 미국 자산가들이 세금을 줄이는 방법 | 김통찰의 미국 부동산",
+    metaDescription:
+      "팔지 않고 자산을 키우는 미국 부호들의 대표적인 절세 전략, Buy Borrow Die의 개념과 원리를 한국인 투자자 눈높이에서 정리했습니다.",
+    readTime: 6,
+    tags: ["Buy Borrow Die", "절세 전략", "자산관리", "상속세", "1031 교환"],
+    coverImage:
+      "https://images.unsplash.com/photo-1780246033063-b058393796a0?w=1200&q=80",
+    featured: false,
+    content: "",
+  },
+  {
     slug: "foreign-ownership-state-laws-2026",
     title:
       "미국 36개 주 외국인 부동산 소유 제한법 확산 — 한국인도 해당될까?",
