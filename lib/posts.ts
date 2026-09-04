@@ -44,6 +44,22 @@ export function toCategorySlug(name: string): string {
 
 export const posts: Post[] = [
   {
+    slug: "llc-setup-guide",
+    title: "미국 LLC 설립 방법 — 한국인 투자자를 위한 7단계 완전 가이드",
+    date: "2026-09-04",
+    category: "세금/법률",
+    excerpt:
+      "미국 부동산 투자를 위한 LLC 설립 절차를 한국인 투자자 관점에서 단계별로 정리했습니다. 주(State) 선택부터 EIN 신청, 운영 계약서 작성, 연간 유지 의무까지 알아야 할 모든 것을 담았습니다.",
+    metaTitle:
+      "미국 LLC 설립 방법 — 한국인 투자자를 위한 7단계 완전 가이드 | 김통찰의 미국 부동산",
+    metaDescription:
+      "미국 부동산 투자를 위한 LLC 설립 절차를 한국인 투자자 관점에서 단계별로 정리했습니다. 주(State) 선택부터 EIN 신청, 운영 계약서 작성, 연간 유지 의무까지 알아야 할 모든 것을 담았습니다.",
+    readTime: 9,
+    tags: ["LLC", "법인 설립", "부동산 투자", "세금", "Delaware", "Wyoming", "EIN", "외국인 투자자"],
+    featured: true,
+    content: "",
+  },
+  {
     slug: "interest-rate-real-estate-correlation",
     title: "금리가 오르면 미국 집값은 정말 떨어질까요",
     date: "2026-09-04",
