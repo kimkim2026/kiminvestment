@@ -44,6 +44,24 @@ export function toCategorySlug(name: string): string {
 
 export const posts: Post[] = [
   {
+    slug: "interest-rate-real-estate-correlation",
+    title: "금리가 오르면 미국 집값은 정말 떨어질까요",
+    date: "2026-09-04",
+    category: "융자/모기지",
+    excerpt:
+      "2026년 9월 현재 연준 금리와 모기지 금리 동향을 바탕으로, 금리 변화가 미국 부동산 투자에 실제로 어떤 영향을 주는지 한국인 투자자 관점에서 정리합니다.",
+    metaTitle:
+      "금리가 오르면 미국 집값은 정말 떨어질까요 | 김통찰의 미국 부동산",
+    metaDescription:
+      "2026년 9월 현재 연준 금리와 모기지 금리 동향을 바탕으로, 금리 변화가 미국 부동산 투자에 실제로 어떤 영향을 주는지 한국인 투자자 관점에서 정리합니다.",
+    readTime: 8,
+    tags: ["금리", "모기지 금리", "연준", "재융자", "부동산 투자", "DSCR 대출"],
+    coverImage:
+      "https://images.unsplash.com/photo-1560221328-12fe60f83ab8?w=1200&q=80",
+    featured: false,
+    content: "",
+  },
+  {
     slug: "buy-borrow-die-strategy",
     title:
       "Buy Borrow Die 절세 전략 — 미국 자산가들이 세금을 줄이는 방법",
