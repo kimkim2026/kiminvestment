@@ -42,7 +42,7 @@ export default function Footer() {
               {[
                 { href: "/blog/us-real-estate-investment-types", label: "부동산 투자 기초" },
                 { href: "/blog/mortgage-guide-for-koreans", label: "융자/모기지" },
-                { href: "/blog/us-llc-formation-guide", label: "LLC 법인 설립" },
+                { href: "/blog/llc-setup-guide", label: "LLC 법인 설립" },
                 { href: "/blog/us-rental-income-tax-korean", label: "외국인 세금 신고" },
                 { href: "/blog/duplex-east-coast-purchase-review", label: "실제 매물 구매 사례" },
                 { href: "/blog/korean-landlord-us-tenant-management-challenges", label: "임대 관리" },

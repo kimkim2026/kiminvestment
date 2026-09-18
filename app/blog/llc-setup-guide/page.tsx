@@ -302,6 +302,13 @@ export default function LlcSetupGuidePage() {
                   "프라이버시와 저비용을 중시하는 소규모 개인 투자자",
                 ],
                 [
+                  "Nevada",
+                  "약 $75~",
+                  "연 $350 (Business License + Annual List)",
+                  "높음 (구성원 비공개)",
+                  "주 소득세가 없어, 다른 주에도 투자를 확장할 예정인 경우",
+                ],
+                [
                   "부동산 소재지 주",
                   "주별 상이 ($50~$500)",
                   "주별 상이",
@@ -374,6 +381,17 @@ export default function LlcSetupGuidePage() {
             납부합니다. 이 서류가 승인되면 LLC가 법적으로 존재하게
             됩니다.
           </p>
+          <TipBox>
+            LLC 이름을 정할 때는 몇 가지 규칙이 있습니다. 이름 끝에{" "}
+            <strong style={{ color: "var(--foreground)" }}>
+              &quot;LLC&quot; 또는 &quot;L.L.C.&quot;
+            </strong>
+            가 포함되어야 하고, 해당 주에서 이미 사용 중인 이름은 쓸 수
+            없으며, FBI·IRS 같은 정부 기관명이 들어간 이름도 사용할 수
+            없습니다. 대부분의 주 정부 웹사이트에서 이름 중복 여부를
+            무료로 확인할 수 있으니, 서류 제출 전에 미리 검색해 보는
+            것이 안전합니다.
+          </TipBox>
         </StepCard>
 
         <StepCard number="04" title="EIN(고용주 식별번호) 신청">
@@ -611,6 +629,22 @@ export default function LlcSetupGuidePage() {
           (Title Insurance) 역시 새로운 소유주 명의를 보장하지 않는
           경우가 있어 별도 확인이 필요합니다.
         </WarningBox>
+
+        <WarningBox>
+          <strong style={{ color: "#f87171" }}>
+            개인 자산과 LLC 자산을 섞어 쓰면 책임 제한 효과 자체가
+            무효화될 수 있습니다.
+          </strong>{" "}
+          개인 카드로 LLC 비용을 결제하거나 LLC 계좌에서 개인 지출을
+          하는 식으로 자금을 혼용하면, 소송이 발생했을 때 법원이 LLC를
+          개인과 별개의 실체로 인정하지 않는{" "}
+          <strong style={{ color: "var(--foreground)" }}>
+            &quot;Piercing the Corporate Veil&quot;
+          </strong>
+          이 적용되어 개인 자산까지 책임 범위에 포함될 수 있습니다.
+          LLC 명의 은행 계좌와 개인 계좌를 철저히 분리해 운영하는 것이
+          기본입니다.
+        </WarningBox>
       </section>
 
       {/* ── 마무리 ── */}
@@ -662,11 +696,11 @@ export default function LlcSetupGuidePage() {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {[
             {
-              href: "/blog/us-llc-formation-guide",
+              href: "/blog/us-rental-income-tax-korean",
               category: "세금/법률",
-              title: "미국 LLC 법인 설립 기초 가이드 — 한국인 부동산 투자자가 알아야 할 모든 것",
+              title: "미국 렌탈 수익, 한국인은 세금을 어떻게 낼까?",
               excerpt:
-                "LLC를 만들고 투자해야 할까요, 개인 명의로 해도 될까요? LLC란 무엇인지, 왜 필요한지, 어떻게 설립하는지 기초부터 정리했습니다.",
+                "미국에서 임대 수익이 발생하면 미국과 한국 양쪽에 세금 신고 의무가 생깁니다. ITIN 발급, Schedule E, 감가상각 혜택, FBAR 신고까지 정리했습니다.",
             },
             {
               href: "/blog/personal-vs-llc-real-estate",

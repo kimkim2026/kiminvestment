@@ -28,7 +28,17 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/tax-legal/llc',
-        destination: '/blog/us-llc-formation-guide',
+        destination: '/blog/llc-setup-guide',
+        permanent: true,
+      },
+      {
+        source: '/blog/us-llc-formation-guide',
+        destination: '/blog/llc-setup-guide',
+        permanent: true,
+      },
+      {
+        source: '/blog/should-i-form-llc-for-real-estate',
+        destination: '/blog/personal-vs-llc-real-estate',
         permanent: true,
       },
       {

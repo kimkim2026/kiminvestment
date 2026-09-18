@@ -23,7 +23,7 @@ const navItems = [
     submenu: [
       { href: "/blog/us-rental-income-tax-korean", label: "외국인 세금 신고" },
       { href: "/tax/fbar-fatca", label: "FBAR/FATCA" },
-      { href: "/blog/us-llc-formation-guide", label: "LLC 법인 설립" },
+      { href: "/blog/llc-setup-guide", label: "LLC 법인 설립" },
     ],
   },
   {
