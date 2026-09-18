@@ -44,6 +44,22 @@ export function toCategorySlug(name: string): string {
 
 export const posts: Post[] = [
   {
+    slug: "best-time-to-buy-fall-2026",
+    title: "2026년 최적의 미국 집 구매 시기 — 9월 27일부터 시작되는 이유",
+    date: "2026-09-18",
+    category: "투자 가이드",
+    excerpt:
+      "Realtor.com이 발표한 2026년 최적 구매 주간(9월 27일~10월 3일)과 최근 모기지 금리·재고 동향을 바탕으로, 지금이 왜 한국인 투자자에게 협상력을 가질 좋은 시점인지 데이터로 정리했습니다.",
+    metaTitle:
+      "2026년 최적의 미국 집 구매 시기 — 9월 27일부터 시작되는 이유 | 김통찰의 미국 부동산",
+    metaDescription:
+      "Realtor.com이 발표한 2026년 최적 구매 주간(9월 27일~10월 3일)과 최근 모기지 금리·재고 동향을 바탕으로, 지금이 왜 한국인 투자자에게 협상력을 가질 좋은 시점인지 데이터로 정리했습니다.",
+    readTime: 6,
+    tags: ["시장 분석", "구매 타이밍", "모기지 금리", "재고 증가", "매수자 시장", "2026년 부동산"],
+    featured: false,
+    content: "",
+  },
+  {
     slug: "llc-setup-guide",
     title: "미국 LLC 설립 방법 — 한국인 투자자를 위한 7단계 완전 가이드",
     date: "2026-09-04",
