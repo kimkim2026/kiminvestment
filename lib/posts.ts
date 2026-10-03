@@ -44,6 +44,24 @@ export function toCategorySlug(name: string): string {
 
 export const posts: Post[] = [
   {
+    slug: "fed-rate-hike-2026-investor-strategy",
+    title: "연준 3년 만의 금리 인상, 미국 부동산 투자자는 지금 뭘 해야 하나",
+    date: "2026-10-03",
+    category: "투자 가이드",
+    excerpt:
+      "2026년 9월 연준이 3년 만에 기준금리를 인상하고 모기지 금리가 7%대로 올라섰습니다. 지금 점검해야 할 숫자와 대응 전략 6가지를 정리했습니다.",
+    metaTitle:
+      "연준 3년 만의 금리 인상, 미국 부동산 투자자는 지금 뭘 해야 하나 | 김통찰의 미국 부동산",
+    metaDescription:
+      "2026년 9월 연준이 3년 만에 기준금리를 인상하고 모기지 금리가 7%대로 올라섰습니다. 미국 부동산 8년차 투자자가 지금 점검해야 할 숫자와 대응 전략 6가지를 정리했습니다.",
+    readTime: 8,
+    tags: ["연준", "금리 인상", "모기지 금리", "리파이낸스", "HELOC", "투자 전략"],
+    coverImage:
+      "https://images.unsplash.com/photo-1600047509358-9dc75507daeb?w=1200&q=80",
+    featured: true,
+    content: "",
+  },
+  {
     slug: "best-time-to-buy-fall-2026",
     title: "2026년 최적의 미국 집 구매 시기 — 9월 27일부터 시작되는 이유",
     date: "2026-09-18",
