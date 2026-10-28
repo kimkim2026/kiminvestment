@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import Script from "next/script";
 import { getAllPosts, getPostBySlug, categoryToSlug } from "@/lib/posts";
 import type { Metadata } from "next";
@@ -134,13 +135,15 @@ function renderMarkdown(content: string) {
       if (match) {
         const [, alt, src] = match;
         elements.push(
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
+          <Image
             key={key++}
             src={src}
-            alt={alt}
-            className="w-full rounded-xl my-6 object-cover"
-            style={{ maxHeight: "400px", border: "1px solid var(--border)" }}
+            alt={alt ?? ""}
+            width={0}
+            height={0}
+            sizes="(max-width: 768px) 100vw, 768px"
+            className="block max-h-[600px] mx-auto rounded-xl my-6 object-contain"
+            style={{ width: "auto", height: "auto", maxWidth: "100%", border: "1px solid var(--border)" }}
           />
         );
       }
@@ -370,12 +373,15 @@ export default async function PostPage({ params }: Props) {
 
       {/* Cover Image */}
       {post.coverImage && (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
+        <Image
           src={post.coverImage}
           alt={post.title}
-          className="w-full rounded-xl mb-8 object-cover"
-          style={{ maxHeight: "420px", border: "1px solid var(--border)" }}
+          width={0}
+          height={0}
+          sizes="(max-width: 768px) 100vw, 768px"
+          priority
+          className="block max-h-[600px] mx-auto rounded-xl mb-8 object-contain"
+          style={{ width: "auto", height: "auto", maxWidth: "100%", border: "1px solid var(--border)" }}
         />
       )}
 
