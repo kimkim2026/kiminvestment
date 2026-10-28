@@ -67,6 +67,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
+      <head>
+        <script src="https://analytics.ahrefs.com/analytics.js" data-key="c8UTMW1UDsLfaXIkIU9OtQ" async />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
         style={{ background: "var(--background)", color: "var(--foreground)" }}
