@@ -2576,7 +2576,7 @@ Title Agency 도착 → 신분증 확인 → Closing Disclosure 검토 → 서�
 
 ## 한국과 미국 비교
 
-![한국과 미국 비교](https://images.unsplash.com/photo-1538485399081-7191377e8241?w=1200)
+![미국 부동산 클로징 서류에 서명하는 모습](https://images.unsplash.com/photo-1626178793926-22b28830aa30?w=1200)
 
 | 항목 | 한국 | 미국 |
 |------|------|------|
