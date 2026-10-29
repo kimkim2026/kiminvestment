@@ -21,10 +21,16 @@ async function* walk(dir) {
 
 const kb = (bytes) => (bytes / 1024).toFixed(0);
 const rows = [];
+let totalBefore = 0;
+let totalAfter = 0;
 
 for await (const file of walk(ROOT)) {
   const before = (await stat(file)).size;
-  if (before <= THRESHOLD) continue;
+  totalBefore += before;
+  if (before <= THRESHOLD) {
+    totalAfter += before;
+    continue;
+  }
 
   // 원본을 메모리로 읽어 같은 경로에 안전하게 덮어쓰기
   const input = await readFile(file);
@@ -38,10 +44,12 @@ for await (const file of walk(ROOT)) {
 
   const output = await pipeline.toBuffer();
   if (output.length >= before) {
+    totalAfter += before;
     rows.push({ file, before: kb(before), after: kb(before), saved: "skip" });
     continue;
   }
   await writeFile(file, output);
+  totalAfter += output.length;
   const pct = ((1 - output.length / before) * 100).toFixed(1);
   rows.push({ file, before: kb(before), after: kb(output.length), saved: `${pct}%` });
 }
@@ -53,3 +61,5 @@ if (rows.length === 0) {
   console.log("|---|---:|---:|---:|");
   for (const r of rows) console.log(`| ${r.file.replaceAll("\\", "/")} | ${r.before} | ${r.after} | ${r.saved} |`);
 }
+console.log(`
+전체 ${ROOT}: ${kb(totalBefore)}KB → ${kb(totalAfter)}KB`);

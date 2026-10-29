@@ -7,7 +7,8 @@
     "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "images": "node scripts/compress-images.mjs && node scripts/check-images.mjs"
   },
   "dependencies": {
     "next": "16.1.7",
