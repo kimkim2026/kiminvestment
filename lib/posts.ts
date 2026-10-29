@@ -1363,7 +1363,7 @@ $1M에서 $5M 이상까지 선택이 가능합니다. 큰 사고나 소송에도
 
 투자하면서 가장 큰 스트레스 중 하나가 "혹시 큰 사고가 나면 어떻게 하지?"입니다. Umbrella 보험은 이 불안을 상당 부분 해소해줍니다. 실제로 저도 가입 후 마음이 훨씬 편해졌습니다.
 
-![보험 약관을 검토하는 모습](https://images.unsplash.com/photo-1554224154-22decf9f311a?w=1200)
+![보험 약관을 검토하는 모습](https://images.unsplash.com/photo-1586486855514-8c633cc6fd38?w=1200)
 
 ## 단점
 
@@ -1470,7 +1470,7 @@ Zillow의 대표 기능 Zestimate(AI 가격 추정)는 AI 알고리즘이 분석
 | 재산세(Property Tax) | 주 · 카운티마다 상이 |
 | 주택보험(Insurance) | 연간 $800 ~ $2,000+ |
 
-![모기지 계약서에 서명하는 모습](https://images.unsplash.com/photo-1554920951-462522873ead?w=1200)
+![모기지 계약서에 서명하는 모습](https://images.unsplash.com/photo-1593672715438-d88a70629abe?w=1200)
 
 ## 5단계 — 투어 예약과 에이전트 연결
 
@@ -2281,7 +2281,7 @@ LLC(유한책임회사)는 기본적으로 Pass-Through Entity입니다. LLC 자
 
 물론 일반 미국 시민권자나 영주권자보다 조건이 까다롭고 금리가 약간 높을 수 있습니다. 하지만 레버리지를 활용해 적은 자본으로 더 큰 자산을 운용할 수 있다는 점에서 충분히 매력적입니다.
 
-![미국 세입자 관리 및 임대 계약 현장](https://images.unsplash.com/photo-1521791055366-0d553872952f?w=1200)
+![미국 세입자 관리 및 임대 계약 현장](https://images.unsplash.com/photo-1556155092-490a1ba16284?w=1200)
 
 ## 4. 세입자 관리는 솔직히 쉽지 않습니다
 
@@ -2576,7 +2576,7 @@ Title Agency 도착 → 신분증 확인 → Closing Disclosure 검토 → 서�
 
 ## 한국과 미국 비교
 
-![한국과 미국 비교](https://images.unsplash.com/photo-1521791055366-0d553872952f?w=1200)
+![한국과 미국 비교](https://images.unsplash.com/photo-1538485399081-7191377e8241?w=1200)
 
 | 항목 | 한국 | 미국 |
 |------|------|------|
@@ -2863,7 +2863,7 @@ Title Agency 도착 → 신분증 확인 → Closing Disclosure 검토 → 서�
 
 결과는 석면 양성(Positive)이었습니다. 타일에 석면이 포함되어 있다는 것이 확인됐습니다.
 
-![제거 작업](https://images.unsplash.com/photo-1590644365607-5e8de1c73ba0?w=1200)
+![제거 작업](https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200)
 
 ## 제거 작업
 
@@ -4065,7 +4065,7 @@ Notice는 두 가지 방법으로 전달했습니다. 등기 우편으로 발송
 
 7일이 지났습니다. 10일이 지났습니다. 연락이 없었습니다.
 
-![법원 소송 서류 작성](https://images.unsplash.com/photo-1521791055366-0d553872952f?w=1200)
+![법원 소송 서류 작성](https://images.unsplash.com/photo-1589994965851-a8f479c573a9?w=1200)
 
 ## 법원 Filing — 1월 말
 
@@ -4539,7 +4539,7 @@ Streamlined Filing Compliance Procedures를 통해 자진 신고하면 페널티
 
 > 큰 금액을 송금할 때는 환율 차이가 수백만 원 이상 날 수 있습니다. 여러 은행에서 환율을 비교하고, 환율이 유리한 시점을 노리는 것이 좋습니다.
 
-![해외 송금 주의사항 및 법적 고려사항](https://images.unsplash.com/photo-1554224154-22decf9f311a?w=1200)
+![해외 송금 주의사항 및 법적 고려사항](https://images.unsplash.com/photo-1611095973763-414019e72400?w=1200)
 
 ## 꼭 알아야 할 주의사항
 
@@ -5201,7 +5201,7 @@ HVAC 업체에 문의했더니 공통적으로 이렇게 이야기했습니다. 
 
 미국에서 임대용 부동산을 운영하면 아래 비용들이 발생합니다.
 
-![미국 임대 부동산 운영 비용 및 예산 계획](https://images.unsplash.com/photo-1554224154-22decf9f311a?w=1200)
+![미국 임대 부동산 운영 비용 및 예산 계획](https://images.unsplash.com/photo-1621981386829-9b458a2cddde?w=1200)
 
 | 항목 | 연간 비용 |
 |------|-----------|

@@ -429,7 +429,7 @@ export default function ZillowGuidePage() {
 
         <div className="rounded-xl overflow-hidden" style={{ border: "1px solid var(--border)" }}>
           <Image
-            src="https://images.unsplash.com/photo-1554920951-462522873ead?w=1200"
+            src="https://images.unsplash.com/photo-1593672715438-d88a70629abe?w=1200"
             alt="모기지 계약서에 서명하는 모습"
             width={1200}
             height={675}
