@@ -44,6 +44,22 @@ export function toCategorySlug(name: string): string {
 
 export const posts: Post[] = [
   {
+    slug: "dollar-asset-retirement",
+    title: "은퇴 자산, 왜 달러로 나눠 담아야 할까 — 서울 아파트 vs 미시간 주택 7년 비교",
+    date: "2026-11-02",
+    category: "투자 가이드",
+    excerpt:
+      "2019년부터 2026년까지 원/달러 환율, 서울 아파트, 미시간 주택 가격을 비교했습니다. 집값이 그대로여도 환율만으로 원금이 25% 늘어나는 구조와, 40~50대가 은퇴 자산을 달러로 분산해야 하는 이유를 설명합니다.",
+    metaTitle:
+      "은퇴 자산, 왜 달러로 나눠 담아야 할까 — 서울 아파트 vs 미시간 주택 7년 비교 | 김통찰의 미국 부동산",
+    metaDescription:
+      "2019년부터 2026년까지 원/달러 환율, 서울 아파트, 미시간 주택 가격을 비교했습니다. 집값이 그대로여도 환율만으로 원금이 25% 늘어나는 구조와, 40~50대가 은퇴 자산을 달러로 분산해야 하는 이유를 설명합니다.",
+    readTime: 5,
+    tags: ["환율", "달러 자산", "은퇴 준비", "자산 분산", "원화 환산 수익률", "서울 아파트", "미시간 부동산"],
+    featured: true,
+    content: "",
+  },
+  {
     slug: "fed-rate-hike-2026-investor-strategy",
     title: "연준 3년 만의 금리 인상, 미국 부동산 투자자는 지금 뭘 해야 하나",
     date: "2026-10-03",
