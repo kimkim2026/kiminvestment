@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     url: URL,
     siteName: "김통찰의 미국 부동산",
     locale: "ko_KR",
+    images: ["https://images.unsplash.com/photo-1713802574878-54a685c4e713?w=1200&q=80"],
     type: "article",
     publishedTime: "2026-11-02",
   },
@@ -184,6 +185,23 @@ export default function DollarAssetRetirementPage() {
         </div>
       </section>
 
+      {/* ── 100달러 지폐 이미지 ── */}
+      <div
+        className="rounded-2xl overflow-hidden mb-2"
+        style={{ border: "1px solid var(--border)" }}
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="https://images.unsplash.com/photo-1713802574878-54a685c4e713?w=900&q=80"
+          alt="나무 테이블 위에 쌓인 100달러 지폐 다발"
+          className="w-full object-cover"
+          style={{ maxHeight: 420 }}
+        />
+      </div>
+      <p className="text-xs mb-14 text-center" style={{ color: "#555" }}>
+        Photo by David Trinks on Unsplash
+      </p>
+
       {/* ── 글 메타 정보 ── */}
       <div
         className="flex flex-wrap items-center gap-4 mb-14 pb-6"
@@ -265,6 +283,21 @@ export default function DollarAssetRetirementPage() {
 
       {/* ── 미시간 주택 ── */}
       <section className="mb-14">
+        <div
+          className="rounded-2xl overflow-hidden mb-2"
+          style={{ border: "1px solid var(--border)" }}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://images.unsplash.com/photo-1770790323277-c1ca469472db?w=900&q=80"
+            alt="맑은 하늘 아래 나무와 단독주택이 늘어선 미국 교외 주택가"
+            className="w-full object-cover"
+            style={{ maxHeight: 420 }}
+          />
+        </div>
+        <p className="text-xs mb-10 text-center" style={{ color: "#555" }}>
+          Photo by Ty Dennis on Unsplash
+        </p>
         <SectionTitle>미시간 주택은 얼마나 올랐을까</SectionTitle>
         <Paragraph>
           제가 투자하고 있는 미국 미시간주 도시의 주택 가격은 같은 기간 약 62%
